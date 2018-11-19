@@ -1,0 +1,4 @@
+<FilesMatch (.*)\.(php|asp|aspx|jsp|exe|bat|bak|com|sql|zip|rar|7z|cab|jar|tar|gz|iso|bz2|z)$>
+order allow,deny
+deny from all
+</FilesMatch>

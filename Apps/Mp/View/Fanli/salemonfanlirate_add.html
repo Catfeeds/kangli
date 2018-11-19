@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>销售奖设置</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Fanli/salemonfanlirate')}>">销售奖设置</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Fanli/salemonfanlirate_save')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$smfrinfo.smfr_id}>" name="smfr_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >代理级别：</td>
+				  <td class="txtleft" >
+				  <select name="smfr_dltype"   class="select"  >
+					<option value="0" >选择代理级别　</option>
+					<volist name='dltypelist' id='vo' key='key' >
+					<option value="<{$vo.dlt_id}>"  <if condition="$vo.dlt_id eq $smfrinfo.smfr_dltype " >selected</if> ><{$vo.dlt_name}></option>
+					</volist>
+                  </select>
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >业绩计算时间：</td>
+				  <td class="txtleft" >
+				  <select name="smfr_countdate"   class="select"  >
+					<option value="1"  <if condition="$smfrinfo.smfr_countdate eq '1' " >selected</if> >按月　</option>
+					<option value="2"  <if condition="$smfrinfo.smfr_countdate eq '2' " >selected</if> >按年　</option>
+                  </select>
+				  </td>
+			  </tr>
+			  
+			   
+			   <tr>     
+                  <td height="40"  class="txtright" >业绩区间：</td>
+				  <td  class="txtleft" ><input type="text" size="8" maxlength="10"  name="smfr_minsale" class="input" value="<{$smfrinfo.smfr_minsale}>" > -- <input type="text" size="8" maxlength="10"  name="smfr_maxsale" class="input" value="<{$smfrinfo.smfr_maxsale}>" ></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"   class="txtright" >业绩计算方式：</td>
+				  <td class="txtleft" >
+				  <select name="smfr_saleunit"   class="select"  >
+					<option value="1"  <if condition="$smfrinfo.smfr_saleunit eq '1' " >selected</if> >订单金额　</option>
+					<option value="2"  <if condition="$smfrinfo.smfr_saleunit eq '2' " >selected</if> >销售数量　</option>
+                  </select>
+				  </td>
+			  </tr>
+			  
+			   <tr   >     
+                  <td height="40"  class="txtright" >奖金返利：</td>
+				  <td  class="txtleft" ><input type="text" size="8" maxlength="8"  name="smfr_fanlirate" class="input" value="<{$smfrinfo.smfr_fanlirate}>" > 数字在1-0间，则以下单价的百分比计算，如0.03代表以下单价的3%计算，如果大于1，则以具体多少元计算</td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"   class="txtright" >奖金计算方式：</td>
+				  <td class="txtleft" >
+				  <select name="smfr_fanlieval"   class="select"  >
+					<option value="1"  <if condition="$smfrinfo.smfr_fanlieval eq '1' " >selected</if> >固定奖金　</option>
+					<option value="2"  <if condition="$smfrinfo.smfr_fanlieval eq '2' " >selected</if> >按销量X奖金返利　</option>
+                  </select>
+				  </td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" ><input type="text" size="40" maxlength="100"  name="smfr_remark" class="input" value="<{$smfrinfo.smfr_remark}>" ></td>
+			  </tr>
+			   
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

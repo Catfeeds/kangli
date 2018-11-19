@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导购管理</title>
+<include file="Com/head" />
+<script type="text/javascript" src="__PUBLIC__/mp/js/Area.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/AreaData_min.js"></script>
+<script type="text/javascript">
+$(function (){
+	initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, sub_arr, '<{$dguserinfo.dguser_sheng}>', '<{$dguserinfo.dguser_shi}>', '<{$dguserinfo.dguser_qu}>');
+});
+</script>
+
+<script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+			$("#ssubmit").click(function() {
+			    if(parseInt($("#seachprov").val())>0){
+					   var dguser_diqustr="";
+					   dguser_diqustr=$("#seachprov option:selected").text();
+					   if(parseInt($("#seachcity").val())>0){
+							dguser_diqustr=dguser_diqustr+$("#seachcity option:selected").text();
+						   if(parseInt($("#seachdistrict").val())>0){
+							   dguser_diqustr=dguser_diqustr+$("#seachdistrict option:selected").text();
+						   }
+					   }
+					   $("#dguser_diqustr").val(dguser_diqustr);
+				}
+
+			
+			 }); 
+	   }); 
+	   
+	function showTipsBox(info) {
+		$("#tipsbox").css({"display":"block"});
+		$("#tipstitle").html(info);
+		setTimeout("tipsBox_clear()", 2000);
+	}
+	
+	function tipsBox_clear() {
+		$("#tipstitle").html("");
+		$("#tipsbox").css({"display":"none"});
+	}
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dguser/index')}>">导购员列表</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dguser/edit_save')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$dguserinfo.dguser_id}>" name="dguser_id" />
+<input name="dguser_diqustr" id="dguser_diqustr" value=""  type="hidden" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <if condition="$qypurview.12005 eq '12005' ">
+			  <notempty name="dguserinfo.dguser_openid">
+			   <tr>     
+                  <td height="40"  class="txtright" >已绑定微信　</td>
+				  <td  class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >Openid：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_openid}></td>
+			  </tr>
+			  </notempty>
+			  <notempty  name="dguserinfo.dguser_wxheadimg" >
+			  <tr>
+				  <td height="40"  class="txtright" > 头像：</td>
+				  <td  class="txtleft" > <img src="<{$dguserinfo.dguser_wxheadimg}>"    style="width:60px; height:60px" />
+				  </td>
+			  </tr>
+              </notempty>
+			  <notempty  name="dguserinfo.dguser_wxnickname" >
+			  <tr>     
+                  <td height="40"  class="txtright" >微信昵称：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_wxnickname}></td>
+			  </tr>
+			  </notempty>
+			  </if>
+			  <if condition="$qypurview.12002 eq '12002' ">
+			  <tr>     
+                  <td height="40"   class="txtright" >登录账号：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="dguser_username"  class="input"  value="<{$dguserinfo.dguser_username}>"   <gt name="dguserinfo.dguser_id" value="0">disabled</gt>  >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 密　　码：</td>
+				  <td  class="txtleft" ><input type="password" size="25" maxlength="25"  name="dguser_pwd" class="input" value="" > <gt name="dguserinfo.dguser_id" value="0">如果为空则不修改密码<else/>*</gt></td>
+			  </tr>
+			  </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >姓名：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dguser_truename" class="input" value="<{$dguserinfo.dguser_truename}>" > *</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dguser_tel" class="input" value="<{$dguserinfo.dguser_tel}>" > *</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >所属店铺：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="25"  name="dguser_dianpu" class="input" value="<{$dguserinfo.dguser_dianpu}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="50"  name="dguser_email" class="input" value="<{$dguserinfo.dguser_email}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dguser_qq" class="input" value="<{$dguserinfo.dguser_qq}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地区：</td>
+				  <td  class="txtleft" >
+				  <select id="seachprov" name="seachprov" onChange="changeComplexProvince(this.value, sub_array, 'seachcity', 'seachdistrict');" class="input"  ></select>&nbsp;&nbsp;
+<select id="seachcity" name="seachcity" onChange="changeCity(this.value,'seachdistrict','seachdistrict');" class="input"  ><option value="0">请选择</option></select>&nbsp;&nbsp;
+<span id="seachdistrict_div"><select id="seachdistrict" name="seachdistrict" class="input"  ><option value="0">请选择</option></select></span>
+				   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >详细地址：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="50"  name="dguser_address" class="input" value="<{$dguserinfo.dguser_address}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft" ><textarea cols="50" rows="3" name="dguser_remark"  ><{$dguserinfo.dguser_remark}></textarea></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton"  id="ssubmit" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

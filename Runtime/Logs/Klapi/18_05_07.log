@@ -1,0 +1,327 @@
+[ 2018-05-07T16:27:32+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=2F59FBBDFEAC5A39099F8150C0A34AFD6D1746363AF8AF44AE3F280A2F2E50CB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0030s ]
+SQL: SELECT `qy_fwkey` FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.008000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009000s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0020s ]
+SQL: SELECT `ad_id`,`ad_name`,`ad_pic` FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0020s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `news_id`,`news_title`,`news_content`,`news_pic`,`news_addtime`,`news_type` FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:27:36+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=50CBCCA1E4857A600A7445D846246AF422CC783821F32839366507958C240EF00C4DA15DFB6D31F2043C21A3C8825AD1A50D672F87CE0F557CA1B3F9C0E160C6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.010000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+
+[ 2018-05-07T16:28:30+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=2F59FBBDFEAC5A39099F8150C0A34AFD6D1746363AF8AF44AE3F280A2F2E50CB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.002000s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0010s ]
+SQL: SELECT `ad_id`,`ad_name`,`ad_pic` FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0010s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0000s ]
+SQL: SELECT `news_id`,`news_title`,`news_content`,`news_pic`,`news_addtime`,`news_type` FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:29:02+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=2F59FBBDFEAC5A39099F8150C0A34AFD6D1746363AF8AF44AE3F280A2F2E50CB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.002000s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0010s ]
+SQL: SELECT `ad_id`,`ad_name`,`ad_pic` FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0000s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `news_id`,`news_title`,`news_content`,`news_pic`,`news_addtime`,`news_type` FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:29:12+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.010000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0030s ]
+SQL: SELECT `dl_id`,`dl_unitcode`,`dl_openid`,`dl_username`,`dl_name`,`dl_type`,`dl_level`,`dl_pwd`,`dl_tel`,`dl_status` FROM `fw_dealer` WHERE `dl_username` = 'test99' AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_accesstoken` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fw_accesstoken` WHERE `at_unitcode` = '9999' AND `at_unitopenid` = 'wx4a12f763b38355df' AND `at_userid` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fw_accesstoken` SET `at_token`='cc7272bdde7b7a42d014c3c285c79b073a4a45d349eb75f4b7bad44ce3419dbd',`at_addtime`='1525681752',`at_status`='1' WHERE `at_unitcode` = '9999' AND `at_unitopenid` = 'wx4a12f763b38355df' AND `at_userid` = 32 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `fw_log` (`log_qyid`,`log_user`,`log_qycode`,`log_action`,`log_type`,`log_addtime`,`log_ip`,`log_link`,`log_remark`) VALUES (NULL,NULL,NULL,'经销商账号登录','2','1525681752','192.168.1.134','192.168.1.134/kangli/klapi/v1/mpwx','') [ RunTime:0.0000s ]
+SQL: UPDATE `fw_dealer` SET `dl_logintime`='1525681752' WHERE `dl_username` = 'test99' AND `dl_unitcode` = '9999' [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:29:12+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=50CBCCA1E4857A600A7445D846246AF422CC783821F32839366507958C240EF00C4DA15DFB6D31F2043C21A3C8825AD1A50D672F87CE0F557CA1B3F9C0E160C6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.013000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+
+[ 2018-05-07T16:29:56+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.010000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.003000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_unitcode`,`dl_openid`,`dl_username`,`dl_name`,`dl_type`,`dl_level`,`dl_pwd`,`dl_tel`,`dl_status` FROM `fw_dealer` WHERE `dl_username` = 'test99' AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_accesstoken` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_accesstoken` WHERE `at_unitcode` = '9999' AND `at_unitopenid` = 'wx4a12f763b38355df' AND `at_userid` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fw_accesstoken` SET `at_token`='2a4c98934741087fe28396ab3a0a01eb46a7a33a7be2bd41af9bccac9458d342',`at_addtime`='1525681796',`at_status`='1' WHERE `at_unitcode` = '9999' AND `at_unitopenid` = 'wx4a12f763b38355df' AND `at_userid` = 32 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_log` [ RunTime:0.0010s ]
+SQL: INSERT INTO `fw_log` (`log_qyid`,`log_user`,`log_qycode`,`log_action`,`log_type`,`log_addtime`,`log_ip`,`log_link`,`log_remark`) VALUES (NULL,NULL,NULL,'经销商账号登录','2','1525681796','192.168.1.134','192.168.1.134/kangli/klapi/v1/mpwx','') [ RunTime:0.0000s ]
+SQL: UPDATE `fw_dealer` SET `dl_logintime`='1525681796' WHERE `dl_username` = 'test99' AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+
+[ 2018-05-07T16:29:56+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=50CBCCA1E4857A600A7445D846246AF422CC783821F32839366507958C240EF00C4DA15DFB6D31F2043C21A3C8825AD1D64E382248928F1FC6FDAC3D6345F310
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.019000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0020s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 7 AND `dlt_level` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 32 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1525104000 AND 1525681796 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1525104000 AND 1525681796 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 1 LIMIT 1000   [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:30:02+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=D58B6951E2EB3602FD62EBA358B25C6230FFBD0C6CDD66BAB3C7328A8EE5E19A513E89D4B6B0E8D601F181F6223C1132F6EB0B8AC588809EB332BF9954CD37EF
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.018000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.018000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004000s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0000s ]
+
+[ 2018-05-07T16:30:02+08:00 ] 192.168.1.134 /kangli/klapi/v1/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: HTTP_VERSION D:\wamp64\www\Kangli\Apps\Klapi\Conf\config.php 第 2 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.013000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013000s ]
+
+[ 2018-05-07T16:30:02+08:00 ] 192.168.1.134 /kangli/klapi/v1/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: HTTP_VERSION D:\wamp64\www\Kangli\Apps\Klapi\Conf\config.php 第 2 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.008000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008000s ]
+
+[ 2018-05-07T16:30:04+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=590A56345C0D548C35E471CB896D67CDBDD83163469706A7EC2CD07F40DDC837DDD3F02440EC20A35F17A9EE3E13B85FDDDD1DD38C46C5EF66D16B38204E4ADCF1E653D596C9CCA45A49F136C2895F5C3D51D1CA0DCAAFD0B05C9C4215AFD521
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.008000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.006000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.007000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 61 ORDER BY oddt_id DESC  [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 61 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 60 ORDER BY oddt_id DESC  [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 60 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 63 ORDER BY oddt_id DESC  [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 63 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 8,8   [ RunTime:0.0000s ]
+

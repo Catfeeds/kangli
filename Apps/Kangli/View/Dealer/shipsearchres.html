@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>查询结果</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Kangli/css/font.css" />
+<style>
+
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" data-href="<{:U('./Kangli/Dealer/shipsearch')}>" ></i><h1>查询结果</h1>
+</header>
+<section class="ui-container" >
+<div class="ui-whitespace">
+　
+</div>
+<ul class="ui-list ui-list-text  ui-border-tb">
+    <li class="ui-border-t">
+        <h4 class="ui-nowrap">条码：<{$shipinfo.code}></h4>
+    </li>
+	<li class="ui-border-t">
+        <h4 class="ui-nowrap">单号：<{$shipinfo.ship_number}></h4>
+    </li>
+	 <li class="ui-border-t">
+        <h4 class="ui-nowrap">产品：<{$shipinfo.ship_pro_name}>  (<{$shipinfo.ship_pro_number}>) </h4>
+    </li>
+	 <li class="ui-border-t">
+        <h4 class="ui-nowrap">数量：<{$shipinfo.qty}></h4>
+    </li>
+	 <li class="ui-border-t">
+	 <div class="ui-list-info">
+        <h4 class="ui-nowrap">流向：</h4>
+		<p class="ui-nowrap">
+		 <notempty name="shipinfo.ship_dealer_from_name">
+		 <{$shipinfo.ship_date_from|date='Y-m-d',###}>  由 <b><{$shipinfo.ship_dealer_from_name}></b>  发向  <b>我</b> <br/>
+		 </notempty>
+		 <notempty name="shipinfo.ship_dealer_name">
+		 <{$shipinfo.ship_date|date='Y-m-d',###}>  由 <b>我</b>  发向 <b><{$shipinfo.ship_dealer_name}></b>
+		 </notempty>
+		</p>
+	</div>
+    </li>
+</ul>
+        
+	
+
+</section>
+
+
+<script>
+(function (){
+
+		$('.ui-icon-return').click(function(){
+			if($(this).data('href')){
+				location.href= $(this).data('href');
+			}
+		});	
+		
+})();
+</script>
+</body>
+
+</html>

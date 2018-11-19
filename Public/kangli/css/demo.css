@@ -1,0 +1,876 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
+
+
+/** 清除内外边距 **/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td
+/* table elements 表格元素 */
+
+{
+  margin: 0;
+  padding: 0;
+}
+
+
+/** 设置默认字体 **/
+
+body,
+button,
+input,
+select,
+textarea
+/* for ie */
+
+{
+  /*font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;*/
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font-size: 0.5rem;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 0.5rem;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 0.5rem;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+
+/* 将斜体扶正 */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+
+
+/* 统一等宽字体 */
+
+small {
+  font-size: 12px;
+}
+
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+
+/** 重置列表元素 **/
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/** 重置文本格式元素 **/
+
+a {
+  text-decoration: none;
+}
+
+
+/*a:hover{text-decoration:underline;}*/
+
+a:focus {
+  outline: none;
+}
+
+
+/** 重置表单元素 **/
+
+legend {
+  color: #000;
+}
+
+
+/* for ie6 */
+
+fieldset,
+img {
+  border: 0;
+  width: auto;
+}
+
+
+/* img 搭车：让链接里的 img 无边框 */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+
+
+/* 注：optgroup 无法扶正 */
+
+
+/** 重置表格元素 **/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+input::-ms-input-placeholder {
+  color: #AFAFAF;
+  font-size: .5rem;
+}
+      
+input::-webkit-input-placeholder {
+  color: #AFAFAF;
+  font-size: .5rem;
+}
+
+.modal-button {
+    font-size: .5rem;
+}
+/* 清除浮动 */
+
+.ks-clear:after,
+.clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.ks-clear,
+.clear {
+  *zoom: 1;
+}
+
+.icon_lists {
+  width: 100% !important;
+}
+
+.icon_lists li {
+  float: left;
+  width: 20%;
+  height: 180px;
+  text-align: center;
+  list-style: none !important;
+}
+
+.icon_lists li img {
+  width: 2rem;
+  margin: 0.3rem;
+}
+
+.icon_lists li a {
+  text-decoration: none;
+}
+
+.icon_lists .iconfont {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+  color: #7e7e7e;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+}
+
+.icon_lists .iconfont.active,
+.icon_lists .iconfont:active {
+  font-size: 1.2rem;
+  color: #f08519;
+}
+
+.icon_lists .name {
+  font-size: 1.2rem;
+}
+
+.bar-tab .tab-item.active,
+.bar-tab .tab-item:active {
+  color: #f08519;
+}
+
+
+
+.bar1 {
+  position: absolute;
+  right: 0.25rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 2.2rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  background-color: transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bar1 .searchbar {
+  margin: 0 -.5rem;
+  padding: .8rem 1rem;
+  background: transparent;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.search-input input {
+  font-size: .5rem;
+  color: #000;
+  border: 0px solid #b4b4b4;
+  border-radius: 1rem;
+}
+
+.searchbar .searchbar-cancel {
+  font-size: 0.5rem;
+  color: #000;
+}
+
+.order-list {
+  margin: 0rem;
+  padding: .5rem;
+}
+
+.order-list .order-number {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: .3rem;
+}
+
+.order-list .order-number2 {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.order-list .order-content {
+  box-sizing: border-box;
+  padding-left: 0rem;
+  min-height: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.order-list .order-content .order-inner {
+  width: 100%;
+  display: block;
+  padding-left: .5rem;
+  padding-top: .2rem;
+}
+
+.order-list .order-content .order-remark {
+  min-height: 1.2rem;
+  color: #7e7e7e;
+}
+
+.order-list .order-content .order-remark .order-price {
+  text-align: right;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.order-list .order-content .order-type {
+  border-bottom: 0.05rem solid #d5d5d5;
+}
+
+.order-list .order-bottom {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-top: 0.05rem solid #d5d5d5;
+  /*border-bottom:0.05rem solid #d5d5d5;*/
+}
+
+.order-list .order-bottom .order-button-type {
+  width: 100%;
+  text-align: right;
+  padding: .3rem 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-button {
+  min-width: 3rem;
+  float: right;
+  font-size: 0.3rem;
+  line-height: 1rem;
+  padding: .15rem;
+}
+
+.order-circle {
+  border-radius: 50%;
+}
+
+.order-number-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: .1rem;
+  line-height: .4rem;
+  background-color: #fff;
+  border: 1px solid red;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.mine-img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: .1rem;
+  line-height: .4rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.line-top {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-top: 1px solid #d5d5d5;
+}
+
+.line-top-bottom {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-top: 1px solid #d5d5d5;
+  border-bottom:1px solid #d5d5d5;
+}
+
+.line-bottom {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-bottom:1px solid #d5d5d5;
+}
+
+.line-full-top {
+  border-top: 1px solid #d5d5d5;
+}
+
+.line-full-bottom {
+  border-bottom:1px solid #d5d5d5;
+}
+
+.top-img {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.top-img img {
+  width: 100%;
+  height: 8rem;
+}
+
+.kl-layout-null{
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout{
+  background-color: #fff;
+  padding:.5rem;
+}
+
+
+.kl-layout .center-horizontally{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content:space-around;
+  justify-content:space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout .between-horizontally{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-horizontally-vcenter{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+/*  -webkit-justify-content:space-between;
+  justify-content:space-between;*/
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-horizontally-between{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-horizontally-right{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction:row-reverse;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-horizontally{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+/*  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;*/
+}
+
+.kl-layout .center-vertical{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content:flex-start;
+  justify-content:flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-center
+{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-layout-login{
+  position: relative;
+  padding:.5rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction:column;
+  -webkit-flex-direction:column;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.kl-login-input{
+   width: 100%;
+   border:0;
+   background:0;
+   padding:.2rem;
+   font-size:.8rem;
+   color:#7e7e7e;
+}
+
+.kl-login-psw-input{
+   width:100%;
+   border:0;
+   background:0;
+   padding:.2rem;
+   font-size:.8rem;
+   color:#7e7e7e;
+/*   background-image:url(../static/youjiantou.png);
+   background-size: .7rem;
+   background-repeat: no-repeat;  
+   background-position: calc(100% - .5rem) center;
+   background-position: 97% center;
+   background-position: -webkit-calc(100% - .5rem) center;*/
+}
+
+/*.kl-login-psw-input:after{
+  content:"\e60b";
+}*/
+
+.kl-line-bottom-main
+{
+  width: 100%;
+  border-bottom: .05rem solid #7e7e7e;
+}
+
+.kl-badge {
+  display: inline-block;
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+  font-size: .5rem;
+  line-height: .6rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .15);
+  border-radius: 5rem;
+}
+
+.kl-circle{
+    border-radius: 50%;
+}
+
+.kl-img-thumbnail{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding:0.1rem;
+    line-height: 1.6rem;
+    background-color: #fff;
+    border:0.05rem solid #ddd;
+    border-radius: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.kl-cross{
+  width:100%;
+  height:0;
+  border-top:0.05rem solid #7e7e7e;
+}
+
+.kl-products-list
+{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  -webkit-justify-content:flex-start;
+  justify-content:flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.kl-products-item
+{
+  width: 33.3333%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction:column;
+/*  -webkit-justify-content:flex-start;
+  justify-content:flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;*/
+}
+
+.kl-products-item .pro_name
+{
+    overflow: hidden;  /*溢出隐藏*/
+    text-overflow: ellipsis; /*以省略号...显示*/
+    white-space: nowrap;  /*强制不换行 默认normal换行*/ 
+}
+
+.kl-page{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  -webkit-justify-content:flex-end;
+  justify-content:flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.current {
+    padding:0.5em;
+    color: #027cff;
+    border: solid 1px #ddd;
+    margin: 0 0.5em;
+}
+
+.kl-page a{
+    text-decoration: none;
+}
+
+.kl-page a.num{
+    padding:0.5em;
+    border: solid 1px #fff;
+    margin: 0 0.5em;
+}
+
+.kl-foot-fixed{
+  position:fixed;
+  bottom:0;
+}
+
+.kl-numbox [class*=btn-numbox], .kl-numbox [class*=numbox-btn] {
+    font-size:1rem; 
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 1.2rem;
+    height: 100%;
+    padding: 0;
+    color: #555;
+    border: none;
+    border-radius: 0;
+    /*background-color: #f9f9f9;*/
+}
+
+.kl-numbox {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 4.5rem;
+    height: 1.5rem;
+    padding: 0 1.2rem;
+    vertical-align: top;
+    vertical-align: middle;
+    border: solid 0.05rem #bbb;
+    border-radius: 0.15rem;
+    /*background-color: #efeff4;*/
+}
+
+.kl-numbox .kl-btn-numbox-minus, .kl-numbox .kl-numbox-btn-minus {
+    left: 0;
+    border-top-left-radius: 0.15rem;
+    border-bottom-left-radius: 0.15rem;
+}
+
+.kl-numbox .kl-input-numbox,.kl-numbox.kl-numbox-input {
+    display: inline-block;
+    overflow: hidden;
+    /*width: 100%!important;*/
+    /*width: 4rem;*/
+    height: 100%;
+    margin:0;
+    padding: 0 0.15rem!important;
+    text-align: center;
+    text-overflow: ellipsis;
+    word-break: normal;
+    border: none!important;
+    border-right: solid 0.05rem #ccc!important;
+    border-left: solid 0.05rem #ccc!important;
+    border-radius: 0!important;
+}
+
+.kl-numbox-input {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%!important;
+    height: 100%;
+    margin: 0;
+    padding: 0 0.15rem!important;
+    text-align: center;
+    text-overflow: ellipsis;
+    word-break: normal;
+    border: none!important;
+    border-right: solid 0.05rem #ccc!important;
+    border-left: solid 0.05rem #ccc!important;
+    border-radius: 0!important;
+}
+
+.kl-numbox .kl-btn-numbox-plus, .kl-numbox .kl-numbox-btn-plus {
+    right: 0;
+    border-top-right-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
+}
+
+.kl-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.42;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+    color: #333;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.15rem;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
+    border-bottom-left-radius: 0.15rem;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+.kl-file {
+    position: relative;
+    display: inline-block;
+    background:transparent;
+    border:.05rem solid #c1c1c1;
+    /*border-radius: 4px;*/
+    margin: .5rem;
+    padding:1.2rem;
+    overflow: hidden;
+    color: #c1c1c1;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 1.5rem;
+}
+.kl-file input {
+    position: absolute;
+    font-size: 5rem;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.kl-file:hover {
+    background:transparent;
+    border-color: #c1c1c1;
+    color: #c1c1c1;
+    text-decoration: none;
+}
+

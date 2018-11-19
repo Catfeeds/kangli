@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="__PUBLIC__/Kangli/static/chuanshu_min.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no">
+		<title><{$Think.config.QY_COMPANY}>-购物车</title>
+		<include file="Com/head" />
+		<style type="text/css">
+			.icon_lists {
+				width: 100% !important;
+			}
+			
+			.icon_lists li {
+				float: left;
+				width: 20%;
+				height: 180px;
+				text-align: center;
+				list-style: none !important;
+			}
+			
+			.icon_lists li img {
+				width: 2rem;
+				margin: 0.3rem;
+			}
+			
+			.icon_lists li a {
+				text-decoration: none;
+			}
+			
+			.icon_lists .iconfont {
+				font-size: 25px;
+				line-height: 30px;
+				margin: 10px 0;
+				color: #7e7e7e;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.icon_lists .iconfont.active,
+			.icon_lists .iconfont:active {
+				font-size: 25px;
+				color: #f08519;
+			}
+			
+			.icon_lists .name {
+				font-size: 12px;
+			}
+			
+			.bar-tab .tab-item.active,
+			.bar-tab .tab-item:active {
+				color: #f08519;
+			}
+		</style>
+	</head>
+
+	<body ontouchstart="" style="background-color:#FAFAFA">
+		<div class="page">
+			<header class="bar bar-nav" style="background-color:#006db2;">
+				<!-- <a href="javascript:;" onClick="javascript :history.back(-1);" class="icon icon-left pull-left" style="color:#fff"></a> -->
+				<if condition="$back eq 1">
+					<a href="<{:U('./Kangli/Product/index/')}>/stock/<{$stock}>/back/<{$back}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				<else/>
+					<a href="<{:U('./Kangli/Product/index/')}>/stock/<{$stock}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				</if>
+				<h1 class="title" style="color:#fff"><if condition="$stock eq 1">预充<else/>提货</if>购物车</h1>
+			</header>
+			<div class="content">
+					<div class="list-block media-list" style="line-height:1rem; margin-top:.25rem;margin-bottom: 0rem; background: #fff;">
+						<ul>
+							<foreach name='shopcartlist' item='item'  key='key'>
+							<if condition="$item.pro_dlprice neq '' ">
+							<li>
+								<div class="kl-layout-horizontally-vcenter">
+									<if condition="$item.sc_status neq 0">
+										<i class="iconfont icon-xuanze1 checkbtn" style="font-size:1rem;margin:.5rem;color: #7e7e7e"></i>
+									<else/>
+										<i class="iconfont icon-xuanze checkbtn" style="font-size:1rem;margin:.5rem;color: #7e7e7e"></i>
+									</if>
+									<div class="kl-layout-horizontally-vcenter" style="width: 100%;border-bottom:0.05rem solid #d5d5d5;margin-right:0.3rem;padding:.3rem 0;">
+										<img src="__PUBLIC__/uploads/mobi/<{$item.pro_pic}>" style="width:3rem;margin:.5rem .5rem .5rem 0" onerror="this.src='__PUBLIC__/Kangli/static/logo_icon.png'">
+										<div style="margin: 0 .3rem 0 0;width:100%">
+											<div class="kl-layout-horizontally-between">
+												 <div class="pro_name"><{$item.pro_name}></div>
+												 <div class="order-price" style="color: #f00">￥<{$item.pro_dlprice|number_format=2,'.',''}></div>
+											</div>
+											<div class="pro_name " style="color: #c1c1c1;max-height:2rem"><{$proinfo.pro_remark}></div>
+											<div class="kl-layout-horizontally-between">
+											    <div style="color: #c1c1c1;">
+											    	<if condition="($item.pri_minimum neq '') AND ($item.pri_minimum neq '0') "><div>最低补货:<{$item.pri_minimum}></div></if>
+											    	<div>库存剩余:<if condition="($dl_belong eq 0) AND ($stock eq 1) ">充足<else/><{$item.pro_stock}></if></div>	
+											    </div>
+												<div class="kl-numbox">
+													<button class="kl-btn kl-btn-numbox-minus" type="button">-</button>
+													<input class="kl-input-numbox" style="height:100%;font-size: 0.6rem" value="<{$item.sc_qty}>" name="num" type="text"/>
+													<button class="kl-btn kl-btn-numbox-plus" type="button">+</button>
+												</div>
+											</div>
+											<div style="color: #c1c1c1;"><if condition="$item.sc_color neq '' ">颜色尺码：<{$item.sc_color}>  <{$item.sc_size}></if></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							</if>
+							</foreach>
+						</ul>
+						<div class="kl-layout-horizontally-right">
+							<div style="padding: 0.3rem">
+								<div style="color: #7e7e7e;display: none;">物流费用：</div>
+								<div style="color: #7e7e7e">共<span style="color: red"> <{$totalqty}> </span>件商品，合计：<span style="color:#000">￥<{$total|number_format=2,'.',''}></span></div></div>
+							</div>
+						</div>
+			</div>
+			<footer class="kl-foot-fixed" style="background: #fff;width: 100%;height:3rem; overflow: hidden;">
+			<div class="kl-layout-horizontally" style="margin: 0rem;">
+				<div class="kl-layout-center" id="checkAllbtn" style="width:20%;height:3rem;">
+						<if condition="$allcheck eq true">
+							<i class="iconfont icon-xuanze" style="font-size:1rem;padding: .3rem;color: #7e7e7e;"></i>
+						<else/>
+							<i class="iconfont icon-xuanze1" style="font-size:1rem;padding: .3rem;color: #7e7e7e;"></i>
+							<!--iconfont icon-xuanze1没有对勾-->
+						</if>
+						<div style="color:#c1c1c1;font-size:0.2rem;">全选</div>
+				</div>
+				<div class="kl-layout-horizontally-right" id="shopcar_add" style="width:55%;height:3rem;font-size:0.75rem;">
+					<div style="padding: 0.5rem">
+							<div style="font-size:0.75rem;">
+								合计：<span style="color: red; font-size:0.3rem;">￥<span style="font-size:1rem;"><{$total|number_format=2,'.',''}></span></span>
+							</div>
+							<div style="display: none;">
+								<span style="color:#c1c1c1;">物流：￥<{$total|number_format=2,'.',''}></span>
+							</div>
+					</div>
+				</div>
+				<div class="kl-layout-center" id="orderlist_add" style="width:25%;height:3rem;background:#f08519;font-size:0.75rem;color: #fff;margin:0rem;"><if condition='$stock eq 0'>提货<else/>结算</if>(<{$totalqty}>)</div>
+			</div>
+		</footer>
+		</div>
+	</body>
+	<include file="Com/sj" />
+	<script type="text/javascript">
+	$.init();
+	$(function() {
+		var stock="<{$stock}>";
+		var scArray=<{:json_encode($shopcartlist)}>||[];
+		$('.checkbtn').each(function(index) {
+			// console.log('li %d is:%o',index,this);
+			if ($.isArray(scArray)&&scArray.length>index)
+			{
+				var scObject=scArray[index];
+				$(this).click(function(){
+					if ($.isPlainObject(scObject))
+					{
+						window.location.href="<{:U('./Kangli/Orders/checkcart/sc_id')}>/"+scObject['sc_id']+"/stock/"+stock;
+					}
+				});
+			}
+		});
+
+		$('.kl-btn.kl-btn-numbox-minus').each(function(index) {
+			// console.log('li %d is:%o',index,this);
+		
+			if ($.isArray(scArray)&&scArray.length>index)
+			{
+				var minusObject=scArray[index];
+				$(this).click(function(){
+					if ($.isPlainObject(minusObject))
+					{		
+						    var sc_qty=parseInt($(".kl-input-numbox").eq(index).val());
+							var sc_id=parseInt(minusObject['sc_id']);
+							if(sc_qty<=1){
+	    						sc_qty=1;
+							}else{
+	    						sc_qty=sc_qty-1;
+							}
+						window.location.href="<{:U('./Kangli/Orders/modifycart/sc_id')}>/"+sc_id+'/sc_qty/'+sc_qty+"/stock/"+stock;
+					}
+				});
+			}
+		});
+
+		$('.kl-btn.kl-btn-numbox-plus').each(function(index) {	
+			if ($.isArray(scArray)&&scArray.length>index)
+			{
+				var plusObject=scArray[index];
+				$(this).click(function(){
+					if ($.isPlainObject(plusObject))
+					{
+
+ 						var sc_qty=parseInt($(".kl-input-numbox").eq(index).val());
+						var sc_id=parseInt(plusObject['sc_id']);
+    					if (sc_qty>=plusObject['pro_stock'])
+    					{
+    						$.toast("该产品库存不足");
+							return false; 
+    					}
+						sc_qty=sc_qty+1;
+						window.location.href="<{:U('./Kangli/Orders/modifycart/sc_id')}>/"+sc_id+'/sc_qty/'+sc_qty+"/stock/"+stock;
+					}
+				});
+			}
+		});
+
+		$('.kl-input-numbox').each(function(index) {
+			if ($.isArray(scArray)&&scArray.length>index)
+			{
+				var numObject=scArray[index];
+				$(this).change(function(){
+					if ($.isPlainObject(numObject))
+					{
+ 						var sc_qty=parseInt($(this).val());
+						var sc_id=parseInt(numObject['sc_id']);
+    					if (sc_qty>=numObject['pro_stock'])
+    					{
+    						$.toast("该产品库存不足");
+							return false; 
+    					}
+    					if(sc_qty<=1){
+	    					sc_qty=1;
+						}
+						window.location.href="<{:U('./Kangli/Orders/modifycart/sc_id')}>/"+sc_id+'/sc_qty/'+sc_qty+"/stock/"+stock;
+					}
+				});
+			}
+		});
+
+		$("#checkAllbtn").click(function(){
+				var checkall=0;
+				var allcheck="<{$allcheck}>";
+				if (allcheck)
+					checkall=1; //1为取消全选
+				window.location.href="<{:U('./Kangli/Orders/checkcart/checkall')}>/"+checkall+"/stock/"+stock;
+		});
+
+		$("#orderlist_add").click(function(){
+			$.confirm('是否确认提交？',function () {
+               	window.location.href="<{:U('./Kangli/Orders/checkshopcart')}>"+"/stock/"+stock;
+            });
+		});
+
+	});
+	</script>	
+</html>

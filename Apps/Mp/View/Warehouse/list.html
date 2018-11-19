@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仓库管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Warehouse/index')}>">仓库管理</A>　&gt;　<A href="#">仓库列表</A></div>
+<div class="nav_r"><eq name="qypurview.11002" value="11002"><a href="<{:U('Mp/Warehouse/add')}>">添加仓库</a></eq></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="5%" ><span>ID</span></th>
+<th  width="15%"  ><span>仓库编号</span></th>
+<th  width="25%"  style="text-align:left" ><span>仓库名称</span></th>
+<th  width="15%"  ><span>负责人</span></th>
+<th  width="25%" style="text-align:left" ><span>场所地址</span></th>
+<th  width="15%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data"><span><{$item.wh_id}></span></td>
+<td class="data"><span><{$item.wh_munber}></span></td>
+<td class="data" style="text-align:left" ><span><{$item.wh_name}></span></td>
+<td class="data"  ><span><{$item.wh_director}></span></td>
+<td class="data" style="text-align:left" ><span><{$item.wh_address}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Warehouse/edit?wh_id='.$item['wh_id'].'')}>">修改</a> <a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Warehouse/whdel?wh_id='.$item['wh_id'].'')}>';" >删除</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

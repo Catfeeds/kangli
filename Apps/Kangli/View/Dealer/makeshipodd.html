@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>出货</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Kangli/css/font.css" />
+<style>
+.ui-form-item-r button {color: #FFFFFF;}
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" data-href="<{:U('./Kangli/Dealer/index')}>" ></i><h1>出货</h1>
+</header>
+<section class="ui-container" >
+<div class="ui-whitespace">
+　
+</div>
+<div style="margin:0 auto; width:60%">
+<div class="ui-btn-wrap">
+    <button class="ui-btn-lg ui-btn-primary"  id="makeadd" data-href="<{:U('./Kangli/Dealer/makeshipodd/action/save')}>"  >创建出货单号</button>
+</div>
+</div>
+
+</section>
+
+
+<script>
+(function (){
+		$('#makeadd').click(function(){
+			if($(this).data('href')){
+				location.href= $(this).data('href');
+			}
+		});
+		
+		
+		$('.ui-icon-return').click(function(){
+			if($(this).data('href')){
+				location.href= $(this).data('href');
+			}
+		});
+	
+})();
+</script>
+</body>
+
+</html>

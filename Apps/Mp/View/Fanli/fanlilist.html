@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>返利管理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">返利明细</A></div>
+<div class="nav_r"><if condition="$back eq '1' " ><a href="<{:U('Mp/Fanli/index')}>" >&lt;&lt; 返 回</a><else /><a href="javascript:window.history.go(-1);" >&lt;&lt; 返 回</a></if></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%">
+</div>
+<div style="float:right; width:69%; text-align:right">
+<form action="<{:U('Mp/Fanli/fanlilist')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　　
+<input    type="text" size="20" maxlength="20"  name="dlusername"  class="input"   onfocus="this.value=''"   value="<{$dlusername}>"   style="color:#999999"  >　<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="13%" style="text-align:left"><span>收款代理</span></th>
+<th  width="13%"  style="text-align:left" ><span>付款代理</span></th>
+<th  width="10%" ><span>返利类别</span></th>
+<th  width="8%" ><span>金额</span></th>
+<th  width="10%" ><span>时间</span></th>
+<th  width="15%"  ><span>相关订单</span></th>
+<th  width="19%"  ><span>说明</span></th>
+<th  width="6%"  ><span>状态</span></th>
+<th  width="6%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" style="text-align:left"  ><span><{$item.dl_name_str}></span></td>
+<td class="data" style="text-align:left" ><span><{$item.dl_sendname_str}></span></td>
+<td class="data"><span><{$item.fl_typestr}></span></td>
+<td class="data"><span><{$item.fl_moneystr}></span></td>
+<td class="data"><span><{$item.fl_addtime|date='Y-m-d H:i:s',###}></span></td>
+<td class="data"><span><if condition="($item.fl_orderid neq '') AND ($item.fl_orderid neq '0') "><a href="<{:U('Mp/Orders/orderdetail?od_id='.$item['fl_odid'].'&odbl_id='.$item['fl_odblid'].'')}>"  ><{$item.fl_orderid}></a></if></span></td>
+<td class="data"><span><{$item.fl_remark}></span></td>
+<td class="data"><span><{$item.fl_state_str}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Fanli/fanlidetail?fl_id='.$item['fl_id'].'')}>">详细</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

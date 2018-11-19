@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>价格体系</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Product/proprice')}>">价格体系</A>　&gt;　<A href="#">详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="10%" class="txtright" ></td>
+				  <td width="90%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >产品名称：</td>
+				  <td class="txtleft" ><{$proinfo.pro_name}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品编号：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_number}></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >零售价：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_price|number_format=2,'.',''}> 元</td>
+			  </tr>
+			  <foreach name='typelist' item='item'  key='key'>
+			  <tr>     
+                  <td height="40"  class="txtright" ><{$item.dlt_name}>：</td>
+				  <td  class="txtleft" >
+				  代理价：<{$item.priprice|number_format=2,'.',''}> 元　　
+				  最低补货：<{$item.pri_minimum}>　　
+				  <if condition="($item.pfl_fanli1 neq '') AND  ($item.pfl_fanli1 neq 0 )" >直推奖：<{$item.pfl_fanli1_str}>　</if>
+				  <if condition="($item.pfl_fanli2 neq '') AND  ($item.pfl_fanli2 neq 0 )" >间推奖：<{$item.pfl_fanli2_str}>　</if>
+				  <if condition="($item.pfl_fanli3 neq '') AND  ($item.pfl_fanli3 neq 0 )" >间推奖2：<{$item.pfl_fanli3_str}>　</if>
+				  <if condition="($item.pfl_fanli4 neq '') AND  ($item.pfl_fanli4 neq 0 )" >间推奖3：<{$item.pfl_fanli4_str}>　</if>
+				  <if condition="($item.pfl_fanli5 neq '') AND  ($item.pfl_fanli5 neq 0 )" >间推奖4：<{$item.pfl_fanli5_str}>　</if>
+				  <if condition="($item.pfl_fanli6 neq '') AND  ($item.pfl_fanli6 neq 0 )" >间推奖5：<{$item.pfl_fanli6_str}>　</if>
+				  <if condition="($item.pfl_fanli7 neq '') AND  ($item.pfl_fanli7 neq 0 )" >间推奖6：<{$item.pfl_fanli7_str}>　</if>
+				  <if condition="($item.pfl_fanli8 neq '') AND  ($item.pfl_fanli8 neq 0 )" >间推奖7：<{$item.pfl_fanli8_str}>　</if>
+				  <if condition="($item.pfl_fanli9 neq '') AND  ($item.pfl_fanli9 neq 0 )" >间推奖8：<{$item.pfl_fanli9_str}>　</if>
+				  <if condition="($item.pfl_fanli10 neq '') AND  ($item.pfl_fanli10 neq 0 )" >间推奖9：<{$item.pfl_fanli10_str}>　</if>
+				  <if condition="($item.pfl_maiduan neq '') AND  ($item.pfl_maiduan neq 0 )" >买断返：<{$item.pfl_maiduan_str}></if>
+				  </td>
+			  </tr>
+              </foreach>
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  ><input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			   
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

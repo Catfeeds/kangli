@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商出货记录</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header"/>
+<div class="main">
+<div class="bound">
+<div class="leftmenu">
+<include file="Com/leftmenu"/>
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">经销商出货记录</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%">
+<form action="<{:U('Mp/Shipment/dlshiplist')}>"   method="post" name="fmmm"  >
+<input    type="text" size="25" maxlength="25"  name="keyword"  class="input"   onfocus="this.value=''"   value="输入条码、出货单号"   style="color:#999999"  >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:69%; text-align:right">
+<form action="<{:U('Mp/Shipment/dlshiplist')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　
+<select name="proid"   class="select"  style="width:150px"   >
+					<option value="0">按产品过滤</option>
+					<volist name='productlist' id='vo' key='key' >
+					<option value="<{$vo.pro_id}>" <if condition="$vo.pro_id eq $pro_id" >selected</if>  ><{$vo.pro_name}></option>
+					</volist>
+				  </select>　
+<input    type="text" size="20" maxlength="20"  name="dlusername"  class="input"   onfocus="this.value=''"   value="<{$dlusername}>"   style="color:#999999"  >　<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="10%" ><span>条码</span></th>
+<th  width="10%" ><span>出货单号</span></th>
+<th  width="8%"  ><span>产品编号</span></th>
+<th  width="16%"  ><span>产品名称</span></th>
+<th  width="8%"  ><span>出货日期</span></th>
+<th  width="10%"  ><span>出货代理</span></th>
+<th  width="10%"  ><span>收货代理</span></th>
+<th  width="8%"  ><span>出货数量(小标)</span></th>
+</tr></thead>
+<tbody>
+<volist name='list' id='vo' key='key' >
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$vo.ship_barcode}></span></td>
+<td class="data" ><span><{$vo.ship_number}></span></td>
+<td class="data" ><span><{$vo.pro_number}></span></td>
+<td class="data" ><span><{$vo.pro_name}></span></td>
+<td class="data" ><span><{$vo.ship_date|date='Y-m-d',###}></span></td>
+<td class="data" ><span><{$vo.dl_name_send}></span></td>
+<td class="data" ><span><{$vo.dl_name}></span></td>
+<td class="data"><span><{$vo.ship_proqty}></span></td>
+</tr>
+</volist>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

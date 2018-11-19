@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品管理</title>
+<include file="Com/head" />
+<include file="Com/mobieditor" />
+<script type="text/javascript" >
+$(document).ready(function() {
+	$(".pro_jftype").click(function(){
+		if($(this).val()==1){
+			$("#gudingjf").show();
+			$("#suijijf").hide();
+		}else{
+			$("#gudingjf").hide();
+			$("#suijijf").show();
+		}
+	 });
+			 
+	$("#coloesize_add").click(function(){
+		var html = addcoloesize();
+		$("#coloesize").append(html);
+		
+	})	 
+			 
+			 
+});
+
+
+function addcoloesize()
+{
+	return '<div class="coloesize">颜色：<input name="attr_color[]" type="text" size="5" value="" class="input"  >　　尺码：<input name="attr_size[]" type="text" size="5" value="" class="input"   ><input type="hidden" name="attr_id[]" value="0"  ></div>';
+}
+</script>
+
+<style>
+
+.coloesize {
+padding:5px 0 5px 0
+}
+</style>
+</head>
+<body>
+<include file="Com/header" />
+
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Product/index')}>">产品管理</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Product/edit_save')}>" method="post" name="fmmm"  enctype="multipart/form-data" >
+<input type="hidden" value="<{$proinfo.pro_id}>" name="pro_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >产品名称：</td>
+				  <td class="txtleft" ><input    type="text" size="50" maxlength="50"  name="pro_name"  class="input"  value="<{$proinfo.pro_name}>"   >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 产品编号：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="pro_number" class="input" value="<{$proinfo.pro_number}>" > *</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 产品排序：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="pro_order" class="input" value="<{$proinfo.pro_order}>" > (空为默认排序，数字越大 排在越前)</td>
+			  </tr>
+			   <if condition="$qypurview.20006 eq '20006' ">
+			   <tr>     
+                  <td height="40"  class="txtright" > 零售价：</td>
+				  <td  class="txtleft" ><input type="text" size="10" maxlength="10"  name="pro_price" class="input" value="<if condition="($proinfo.pro_price neq '') AND ($proinfo.pro_price neq '0') "><{$proinfo.pro_price}></if>" > 元 *</td>
+			  </tr>
+			   </if>
+			    <!--<if condition="$qypurview.20012 eq '20012' ">-->
+			   <!--<tr>     -->
+                  <!--<td height="40"  class="txtright" > 库存：</td>-->
+				  <!--<td  class="txtleft" ><input type="text" size="10" maxlength="10"  name="pro_stock" class="input" value="<if condition="($proinfo.pro_stock neq '') AND ($proinfo.pro_stock neq '0') "><{$proinfo.pro_stock}></if>" ></td>-->
+			  <!--</tr>-->
+			   <!--</if>-->
+	<tr>
+		<td height="40"  class="txtright" > 库存：</td>
+		<td  class="txtleft" ><input type="text" size="10" maxlength="10"  name="pro_stock" class="input" value="" ></td>
+	</tr>
+			   <tr>
+                  <td height="40"  class="txtright" > 单位：</td>
+				  <td  class="txtleft" ><input type="text" size="10" maxlength="10"  name="pro_units" class="input" value="<{$proinfo.pro_units}>" > * 如：箱、盒</td>
+			  </tr>
+			   <if condition="$qypurview.20007 eq '20007' ">
+
+			  <tr>     
+                  <td height="40"  class="txtright" > 产品包装比例：</td>
+				  <td  class="txtleft" >大标：<input type="text" size="4" maxlength="4"  name="pro_dbiao" class="input" value="<{$proinfo.pro_dbiao}>" >　小标：<input type="text" size="4" maxlength="5"  name="pro_xbiao" class="input" value="<{$proinfo.pro_xbiao}>" >　　(一个包装单位里面大标与小标比例，如没有则不用填或为0)</td>
+			  </tr>
+			   </if>
+			   
+			   <tr>     
+                  <td height="40"  class="txtright" >产品类别：</td>
+				  <td  class="txtleft" >
+				  <select name="pro_typeid"   class="select" >
+					<option value="0"   >选择产品类别</option>
+					<volist name='typelist' id='vo' key='key' >
+					<option value="<{$vo.protype_id}>" style="font-weight:bold;" <{$vo.selected}> ><{$vo.protype_name}></option>
+					<volist name="vo['subarr']" id="sub">
+					<option value="<{$sub.protype_id}>"  <{$sub.selected}> >　├<{$sub.protype_name}></option>
+					</volist>
+					</volist>
+				  </select> *
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品主图：</td>
+				  <td  class="txtleft"  style="padding:5px 5px 10px 0" >
+				  <neq name="proinfo.pro_pic_str" value=""><a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic}>" target="_blank" ><{$proinfo.pro_pic_str}></a></neq> <input name="pic_file" type="file" /> (建议图片大小:600X600) <input type="hidden"  value="<{$proinfo.pro_pic}>" name="old_pro_pic" />
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品广告图：</td>
+				  <td  class="txtleft"  style="padding:5px 5px 10px 0" >
+				  <neq name="proinfo.pro_pic2_str" value=""><a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic2}>" target="_blank" ><{$proinfo.pro_pic2_str}></a> <a href="<{:U('Mp/Product/delpic?proid='.$proinfo['pro_id'].'&pic=2')}>" >删</a></neq> <input name="pic_file2" type="file" /> (建议图片宽度不大于1000,比例为：16：9) <input type="hidden"  value="<{$proinfo.pro_pic2}>" name="old_pro_pic2" />
+				  </td>
+			  </tr>
+<!-- 			   <tr>     
+                  <td height="40"  class="txtright" >产品图3：</td>
+				  <td  class="txtleft"  style="padding:5px 5px 10px 0" >
+				  <neq name="proinfo.pro_pic3_str" value=""><a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic3}>" target="_blank" ><{$proinfo.pro_pic3_str}> <a href="<{:U('Mp/Product/delpic?proid='.$proinfo['pro_id'].'&pic=3')}>"  >删</a></a></neq> <input name="pic_file3" type="file" /> (建议图片大小:600X600) <input type="hidden"  value="<{$proinfo.pro_pic3}>" name="old_pro_pic3" />
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品图4：</td>
+				  <td  class="txtleft"  style="padding:5px 5px 10px 0" >
+				  <neq name="proinfo.pro_pic4_str" value=""><a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic4}>" target="_blank" ><{$proinfo.pro_pic4_str}> <a href="<{:U('Mp/Product/delpic?proid='.$proinfo['pro_id'].'&pic=4')}>" >删</a></a></neq> <input name="pic_file4" type="file" /> (建议图片大小:600X600) <input type="hidden"  value="<{$proinfo.pro_pic4}>" name="old_pro_pic4" />
+				  </td>
+			  </tr> -->
+<!-- 			   <tr>     
+                  <td height="40"  class="txtright" >产品图5：</td>
+				  <td  class="txtleft"  style="padding:5px 5px 10px 0" >
+				  <neq name="proinfo.pro_pic5_str" value=""><a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic5}>" target="_blank" ><{$proinfo.pro_pic5_str}> <a href="<{:U('Mp/Product/delpic?proid='.$proinfo['pro_id'].'&pic=5')}>" >删</a></a></neq> <input name="pic_file5" type="file" /> (建议图片大小:600X600) <input type="hidden"  value="<{$proinfo.pro_pic5}>" name="old_pro_pic5" />
+				  </td>
+			  </tr> -->
+
+			  <if condition="$qypurview.20008 eq '20008' ">
+			   <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" > <input name="pro_jftype" type="radio" value="1"  class="pro_jftype" <eq name="proinfo.pro_jftype" value="1">checked</eq>  />固定积分　　　<input name="pro_jftype" type="radio" value="2" class="pro_jftype" <eq name="proinfo.pro_jftype" value="2">checked</eq> />随机积分 </td>
+			  </tr>
+			  
+			   <tr id="gudingjf" <eq name="proinfo.pro_jftype" value="2">style="display:none"</eq>  >     
+                  <td height="40"  class="txtright" >固定积分：</td>
+				  <td  class="txtleft" ><input type="text" size="5" maxlength="8"  name="pro_jifen" class="input" value="<{$proinfo.pro_jifen}>" > *</td>
+			  </tr>
+			   <tr id="suijijf" <eq name="proinfo.pro_jftype" value="1">style="display:none"</eq>  >     
+                  <td height="40"  class="txtright" >随机积分范围：</td>
+				  <td  class="txtleft" ><input type="text" size="5" maxlength="8"  name="pro_jifen2" class="input" value="<{$proinfo.pro_jifen}>" >　<input type="text" size="5" maxlength="8"  name="pro_jfmax" class="input" value="<{$proinfo.pro_jfmax}>" > *</td>
+			  </tr>
+			  </if>
+<!--		<if condition="$qypurview.15001 eq '15001' ">
+			  <tr >     
+                  <td height="40"  class="txtright" >代理积分：</td>
+				  <td  class="txtleft" ><input type="text" size="5" maxlength="8"  name="pro_dljf" class="input" value="<{$proinfo.pro_dljf}>" ></td>
+			  </tr>
+			   </if>
+-->
+         <if condition="$qypurview.20013 eq '20013' ">
+          <tr >     
+                  <td  class="txtright"  style="vertical-align:top; padding-top:5px">颜色尺码：</td>
+				  <td  class="txtleft" >
+				  <div  id="coloesize"  style="">
+				  <foreach name='colorlist' item='item'  key='key'>
+				  <div class="coloesize">颜色：<input name="attr_color[]" type="text" size="5" value="<{$item.attr_color}>" class="input"  >　　尺码：<input name="attr_size[]" type="text" size="5" value="<{$item.attr_size}>" class="input"   ><input type="hidden" name="attr_id[]" value="<{$item.attr_id}>"  ></div>
+				  </foreach>   
+				  </div>
+				  <div style="clear:both; height:10px; line-height:10px"></div>
+				  <div style="text-align:left"><a href="javascript:void(0);"  class="abotton" id="coloesize_add" >+ 颜色尺码</a></div>
+				   <div style="clear:both; height:20px; line-height:20px"></div>
+				  </td>
+		  </tr>
+
+          </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品描述：</td>
+				  <td  class="txtleft" ><textarea name="econtent" id="econtent" style="width:640px;height:500px;visibility:hidden;"><{$proinfo.pro_desc|htmlspecialchars}></textarea> <br /><br /></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft" ><textarea cols="50" rows="3" name="pro_remark"  ><{$proinfo.pro_remark}></textarea></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

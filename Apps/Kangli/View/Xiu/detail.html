@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>买家秀</title>
+<include file="Com/head" />
+<style>
+iframe{ width:100%}
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" onClick="history.back()"></i>
+	<h1>买家秀</h1>
+</header>
+<section class="ui-container" >
+<div style="text-align:center">
+<{$newsinfo.news_pic_str}>
+</div>
+
+<ul class="ui-list ui-list-text  ui-border-tb" > 
+    <li class="ui-border-t">
+        <p class="ui-nowrap"><b><{$newsinfo.news_title}></b></p>
+    </li>
+</ul>
+<div class="ui-whitespace" style="background-color:#FFFFFF; padding:15px" id="newsdesc" >
+<{$newsinfo.news_content}>
+</div>
+
+</section>
+<script>
+
+$('.ui-icon-return').click(function(){
+	if($(this).data('href')){
+		location.href= $(this).data('href');
+	}
+});
+
+window.onload = window.onresize = function () {
+    resizeIframe();
+}
+var resizeIframe=function(){
+    var bodyw=document.body.clientWidth;
+    for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
+
+        document.getElementsByTagName("iframe")[ilength].height = bodyw*3/4;//设定高度
+
+    }
+}
+</script>
+</body>
+</html>

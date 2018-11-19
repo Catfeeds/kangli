@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>积分明细</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfdetail/index')}>">积分明细</A>　&gt;　<A href="#">详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >积分用户：</td>
+				  <td class="txtleft" ><{$jfdetailinfo.jf_username}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 姓名：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_user_truename}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >积分：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_jf}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >积分类型：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_typestr}></td>
+			  </tr>
+			  <if condition="$jfdetailinfo.jf_code neq ''" >
+			  <tr>     
+                  <td height="40"  class="txtright" >积分码：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_code}></td>
+			  </tr>
+			  </if>
+			  <if condition="$jfdetailinfo.jf_type eq 1" >
+			   <tr>     
+                  <td height="40"  class="txtright" >积分产品：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_proname}> (ID:<{$jfdetailinfo.jf_proid}>)</td>
+			  </tr>
+			  </if>
+			  <if condition="$jfdetailinfo.jf_type eq 6" >
+			   <tr>     
+                  <td height="40"  class="txtright" >兑换礼品：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_proname}> (ID:<{$jfdetailinfo.jf_proid}>)</td>
+			  </tr>
+			  </if>
+			  <if condition="$jfdetailinfo.jf_pronumber neq ''" >
+			   <tr>     
+                  <td height="40"  class="txtright" >产品编号：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_pronumber}></td>
+			  </tr>
+			  </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_remark}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >操作IP：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_ip}></td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >操作时间：</td>
+				  <td  class="txtleft" ><{$jfdetailinfo.jf_addtime|date='Y-m-d H:i:s',###}></td>
+			  </tr>
+			   
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

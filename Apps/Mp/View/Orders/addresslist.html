@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发货地址</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">发货地址</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%">
+<form action="<{:U('Mp/Orders/addresslist')}>"   method="post" name="fmmm"  >
+<input    type="text" size="30" maxlength="30"  name="keyword"  class="input"  onfocus="this.value=''"   value="请填写姓名/电话/地址查询"   style="color:#999999"   >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:69%; text-align:right">
+
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="15%"  ><span>收货人</span></th>
+<th  width="15%" ><span>电话</span></th>
+<th  width="50%"  style="text-align:left" ><span>详细地址</span></th>
+<th  width="20%"  ><span>所属代理</span></th>
+</tr></thead>
+<tbody>
+<volist name='list' id='vo' key='key' >
+<tr class="<{$key%2 == 0?'odd':'even'}>"  >
+<td class="data" ><span><{$vo.dladd_contact}></span></td>
+<td class="data" ><span><{$vo.dladd_tel}></span></td>
+<td class="data" style="text-align:left"  ><span><{$vo.dladd_address}></span></td>
+<td class="data" ><span><{$vo.dl_name}></span></td>
+</tr>
+</volist>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div class="height10"></div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

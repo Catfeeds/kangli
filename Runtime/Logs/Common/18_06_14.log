@@ -1,0 +1,18 @@
+[ 2018-06-14T20:50:17+08:00 ] 192.168.1.135 /Kangli/Public/uploads/product/9999/1510556483_5913.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-06-14T20:52:19+08:00 ] 192.168.1.135 /Kangli/Public/uploads/product/9999/1510556483_5913.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-06-14T20:54:10+08:00 ] 192.168.1.135 /Kangli/Public/uploads/product/9999/1510556483_5913.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+

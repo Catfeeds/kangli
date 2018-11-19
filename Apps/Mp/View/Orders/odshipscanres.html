@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单产品出货</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Orders/cporders')}>">订单管理</A>　&gt;　<A href="#">订单产品出货</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Orders/odshipscanres_save')}>"   method="post" name="fmmm" >
+<input type="hidden" name="od_id" value="<{$od_id}>" />
+<input type="hidden" name="odbl_id" value="<{$odbl_id}>" />
+<input type="hidden" name="oddt_id" value="<{$oddt_id}>" />
+<input type="hidden" name="ship_whid" value="<{$ship_whid}>" />
+<textarea name="ship_remark" rows="0" cols="0"  style="visibility:hidden" ><{$ship_remark}></textarea>
+<textarea name="ship_barcode" rows="0" cols="0" style="visibility:hidden" ><{$ship_barcode}></textarea>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >出货订单：</td>
+				  <td class="txtleft" ><b><{$ordersinfo.oddt_orderid}></b> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货产品：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_proname}> (<{$ordersinfo.oddt_pronumber}>)
+		      </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >收货代理：</td>
+				  <td  class="txtleft" >
+				  <{$ordersbase.od_dl_name}> (<{$ordersbase.od_dl_username}>)
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货仓库：</td>
+				  <td  class="txtleft" >
+                  <{$ordersbase.od_wh_name}>
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >订购数量：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_qty}><{$ordersinfo.oddt_prounits}><{$ordersinfo.oddt_totalqty}>
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >已发数量：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_shipqty}>
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" style="padding:10px 0 5px 0" >
+				  <{$ship_remark|nl2br}>
+				  <br />
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" style="padding:10px 0 5px 0" >
+				  有效条码：<{$success}>　　　无效条码：<{$fail}>　　　出货产品数(小标)：<{$scancount}>
+		      </td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" valign="top" style="padding-top:8px" >产品条码：</td>
+				  <td  class="txtleft" >
+				  <table width="70%" border="0" cellspacing="0" cellpadding="0" >
+				  <foreach name='msgs' item='item'  key='key'>
+				  <tr>     
+                  <td height="30"  class="txtleft" ><{$item.barcode}></td>
+				  <td  class="txtleft" >
+                  <{$item.error}>
+		          </td>
+				  <td  class="txtleft" >
+                  <{$item.qty}>
+		          </td>
+			      </tr>
+				  </foreach>
+				  </table>
+				  <br />
+				  <br />
+		      </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认出货" class="botton"   id="submit" >　　　　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

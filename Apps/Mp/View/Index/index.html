@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>微商控价系统</title>
+<include file="Com/head" />
+<style>
+.follow {
+    border: 1px solid #eee;
+	float:left;
+	width:25%;
+	margin:0 30px 30px 0
+}
+.follow_t {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+	line-height:36px;
+}
+</style>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<nheq name="daishenjxs" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待审经销商</div>
+<div style="padding:10px; font-size:14px; line-height:36px">
+待审经销商 <b style="color:#FF0000"><{$daishenjxs}></b>　<a  href="<{:U('Mp/Dealer/index?dl_status=0')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+
+<nheq name="daichuliorders" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理订单</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理订单 <b style="color:#FF0000"><{$daichuliorders}></b>　<a  href="<{:U('Mp/Orders/cporders')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+
+<nheq name="daichulifanli" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理返利</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理返利 <b style="color:#FF0000"><{$daichulifanli}></b>　<a  href="<{:U('Mp/Fanli/paylist')}>" >[进入]</a>
+</div>
+</div>
+
+</nheq>
+
+<nheq name="daichulitixian" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理提现</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理提现 <b style="color:#FF0000"><{$daichulitixian}></b>　<a  href="<{:U('Mp/Capital/recashlist')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+
+<nheq name="daichulichongzhi" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理充值</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理充值 <b style="color:#FF0000"><{$daichulichongzhi}></b>　<a  href="<{:U('Mp/Capital/payinlist')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+
+<nheq name="daichuliduihuan" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理积分兑换</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理积分兑换 <b style="color:#FF0000"><{$daichuliduihuan}></b>　<a  href="<{:U('Mp/Dljf/dljfexch')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+
+<nheq name="daichuliliuyan" value="" >
+<div class="follow">
+<div class="follow_t" style="padding:0 0 0 10px">待处理留言</div>
+<div style="padding:10px; font-size:14px;line-height:36px">
+待处理留言 <b style="color:#FF0000"><{$daichuliliuyan}></b>　<a  href="<{:U('Mp/Jfmobi/feedback')}>" >[进入]</a>
+</div>
+</div>
+</nheq>
+<div class="height10"></div>
+</div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

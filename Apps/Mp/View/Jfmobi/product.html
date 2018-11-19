@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品展示</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">产品展示</A></div>
+<div class="nav_r"><eq name="qypurview.70008" value="70008"><a href="<{:U('Mp/Jfmobi/protypelist')}>">产品分类</a></eq>　<eq name="qypurview.20002" value="20002"><a href="<{:U('Mp/Jfmobi/proadd')}>">添加产品</a></eq></div>
+</div>
+<div class="height10"></div>
+<div>
+<form action="<{:U('Mp/Jfmobi/product')}>"   method="post" name="fmmm"  >
+<eq name="qypurview.70008" value="70008">
+<select name="pro_typeid"   class="select"  onChange="document.location.href ='<{:U('Mp/Jfmobi/product')}>?pro_typeid='+this.value;" >
+					<option value="0"   >选择产品类别</option>
+					<volist name='typelist' id='vo' key='key' >
+					<option value="<{$vo.protype_id}>" style="font-weight:bold;"  <{$vo.selected}> ><{$vo.protype_name}></option>
+					<volist name="vo['subarr']" id="sub">
+					<option value="<{$sub.protype_id}>"  <{$sub.selected}> >　├<{$sub.protype_name}></option>
+					</volist>
+					</volist>
+				  </select>　</eq><input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="5%" ><span>ID</span></th>
+<th  width="10%" ><span>图</span></th>
+<th  width="30%" style="text-align:left" ><span>产品名称</span></th>
+<th  width="15%" ><span>产品编号</span></th>
+<th  width="15%" ><span>产品类别</span></th>
+<th  width="10%"  ><span>添加时间</span></th>
+<th  width="5%"  ><span>状态</span></th>
+<th  width="10%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data"><span><{$item.pro_id}></span></td>
+<td class="data"><span><{$item.pro_pic_str}></span></td>
+<td class="data" style="text-align:left" ><span><{$item.pro_name}></span></td>
+<td class="data"><span><{$item.pro_number}></span></td>
+<td class="data"><span><{$item.pro_typeid_str}></span></td>
+<td class="data"><span><{$item.pro_addtime|date='Y-m-d',###}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Jfmobi/proactive?pro_id='.$item['pro_id'].'&pro_active='.$item['pro_active'].'')}>" ><img src="__PUBLIC__/mp/static/<{$item['pro_active'] == 0?'no':'yes'}>.gif" /></a></span></td>
+<td class="data"><span><a href="<{:U('Mp/Jfmobi/proedit?pro_id='.$item['pro_id'].'')}>">修改</a> <a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Jfmobi/prodelete?pro_id='.$item['pro_id'].'')}>';" >删除</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

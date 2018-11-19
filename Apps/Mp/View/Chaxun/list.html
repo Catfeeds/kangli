@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>防伪码查询记录</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">防伪码查询记录</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:40%">
+<form action="<{:U('Mp/Chaxun/fwlist')}>"   method="post" name="fmmm"  >
+防伪码：<input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:50%; text-align:right">
+<form action="<{:U('Mp/Chaxun/fwlist')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　
+<select name="statu"  ID="statu" style="width:100px">
+<option value=0   <eq name="statu" value="0"> selected </eq> >全部</option>	
+<option value="1" <eq name="statu" value="1"> selected </eq> >首次</option>
+<option value="2" <eq name="statu" value="2"> selected </eq> >重复</option>
+</select>　
+<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="25%" ><span>防伪码</span></th>
+<th  width="10%" ><span>查询状态</span></th>
+<th  width="20%" ><span>查询时间</span></th>
+<th  width="10%" ><span>查询方式</span></th>
+<th  width="20%" ><span>查询来源</span></th>
+<th  width="15%"  ><span>备注</span></th>
+
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data"><span><{$item.fwcode}></span></td>
+<td class="data"><span><{$item.querystatu}></span></td>
+<td class="data"><span><{$item.querydate}></span></td>
+<td class="data"><span><{$item.qutypestr}></span></td>
+<td class="data"><span><{$item.callerid}></span></td>
+<td class="data"><span><{$item.remark}></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

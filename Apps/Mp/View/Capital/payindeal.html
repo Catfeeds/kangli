@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>充值处理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Capital/payinlist')}>">充值记录</A>　&gt;　<A href="#">充值处理</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Capital/payindeal_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data"  >
+<input type="hidden" value="<{$payininfo.pi_id}>" name="pi_id" />
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft"  ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >充值代理：</td>
+				  <td  class="txtleft" ><{$payininfo.dl_name_str}></td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >充值金额：</td>
+				  <td  class="txtleft" ><{$payininfo.pi_moneystr}> 元</td>
+			  </tr>
+              <tr>     
+                  <td height="40"  class="txtright" >充值时间：</td>
+				  <td  class="txtleft" ><{$payininfo.pi_addtime|date='Y-m-d H:i:s',###}></td>
+			  </tr>
+              <tr>     
+                  <td height="40"  class="txtright" >充值备注：</td>
+				  <td  class="txtleft" ><{$payininfo.pi_remark}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >凭证：</td>
+				  <td  class="txtleft" >
+				  <neq name="payininfo.pi_pic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$payininfo.pi_pic}>" target="_blank" ><{$payininfo.pi_pic_str}></a></neq> 
+				  </td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >当前状态：</td>
+				  <td  class="txtleft" ><{$payininfo.pi_statestr}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft"  style="color:#FF0000" >充值步骤：确认充值到账之后，点击【代理资金】找到对应充值代理，再点击【增减余额】，进去后增加余额。</td>
+			  </tr>
+			  <tr>  <td height="80" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="&lt;&lt; 返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			  
+<eq name="payininfo.pi_state" value="0" >
+			  
+			  <tr>     
+                  <td height="40"  class="txtright" >处理状态：</td>
+				  <td  class="txtleft" >
+				  <select name="pi_state"   class="select"   >
+					<option value="0" selected >状态更改为　</option>
+					<option value="1" >充值成功</option>
+					<option value="2" >充值失败</option>
+				  </select>　*
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright"  >处理备注：</td>
+			     <td  class="txtleft" ><br><textarea  name="pi_dealremark"   rows="4"  cols="40" ><{$payininfo.pi_dealremark}></textarea><br><br></td>
+			  </tr>
+
+			  
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认处理" class="botton" >
+            </td>
+			 </tr>
+</eq>
+			 <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" >注：每个充值记录只能处理一次，确认处理完后不能再操作</td>
+			  </tr>
+
+			  
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

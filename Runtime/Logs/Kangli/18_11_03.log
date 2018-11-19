@@ -1,0 +1,1256 @@
+[ 2018-11-03T09:14:13+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.036002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.036002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0920s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0220s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_id` = 32 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 8 AND `dlt_level` = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 78 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0230s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0080s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0080s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0080s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541207653 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541207653 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 2 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T09:14:15+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 155 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 155 AND `ship_dealer` = 78 LIMIT 1   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T09:14:16+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0050s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0050s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0060s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T09:14:17+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.027002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0100s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_type` = 14 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T09:14:19+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.071004s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.071004s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 155 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 155 AND `ship_dealer` = 78 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T09:14:20+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0050s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 8 AND `dlt_level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 78 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0060s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0060s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0050s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541207660 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541207660 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 2 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:12:27+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0130s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0130s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0200s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:12:29+08:00 ] ::1 /Kangli/Kangli/apply
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.024001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.024001s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0110s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:13:45+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.020001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0120s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 78 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:13:49+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 8 AND `dlt_level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 78 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 78 AND `dl_unitcode` = '9999' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '78' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541232829 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 78 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541232829 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 78 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 2 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:13:49+08:00 ] ::1 /kangli/Kangli/Dealer/login/ttamp/1541232829/sture/29d536ea65e4952f660a56037c21865e/tagpage/aHR0cDovL2xvY2FsaG9zdC9LYW5nbGkvS2FuZ2xpL01pbmU=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.020001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:13:53+08:00 ] ::1 /Kangli/Kangli/Dealer/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.024002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_username` = 'test' AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_log` [ RunTime:0.0130s ]
+SQL: INSERT INTO `fw_log` (`log_qyid`,`log_user`,`log_qycode`,`log_action`,`log_type`,`log_addtime`,`log_ip`,`log_link`,`log_remark`) VALUES ('32','test','9999','经销商账号登录','2','1541232833','0.0.0.0','/Kangli/Kangli/Dealer/login','') [ RunTime:0.0220s ]
+SQL: UPDATE `fw_dealer` SET `dl_logintime`='1541232833' WHERE `dl_username` = 'test' AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+
+[ 2018-11-03T16:13:56+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.019001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:13:58+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.022001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022001s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 14 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:14:00+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.020001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0120s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:14:01+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.022001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:33:41+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.018001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 14 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:33:43+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.027002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0130s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:31+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.020001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:34+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0130s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 7 AND `dlt_level` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 32 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234134 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234134 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 1 LIMIT 1000   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:35+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:38+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.022002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022002s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 14 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:39+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.020002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 7 AND `dlt_level` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 32 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234139 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234139 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 1 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:40+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.019001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:44+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021002s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_type` = 14 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:46+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.031001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031001s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0120s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0130s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 32 AND `dl_unitcode` = '9999'  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_level`,`dl_status`,`dl_type` FROM `fw_dealer` WHERE `dl_belong` = 78 AND `dl_unitcode` = '9999'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = 32 AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:49+08:00 ] ::1 /Kangli/Kangli/Orders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021001s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` = 9 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` < '8' AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 0 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` = 3 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: parameter D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\OrdersController.class.php 第 96 行.
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_virtualstock` = 0 ORDER BY od_addtime DESC LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 158 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 158 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 157 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 157 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 153 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 5 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 5 AND `ship_unitcode` = '9999' AND `ship_odid` = 153 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 151 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_pic` FROM `fw_product` WHERE `pro_id` = 12 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 12 AND `ship_unitcode` = '9999' AND `ship_odid` = 151 AND `ship_dealer` = 32 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:51+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.024001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025001s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 7 AND `dlt_level` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 32 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0130s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234151 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234151 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 1 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-11-03T16:35:56+08:00 ] ::1 /Kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.022002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022002s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dlt_id`,`dlt_name` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' AND `dlt_id` = 7 AND `dlt_level` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(fl_money) AS tp_sum FROM `fw_fanlidetail` WHERE `fl_dlid` = 32 AND `fl_unitcode` = '9999' AND `fl_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fw_dealer` SET `dl_fanli`='0' WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0120s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_rcdlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 1 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0110s ]
+SQL: SELECT * FROM fw_orders a,fw_orderdetail b WHERE a.od_unitcode = '9999' AND a.od_state IN ('0','1','2','3','8') AND a.od_oddlid = '32' AND a.od_id =b.oddt_odid AND a.od_virtualstock = 0 ORDER BY a.od_addtime DESC  [ RunTime:0.0030s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_total) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234156 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(od_expressfee) AS tp_sum FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_oddlid` = 32 AND `od_state` IN ('3','8') AND `od_virtualstock` = 1 AND `od_fugou` = 1 AND `od_addtime` BETWEEN 1541001600 AND 1541234156 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_virtualstock` = 1 AND `od_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = 32 AND `od_state` IN ('1','2') AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_level` = 1 LIMIT 1000   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+

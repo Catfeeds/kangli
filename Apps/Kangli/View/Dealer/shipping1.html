@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>选择下级经销商</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Kangli/css/font.css" />
+<style>
+.ui-form-item-r button {color: #FFFFFF;}
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return" data-href="<{:U('./Kangli/Dealer/shipscanlist')}>" ></i><h1>选择下级经销商</h1>
+</header>
+<section class="ui-container" >
+<ul class="ui-list ui-list-text ui-border-tb">
+    <li class="ui-border-t active">
+        <div class="ui-list-info">
+            <h4 class="ui-nowrap">出货单号：<{$jxoddcount}></h4>
+        </div>
+    </li>
+</ul>
+
+<div class="ui-whitespace">
+<p>　</p>
+</div>
+
+
+<div class="ui-form ui-border-t">
+    <form action="<{:U('./Kangli/Dealer/shipping')}>"  id="fmm"  method="get" >
+	<input type="hidden" value="1"  name="step" >
+     <div class="ui-form-item ui-border-b">
+            <label>选择经销商</label>
+            <div class="ui-select">
+                <select id="ship_dealer" name="ship_dealer" >
+                    <foreach name='list' item='item'  key='key'>
+                    <option value="<{$item.dl_id}>" ><{$item.dl_name}> (<{$item.dl_weixin}>)</option>
+					</foreach>
+                </select>
+            </div>
+     </div>
+    </form>
+</div>
+
+	
+<div class="ui-footer ui-footer-stable ui-btn-group ui-border-t">
+    <button class="ui-btn-lg"  id="shipscanlist"  data-href="<{:U('./Kangli/Dealer/shipscanlist')}>" >
+        已扫<{$scancount}>条记录
+    </button>
+    <button class="ui-btn-lg"  id="shiping"   >
+        确认出货
+    </button>
+</div>
+
+</section>
+
+
+<script>
+(function (){
+        $("#shiping").click(function(){
+            if($("#ship_dealer").val() == "") { 
+				mpoptips("请选择下级经销商","warn",2000);
+				return false; 
+			} 
+			$("#fmm").submit();
+        });
+		
+		
+		$('.ui-icon-return').click(function(){
+			if($(this).data('href')){
+				location.href= $(this).data('href');
+			}
+		});
+		
+		$('#shipscanlist').click(function(){
+			if($(this).data('href')){
+				location.href= $(this).data('href');
+			}
+		});
+		
+	
+})();
+</script>
+
+</body>
+
+</html>

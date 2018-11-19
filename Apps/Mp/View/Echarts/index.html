@@ -1,0 +1,107 @@
+<!DOCTYPE >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大数据统计</title>
+<include file="Com/head"/>
+</head>
+<style type="text/css">
+  #screenFull
+  {
+
+  }
+</style>
+<body>
+<include file="Com/header"/>
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">大数据统计</A></div>
+<div class="nav_r"><a href="javascript:fullScreen()">全屏显示</a></div>
+</div>
+<div class="content">
+    <iframe id='content_body' src="<{:U('Mp/echarts/fullscreen')}>" frameborder="0" width="100%" height='100%'></iframe>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+<script language="JavaScript">
+var initWidth=window.innerWidth;
+//自适应屏幕
+function resize(){
+    // var width=window.innerWidth;
+    var width=$('.content').width();
+    initWidth=width;
+    var hscale=width/1920;
+    document.getElementById("content_body").style.height=hscale*1080 +"px";
+}
+//全屏功能
+function fullScreen(){
+  var width=window.innerWidth;
+  var scale=width/1920;
+  var elem = document.getElementById("content_body");     
+      elem.style.height=scale*1080 +"px";
+      // elem.style.transform='scale('+scale+')';
+      // elem.style.width = "100%";
+      // elem.style.height = "100%";
+      // elem.style.overflowY = "scroll";
+      // requestFullScreen(document.documentElement); // 整个网页
+      requestFullScreen(elem); // 某个页面元素
+}  
+
+// function requestFullScreen(element) {    
+//     var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;    
+//     if (requestMethod) {      
+//         requestMethod.call(element);    
+//     } else if (typeof window.ActiveXObject !== "undefined") {      
+//         var wscript = new ActiveXObject("WScript.Shell");    
+//         if (wscript !== null) {    
+//             wscript.SendKeys("{F11}");    
+//         }    
+//     }    
+// }
+// 
+function requestFullScreen(element) {
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    }
+//FireFox
+    else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    }
+//Chrome等
+    else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+    }
+//IE11
+    else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }else{
+        isFull=false;
+        alert("当前浏览器不支持全屏化操作！");
+    }
+};
+
+//监听全屏状态
+window.onresize = function() {
+    var elem = document.getElementById("content_body").contentDocument||document.getElementById("content_body").contentWindow.document;    
+    // console.log(elem.documentElement.scrollWidth);
+    if (elem.documentElement.scrollWidth==initWidth)
+    {
+      var hscale=initWidth/1920;
+      // console.log(hscale);
+      // document.getElementById("content_body").style.width="100%;
+      document.getElementById("content_body").style.height=hscale*1080 +"px";
+      document.getElementById("content_body").style.transform='';
+    }
+}
+resize();
+</script>  
+</html>

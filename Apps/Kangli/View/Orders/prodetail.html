@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>订货产品</title>
+<include file="Com/head" />
+<style>
+.prodesc img{width:100%}
+
+.ui-slider {
+       padding-top: <{$wvsh}>; /*滚图宽高比*/
+
+}
+
+
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return"  data-href="<{:U('./Kangli/Orders/prolist')}>"  ></i><h1>订货产品</h1>
+</header>
+<section class="ui-container" >
+<div class="ui-slider">
+    <ul class="ui-slider-content" style="width: 300%" >
+       <if condition="$proinfo.pro_pic neq '' ">
+        <li ><span style="background-image:url(__PUBLIC__/uploads/product/<{$proinfo.pro_pic}>)"></span></li>
+       </if>
+	    <if condition="$proinfo.pro_pic2 neq '' ">
+        <li ><span style="background-image:url(__PUBLIC__/uploads/product/<{$proinfo.pro_pic2}>)"></span></li>
+       </if>
+	    <if condition="$proinfo.pro_pic3 neq '' ">
+        <li ><span style="background-image:url(__PUBLIC__/uploads/product/<{$proinfo.pro_pic3}>)"></span></li>
+       </if>
+	    <if condition="$proinfo.pro_pic4 neq '' ">
+        <li ><span style="background-image:url(__PUBLIC__/uploads/product/<{$proinfo.pro_pic4}>)"></span></li>
+       </if>
+	    <if condition="$proinfo.pro_pic5 neq '' ">
+        <li ><span style="background-image:url(__PUBLIC__/uploads/product/<{$proinfo.pro_pic5}>)"></span></li>
+       </if>
+    </ul>
+</div>
+<script>
+(function (){
+	var slider = new fz.Scroll('.ui-slider', {
+		role: 'slider',
+		indicator: true,
+		autoplay: true,
+		interval: 3000
+	});
+
+	slider.on('beforeScrollStart', function(fromIndex, toIndex) {
+		console.log(fromIndex,toIndex)
+	});
+
+	slider.on('scrollEnd', function(cruPage) {
+		console.log(cruPage)
+	});
+})();
+</script>	
+
+<ul class="ui-list ui-list-text  ui-border-tb" > 
+    <li class="ui-border-t">
+        <p class="ui-nowrap"><b><{$proinfo.pro_name}></b></p>
+    </li>
+	 <li class="ui-border-t">
+        <p class="ui-nowrap">产品编号：<{$proinfo.pro_number}></p>
+    </li>
+    <if condition="($proinfo.pro_price neq '') AND ($proinfo.pro_price neq '0') ">
+	 <li class="ui-border-t">
+        <p class="ui-nowrap">零售价：<{$proinfo.pro_price|number_format=2,'.',''}> 元</p>
+    </li>
+	</if>
+	<if condition="($proinfo.pro_dlprice neq '') AND ($proinfo.pro_dlprice neq '0') ">
+	 <li class="ui-border-t">
+        <p class="ui-nowrap">代理价：<{$proinfo.pro_dlprice|number_format=2,'.',''}> 元</p>
+    </li>
+	</if>
+	
+	 <li class="ui-border-t">
+	    <div class="ui-list-info">
+		<h4 class="ui-nowrap">颜色：</h4>
+        <p class="ui-nowrap" style="text-overflow:unset;white-space:unset;">
+		<foreach name='colorlist' item='item'  key='key'>
+		<button class="ui-btn ui-btn-progress colorbtn" data-value="<{$item.attr_color}>" data-sizes="<{$item.sizes}>"   style="margin-bottom:5px" ><{$item.attr_color}></button>　
+		</foreach>
+		</p>
+		</div>
+    </li>
+	 <li class="ui-border-t">
+	    <div class="ui-list-info">
+		<h4 class="ui-nowrap">尺码：</h4>
+        <p class="ui-nowrap" style="text-overflow:unset;white-space:unset;">
+		<foreach name='sizelist' item='item'  key='key'>
+		<button class="ui-btn ui-btn-progress sizebtn" data-value="<{$item.attr_size}>"   data-colors="<{$item.colors}>"  style="margin-bottom:5px" ><{$item.attr_size}></button>　
+		</foreach>
+		</p>
+		</div>
+    </li>
+
+</ul>
+<div class="ui-btn-wrap">
+<form action="<{:U('./Kangli/Orders/addshopcart')}>" id="fmm"  method="post"  >
+<input type="hidden" id="pro_id" name="pro_id"  value="<{$proinfo.pro_id}>" >
+<input type="hidden" id="color"  name="color"  value="" >
+<input type="hidden" id="size"  name="size"  value="" >
+<input type="hidden" id="qty"  name="qty"  value="1" >
+</form>
+    <button class="ui-btn-lg ui-btn-primary"  id="addshopcart"  data-href="" >
+        加入购物车
+    </button>
+
+</div>
+
+<div class="ui-whitespace" style="background-color:#FFFFFF; padding:15px"  id="prodesc">
+<{$proinfo.pro_desc}>
+<br>
+<br>
+<br>
+</div>
+</section>
+<script>
+$('.colorbtn').click(function(){
+    if(!$(this).hasClass("disabled")){
+		$('.colorbtn').each(function(index, domEle){
+			if($(domEle).hasClass("ui-btn-primary")){
+				 $(domEle).addClass("ui-btn-progress");
+				 $(domEle).removeClass("ui-btn-primary");
+				 
+			}
+		});
+		
+		$(this).addClass("ui-btn-primary");
+		$(this).removeClass("ui-btn-progress");
+	
+		if($(this).data('value')){
+			$("#color").val($(this).data('value'));
+			$("#size").val("");
+		}
+		
+		if($(this).data('sizes')){
+			var sizes=$(this).data('sizes');
+			$('.sizebtn').each(function(index, domEle){
+			    if(sizes.indexOf($(domEle).data('value')) > 0 ){
+					if($(domEle).hasClass("ui-btn-primary")){
+					     $(domEle).addClass("ui-btn-progress");
+						 $(domEle).removeClass("ui-btn-primary");
+					}
+					
+					if($(domEle).hasClass("disabled")){
+					     $(domEle).addClass("ui-btn-progress");
+						 $(domEle).removeClass("disabled");
+					}
+				}else{
+					if($(domEle).hasClass("ui-btn-primary")){
+					     $(domEle).addClass("disabled");
+						 $(domEle).removeClass("ui-btn-primary");
+					}
+					
+					if($(domEle).hasClass("ui-btn-progress")){
+					     $(domEle).addClass("disabled");
+						 $(domEle).removeClass("ui-btn-progress");
+					}
+				}
+			});
+		}
+	}
+});
+
+$('.sizebtn').click(function(){
+    if(!$(this).hasClass("disabled")){
+		$('.sizebtn').each(function(index, domEle){
+			if($(domEle).hasClass("ui-btn-primary")){
+				 $(domEle).addClass("ui-btn-progress");
+				 $(domEle).removeClass("ui-btn-primary");
+				 
+			}
+		});
+		
+		$(this).addClass("ui-btn-primary");
+		$(this).removeClass("ui-btn-progress");
+	
+		if($(this).data('value')){
+			$("#size").val($(this).data('value'));
+		}
+    }
+});
+
+
+$("#addshopcart").click(function(){
+	if($("#color").val() == "") { 
+		mpoptips("请选择颜色","warn",2000);
+		return false; 
+	} 
+	if($("#size").val() == "") { 
+		mpoptips("请选择尺码","warn",2000);
+		return false; 
+	} 
+
+	
+	$("#fmm").submit();
+  
+});
+
+
+$('.ui-icon-return').click(function(){
+	if($(this).data('href')){
+		location.href= $(this).data('href');
+	}
+});
+
+$('.ui-list li').click(function(){
+	if($(this).data('href')){
+		location.href= $(this).data('href');
+	}
+});
+
+
+$('#addshopcart').click(function(){
+	if($(this).data('href')){
+		location.href= $(this).data('href');
+	}
+});
+
+$('.ui-btn-s').click(function(){
+	if($(this).data('href')){
+		location.href= $(this).data('href');
+	}
+});
+
+</script>
+</body>
+</html>

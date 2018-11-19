@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>入库导入</title>
+		<include file="Com/head" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+	</head>
+
+	<body>
+		<include file="Com/header" />
+		<div class="main">
+			<div class="bound">
+				<div class="leftmenu">
+					<include file="Com/leftmenu" />
+				</div>
+				<div class="rightcontent">
+					<div class="content_nav">
+						<div class="nav_l">
+							<a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;
+							<A href="<{:U('Mp/Storage/index')}>">入库记录</A>　&gt;　<A href="#">入库导入</A>
+						</div>
+						<div class="nav_r"></div>
+					</div>
+					<div class="height20"></div>
+					<div class="content">
+					<form action="<{:U('Mp/Storage/import_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+							<input type="hidden" name="stor_id" value="<{$storageinfo.stor_id}>" />
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td height="40" width="25%" class="txtright"></td>
+									<td width="75%" class="txtleft"></td>
+								</tr>
+								<tr>
+									<td height="40" class="txtright">入库单号：</td>
+									<td class="txtleft">
+										<input type="text" size="25" maxlength="32" id="stor_number" name="stor_number" class="input" value="<{$storageinfo.stor_number}>"> *
+									</td>
+								</tr>
+								<tr>
+									<td height="40" class="txtright">入库仓库：</td>
+									<td class="txtleft">
+										<select name="stor_whid" id="stor_whid" class="select">
+											<option value="0">选择仓库</option>
+											<volist name='warehouselist' id='vo' key='key'>
+												<option value="<{$vo.wh_id}>" <if condition="$storageinfo.stor_whid eq $vo.wh_id ">selected</if> >
+													<{$vo.wh_name}>
+												</option>
+											</volist>
+										</select> *
+									</td>
+								</tr>
+								<tr>
+									<td height="40" class="txtright">入库产品：</td>
+									<td class="txtleft">
+										<select name="stor_pro" class="select" id="stor_pro">
+											<option value="0">选择产品</option>
+											<volist name='productlist' id='vo' key='key'>
+												<option value="<{$vo.pro_id}>" <if condition="$storageinfo.stor_pro eq $vo.pro_id ">selected</if> >
+													<{$vo.pro_name}>
+												</option>
+											</volist>
+										</select> *
+									</td>
+								</tr>
+								<gt name="$storageinfo.proattrlist|count" value='0'>
+									<tr>
+										<td height="40" class="txtright">颜色尺码：</td>
+										<td class="txtleft">
+											<select name="stor_color" class="select" id="stor_color">
+												<option value="0">颜色</option>
+											</select>
+											<select name="stor_size" class="select" id="stor_size">
+												<option value="0">尺码</option>
+											</select>
+											*
+											<input type="hidden" name="pro_attrcolor" id="pro_attrcolor">
+											<input type="hidden" name="pro_attrsize" id="pro_attrsize">
+										</td>
+									</tr>
+								</gt>
+								<eq name="qypurview.6004" value="6004">
+									<tr>
+										<td height="40" class="txtright">生产日期：</td>
+										<td class="txtleft">
+											<input type="text" size="25" maxlength="32" name="stor_prodate" class="input" value="<{$storageinfo.stor_number}>">
+										</td>
+									</tr>
+								</eq>
+								<eq name="qypurview.6004" value="6004">
+									<tr>
+										<td height="40" class="txtright">生产批号：</td>
+										<td class="txtleft">
+											<input type="text" size="25" maxlength="32" name="stor_batchum" class="input" value="<{$storageinfo.stor_number}>">
+										</td>
+									</tr>
+								</eq>
+								<tr>     
+                  <td height="40"  class="txtright" >条码文件：</td>
+				  <td  class="txtleft" >
+				   <input name="barcode_file" type="file" id="barcode_file" />
+		      </td>
+			  </tr>
+			    <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" >
+				  注：条码文件为txt文件，每个条码占一行
+		      </td>
+
+								<tr>
+									<td height="60"></td>
+									<td class="txtleft">
+										<input type="submit" name="Submit" value="<{$mtitle}>" class="botton" id="submit">
+										<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<div class="height20"></div>
+				</div>
+			</div>
+		</div>
+		<include file="Com/foot" />
+	</body>
+	<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" language="javascript">
+		var prolist = <{$productlist}>;
+		$("#stor_pro").html("<option value=''>选择产品</option>");
+		$.each(prolist, function(i, item) {
+			$("#stor_pro").append("<option value='" + item.pro_id + "'>" + item.pro_name + "</option>");
+		});
+		$("#stor_color").html("<option value=''>颜色</option>");
+		$("#stor_size").html("<option value=''>尺码</option>");
+		$("#pro_attrcid").val('');
+		$("#pro_attrcolor").val('');
+		$("#pro_attrsize").val('');
+		
+		var proattrs = <{$storageinfo.proattrlist}>;
+		var procheckid=0;
+		$(document).ready(function() {
+			$("#stor_date").datebox("setValue", "<{$storageinfo.stor_datestr}>");
+		});
+
+		var index = -1;
+		var attrlist=new Array();
+		var sizelist=new Array();
+		$("#stor_pro").change(function(){
+//			console.log(proattrs.length);
+			procheckid=$("#stor_pro").val();
+			if(proattrs instanceof Array && proattrs.length > 0) {
+				if(procheckid > 0) {
+				for(var i = 0; i < proattrs.length; i++) {
+					var obj = proattrs[i];
+					for(var name in obj) {
+						if(name == procheckid) {
+							index = i;
+							attrlist = obj[name];
+							break;
+						}
+					}
+					if(index >= 0)
+						break;
+				}
+				
+				$("#stor_color").html("<option value=''>颜色</option>");
+				$.each(attrlist, function(i, item) {
+						if (i==0)
+						{
+							$("#stor_color").append("<option value='" + item.value + "' selected>" + item.text + "</option>");
+							$("#pro_attrcolor").val(item.text);
+						}
+						else
+						$("#stor_color").append("<option value='" + item.value + "'>" + item.text + "</option>");
+				});
+				$("#stor_size").html("<option value=''>尺码</option>");
+						
+				$.each(attrlist[0].children, function(i, item) {
+						if (i==0)
+						{
+							$("#stor_size").append("<option value='" + item.value + "' selected>" + item.text + "</option>");
+							$("#pro_attrsize").val(item.text);
+						}
+						else
+							$("#stor_size").append("<option value='" + item.value + "'>" + item.text + "</option>");
+				});
+				}else
+				{
+					$("#stor_color").html("<option value='0'>颜色</option>");
+					$("#stor_size").html("<option value='0'>尺码</option>");
+					$("#pro_attrcid").val('');
+					$("#pro_attrcolor").val('');
+					$("#pro_attrsize").val('');
+				}
+			}
+		});
+		
+		$("#stor_color").change(function(){
+			var colpos=$("#stor_color").get(0).selectedIndex;//序号，取当前选中选项的序号
+			$("#stor_size").html("<option value=''>尺码</option>");
+			if (colpos>0)
+			{
+				$("#pro_attrcolor").val(attrlist[colpos-1].text);
+				$.each(attrlist[colpos-1].children, function(i, item) {
+					if (i==0){
+						$("#pro_attrsize").val(item.text);
+						$("#stor_size").append("<option value='" + item.value + "' selected>" + item.text + "</option>");
+					}
+					else
+						$("#stor_size").append("<option value='" + item.value + "'>" + item.text + "</option>");
+				});
+			}else
+			{
+				$("#pro_attrcolor").val('');
+				$("#stor_size").val('');
+			}
+		});
+		
+		$("#stor_size").change(function(){
+			var colpos=$("#stor_color").get(0).selectedIndex;//序号，取当前选中选项的序号
+			var sizepos=$("#stor_size").get(0).selectedIndex;//序号，取当前选中选项的序号
+			if (colpos>0&&sizepos>0)
+				$("#pro_attrsize").val(attrlist[colpos-1].children[sizepos-1].text);
+			else
+				$("#pro_attrsize").val('');
+		});
+		
+		$("#submit").click(function()
+		{
+			if ($("#stor_number").val()=='')
+			{
+				$.messager.alert('温馨提示','请填写入库单号');
+				return false;
+			}
+			if ($("#stor_whid").get(0).selectedIndex==0)
+			{
+				$.messager.alert('温馨提示','请选择入库仓库');
+				return false;
+			}
+			if ($("#stor_pro").get(0).selectedIndex==0)
+			{
+				$.messager.alert('温馨提示','请选择入库产品');
+				return false;
+			}
+			if ($("#stor_color").get(0).selectedIndex==0)
+			{
+				$.messager.alert('温馨提示','请选择产品颜色');
+				return false;
+			}
+			if ($("#stor_size").get(0).selectedIndex==0)
+			{
+				$.messager.alert('温馨提示','请选择产品尺码');
+				return false;
+			}
+			var fileName =$("#barcode_file").val();
+			if (fileName==''|| fileName == null)
+			{
+				$.messager.alert('温馨提示','请添加格式为txt的条码文件');
+				return false;
+			}的
+			var fileType = fileName.substring(fileName.lastIndexOf('.') + 1, fileName.length).toLocaleLowerCase();
+			if (fileType != 'txt') {
+				$.messager.alert('温馨提示','请上传格式正确的条码文件');
+				return false;
+			}
+		});
+		
+	</script>
+</html>

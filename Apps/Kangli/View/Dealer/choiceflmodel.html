@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>我推荐的代理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Kangli/css/font.css" />
+<style>
+
+</style>
+</head>
+<body ontouchstart >
+<header class="ui-header ui-header-positive ui-border-b">
+	<i class="ui-icon-return"  data-href="<{:U('./Kangli/Dealer/referee')}>"  ></i><h1>我推荐的代理</h1>
+</header>
+<section class="ui-container" >
+<div class="ui-whitespace">
+　
+</div>
+<ul class="ui-list ui-list-text  ui-border-tb">
+    <li class="ui-border-t">
+        <h4 class="ui-nowrap">姓名：<{$dlinfo.dl_name}></h4>
+    </li>
+	 <li class="ui-border-t">
+        <h4 class="ui-nowrap">微信号：<{$dlinfo.dl_weixin}></h4>
+    </li>
+	 <li class="ui-border-t">
+        <h4 class="ui-nowrap">手机号：<{$dlinfo.dl_tel}></h4>
+    </li>
+	<li class="ui-border-t">
+        <h4 class="ui-nowrap">申请时间：<{$dlinfo.dl_addtime|date='Y-m-d H:i:s',###}></h4>
+    </li>
+	<neq name="dlinfo.dlt_name" value="">
+	<li class="ui-border-t">
+        <h4 class="ui-nowrap">代理级别：<{$dlinfo.dlt_name}></h4>
+    </li>
+	</neq>
+	<li class="ui-border-t">
+        <h4 class="ui-nowrap">当前上家：<{$dlinfo.dl_belong_str}></h4>
+    </li>
+	<li class="ui-border-t">
+        <h4 class="ui-nowrap">可以选择以下三种模式：</h4>
+    </li>
+	<li class="ui-border-t">
+	1、升级到比当前代理更高的级别(选择此项请与上家或公司联系升级)
+	</li>
+	<li class="ui-border-t">
+	2、一次性获取该代理上家的返利,卖断给上家(选择此项请点击按钮确认)
+	<div class="ui-btn-s ui-btn-primary"  >确认选择</div>
+	</li>
+	<li class="ui-border-t">
+	3、仅保留推荐关系，不获取返利(选择此项不用操作，默认)
+	</li>
+
+</ul>
+
+     
+</section>
+<div class="ui-dialog">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+		    <h4>选择后则不能修改，确认选择？</h4>
+        </div>
+        <div class="ui-dialog-ft">
+            <button type="button" data-role="button" id="cancel"  style="z-index:9999" >取消</button>
+            <button type="button" data-role="button" id="confirm" style="z-index:9999"  >确认</button>
+        </div>
+    </div>        
+</div>
+
+<script>
+(function (){
+
+	$("#cancel").click(function(){
+		$(".ui-dialog-cnt").css('display','none');
+		$(".ui-dialog").css('display','none');
+		return false; 
+	});
+	
+	$("#confirm").click(function(){
+		$(".ui-dialog-cnt").css('display','none');
+		$(".ui-dialog").css('display','none');
+		location.href= "<{:U('./Kangli/Dealer/choiceflmodel_save?dl_id='.$dlinfo['dl_id'].'')}>";
+		return false; 
+	});
+	
+	$('.ui-icon-return').click(function(){
+		if($(this).data('href')){
+			location.href= $(this).data('href');
+		}
+	});	
+	$('.ui-btn-s').click(function(){
+	        $(".ui-dialog").css('display','-webkit-box');
+	        $(".ui-dialog-cnt").css('display','block');
+	});
+
+
+
+})();
+</script>
+</body>
+
+</html>

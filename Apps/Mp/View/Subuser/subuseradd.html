@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加子用户</title>
+<include file="Com/head" />
+<style>
+.purview {
+    background-color: #ddd;
+}
+.purview .tdl {
+    background-color: #eee;
+    padding: 0 0 0 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+.purview .tdr {
+    background-color: #fff;
+    padding: 8px 8px 0;
+    text-align: left;
+}
+.purview .tdr .son {
+    float: left;
+    padding: 0 0 8px;
+    width: 150px;
+}
+</style>
+
+<script type="text/javascript" >
+function check(list,obj)
+{
+
+	$(".sonbox").each(function(){
+	    if(list.indexOf($(this).val())>=0){
+		    if($(obj).prop("checked")){
+		       $(this).prop("checked",true);
+		    }else{
+		       $(this).prop("checked",false);
+		    }
+	    }
+    });
+}
+function checkrelevance(p,obj)
+{
+  if($(obj).prop("checked")){
+      $(p).prop("checked",true);
+  }
+}
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+	<div class="bound" >
+		<div class="leftmenu">
+			<include file="Com/leftmenu" />
+		</div>
+		<div class="rightcontent">
+			<div class="content_nav" >
+				<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Subuser/index')}>">子用户管理</A>　&gt;　<A href="#"><{$mtitle}></A></div>
+				<div class="nav_r"></div>
+			</div>
+			<div class="height20"></div>
+			<div class="content">
+				<form action="<{:U('Mp/Subuser/subuseradd_save')}>"   method="post" name="fmmm" >
+					<input type="hidden" name="su_id" value="<{$subuserinfo.su_id}>" />
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+						<tr>
+							<td height="40"   width="25%" class="txtright" ></td>
+							<td width="75%" class="txtleft" ></td>
+						</tr>
+						<tr>
+							<td height="40"  class="txtright" >子用户名：</td>
+							<td  class="txtleft" >
+								<if condition="$subuserinfo.su_id eq '0' ">
+									<{$qyuser}>:<input    type="text" size="25" maxlength="32"  name="su_username"  class="input"  value=""   >  *
+									<else/>
+									<{$qyuser}>:<{$subuserinfo.su_username}>
+								</if>
+							</td>
+						</tr>
+						<tr>
+							<td height="40"  class="txtright" >密　码：</td>
+							<td  class="txtleft" >
+								<input   size="25" maxlength="32"  name="su_pwd"  class="input"  value=""  type="password"  >  *
+							</td>
+						</tr>
+						<tr>
+							<td height="40"  class="txtright" >名称备注：</td>
+							<td  class="txtleft" >
+								<input    type="text" size="25" maxlength="32"  name="su_name"  class="input"  value="<{$subuserinfo.su_name}>"   >  *
+							</td>
+						</tr>
+
+							<tr>
+								<td height="40"  class="txtright" >权限：</td>
+								<td  class="txtleft" >
+
+									<table cellspacing="1" cellpadding="1"  class="purview" >
+										<tbody>
+										<foreach name='purview_arr' item='item'  key='key'>
+											<tr>
+												<td width="15%"    class="tdl" >
+													<input type="checkbox"  onclick="check('<{$item.ids}>',this);" value="<{$item.value}>" name="subadmin_purview[]"  id="parent_<{$item.value}>"   <{$item.checked}> > <{$item.pname}></td>
+												<td class="tdr" >
+													<foreach name="item['sub']" item='item2'  key='key2'>
+
+														<div class="son"><input type="checkbox" class="sonbox"  value="<{$item2.value}>" name="subadmin_purview[]" onClick="checkrelevance('#parent_<{$item2.value}>',this)" <{$item2.checked}> > <{$item2.pname}></div>
+
+													</foreach>
+												</td>
+											</tr>
+										</foreach>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+
+						<tr>  <td height="60" ></td>
+							<td  class="txtleft"  >
+								<foreach name='hide_arr' item='item'  key='key'>
+									<input type="hidden"  value="<{$item.value}>"  name="subhide_purview[]"  />
+								</foreach>
+
+								<input type="submit" name="Submit" value="<{$mtitle}>" class="botton"   id="submit" >　　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="height20"></div>
+		</div>
+	</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>调级申请</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="<{:U('Mp/Dealer/updatedltypelist')}>">调级申请</A>　&gt;　<A href="#">调级申请记录详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+
+<form action="<{:U('Mp/Dealer/updatedltypedeal')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$updateinfo.apply_id}>" name="apply_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >申请代理：</td>
+				  <td class="txtleft" ><{$updateinfo.dl_name_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >申请前上家：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_agobelong_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >申请前级别：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_agodltype_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >申请后上家：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_afterbelong_str}></td>
+			  </tr>
+			  
+			   <tr>  
+                  <td height="40"  class="txtright" >申请后级别：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_afterdltype_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >凭证：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_pic_str}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >当前状态：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_state_str}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >申请时间：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_addtime|date='Y-m-d H:m:s',###}></td>
+			  </tr>
+			  <if condition="($updateinfo.apply_dealtime neq '') AND ($updateinfo.apply_dealtime neq '0') ">
+			   <tr>     
+                  <td height="40"  class="txtright" >处理时间：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_dealtime|date='Y-m-d H:m:s',###}></td>
+			  </tr>
+			   </if>
+			 
+              <if condition="$updateinfo.apply_remark neq '' ">
+			   <tr>     
+                  <td height="40"  class="txtright" >处理备注：</td>
+				  <td  class="txtleft" ><{$updateinfo.apply_remark|nl2br}></td>
+			  </tr>
+              </if>
+			   
+			  <tr>  <td height="80" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+
+<eq name="updateinfo.apply_state" value="0" >
+			   <tr>     
+                  <td height="40"  class="txtright" >处理动作：</td>
+				  <td  class="txtleft" >
+				  <select id="apply_state" name="apply_state"  class="input"  >
+				  <option  value="" selected >选择处理结果 </option>
+				  <option value="1" >确认调整级别</option>
+				  <option value="2" >申请无效</option>
+				  </select>
+				   </td>
+			  </tr>
+			  
+              <tr>     
+                  <td height="40"  class="txtright" >处理备注：</td>
+			     <td  class="txtleft" ><textarea cols="50" rows="3" name="apply_remark"  id="apply_remark" ></textarea></td>
+			  </tr>
+              <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认处理" class="botton" >
+            </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" >注：每个调级记录只能处理一次，确认处理完后不能再操作</td>
+			  </tr>
+			  
+</eq>
+			  
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

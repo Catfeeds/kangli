@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/brandlist')}>">授权品牌</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dealer/brand_save')}>"   method="post" name="fmmm"   enctype="multipart/form-data"  >
+<input type="hidden" value="<{$brandinfo.br_id}>" name="br_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >品牌名称：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="br_name"  class="input"  value="<{$brandinfo.br_name}>"   >  * </td>
+			  </tr>
+              <tr>     
+                  <td height="40"  class="txtright" >图片：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <neq name="brandinfo.br_pic_str" value=""><a href="__PUBLIC__/uploads/product/<{$brandinfo.br_pic}>" target="_blank" ><{$brandinfo.br_pic_str}></a></neq> <input name="pic_file" type="file" /> (jpg,png格式) <input type="hidden"  value="<{$brandinfo.br_pic}>" name="old_br_pic" />
+				  </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

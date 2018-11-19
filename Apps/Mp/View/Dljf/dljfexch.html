@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼品兑换</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">礼品兑换</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<form action="<{:U('Mp/Dljfexch/index')}>"   method="post" name="fmmm"  >
+<input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="15%" style="text-align:left" ><span>兑换代理</span></th>
+<th  width="10%" ><span>姓名</span></th>
+<th  width="10%" ><span>电话</span></th>
+<th  width="5%" ><span>积分</span></th>
+<th  width="5%" ><span>数量</span></th>
+<th  width="22%"   style="text-align:left" ><span>兑换产品</span></th>
+<th  width="10%"  ><span>时间</span></th>
+<th  width="8%"  ><span>状态</span></th>
+<th  width="12%" ><span>操作</span></th>
+<th  width="3%"  ><span>备</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" style="text-align:left" ><span><a href="<{:U('Mp/Dealer/view?dl_id='.$item['exch_dlid'].'')}>"><{$item.dl_name_str}></a></span></td>
+<td class="data"><span><{$item.exch_contact}></span></td>
+<td class="data"><span><{$item.exch_tel}></span></td>
+<td class="data"><span><{$item.exch_jf}></span></td>
+<td class="data"><span><{$item.exch_qty}></span></td>
+<td class="data"  style="text-align:left" ><span><{$item.exchdetail}></span></td>
+<td class="data"><span ><{$item.exch_time|date='Y-m-d H:i:s',###}></span></td>
+<td class="data"><span ><{$item.exch_state_str}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Dljf/dljfexch_deal?exch_id='.$item['exch_id'].'')}>">处理</a>　<a href="<{:U('Mp/Dljf/dljfexch_view?exch_id='.$item['exch_id'].'')}>">详细</a></span></td>
+<td class="data"><neq name="item.exch_remark" value=""><span  title="<{$item.exch_remark}>"  style="cursor:pointer" >...</span></neq></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

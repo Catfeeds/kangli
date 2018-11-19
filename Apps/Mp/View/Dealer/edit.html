@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dealer/edit_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <if condition="$qypurview.90002 eq '90002'">
+			  <notempty  name="dealerinfo.dl_openid" >
+			   <tr>     
+                  <td height="40"   class="txtright" >已绑定微信</td>
+				  <td class="txtleft" ></td>
+			  </tr>
+			  <tr>
+				  <td height="40"  class="txtright" > OpenID：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_openid}>
+				  </td>
+			  </tr>
+              </notempty>
+              <notempty  name="dealerinfo.dl_wxnickname" >
+			  <tr>
+				  <td height="40"  class="txtright" > 微信名称：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_wxnickname}>
+				  </td>
+			  </tr>
+              </notempty>
+			  
+			  <notempty  name="dealerinfo.dl_wxheadimg" >
+			  <tr>
+				  <td height="40"  class="txtright" > 头像：</td>
+				  <td  class="txtleft" > <img src="<{$dealerinfo.dl_wxheadimg}>"    style="width:60px; height:60px" />
+				  </td>
+			  </tr>
+              </notempty>
+			  </if>
+			  <if condition="$qypurview.90001 eq '90001'" >
+				  <tr>     
+					  <td height="40"  class="txtright" > 登录账户：</td>
+					  <td  class="txtleft" >
+					  <if condition="$dealerinfo.dl_id neq '0'" >
+						  <notempty  name="dealerinfo.dl_username" >
+						  <{$dealerinfo.dl_username}>
+						  <else/>
+						  <input type="text" size="25" maxlength="25"  name="dl_username" class="input" value="" > * 用户名由 A--Z,a--z,0--9,_ 组成,4-20位
+						  </notempty>
+					  <else/>
+					    <input type="text" size="25" maxlength="25"  name="dl_username" class="input" value=""   > * 用户名由 A--Z,a--z,0--9,_ 组成,4-20位
+					  </if>
+					  </td>
+				  </tr>
+				  <tr>     
+					  <td height="40"  class="txtright" > 登录密码：</td>
+					  <td  class="txtleft" ><input  type="password" size="25" maxlength="25"  name="dl_pwd" class="input" value=""   > <notempty  name="dealerinfo.dl_username" >如果为空则不修改密码<else/> *</notempty></td>
+				  </tr>
+			  </if>
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商编号：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="dl_number"  class="input"  value="<{$dealerinfo.dl_number}>"   >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 经销商名称：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="50"  name="dl_name" class="input" value="<{$dealerinfo.dl_name}>" > *</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系人：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_contact" class="input" value="<{$dealerinfo.dl_contact}>" > *</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_tel" class="input" value="<{$dealerinfo.dl_tel}>" > *</td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >传真：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_fax" class="input" value="<{$dealerinfo.dl_fax}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地址：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="100"  name="dl_address" class="input" value="<{$dealerinfo.dl_address}>" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="100"  name="dl_email" class="input" value="<{$dealerinfo.dl_email}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_qq" class="input" value="<{$dealerinfo.dl_qq}>" > </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >微信号：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="50"  name="dl_weixin" class="input" value="<{$dealerinfo.dl_weixin}>" > 注:是微信号不是微信昵称 微信号由 A--Z,a--z,0--9,_-组成,6-20位</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >身份证：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_idcard" class="input" value="<{$dealerinfo.dl_idcard}>" > </td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"  class="txtright" >身份证图片：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  正面：<neq name="dealerinfo.dl_idcardpic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_idcardpic}>" target="_blank" ><{$dealerinfo.dl_idcardpic_str}></a></neq> <input name="pic_file" type="file" /> (建议图片大小不要超500k)  <input type="hidden"  value="<{$dealerinfo.dl_idcardpic}>" name="old_idcardpic" />
+				 
+				 <br /><br />
+				 背面：<neq name="dealerinfo.dl_idcardpic2_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_idcardpic2}>" target="_blank" ><{$dealerinfo.dl_idcardpic2_str}></a></neq> <input name="pic_file2" type="file" />  <input type="hidden"  value="<{$dealerinfo.dl_idcardpic2}>" name="old_idcardpic2" />
+				  </td>
+			  </tr>
+			  
+			  <tr>     
+                  <td height="40"  class="txtright" >授权证书：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <neq name="dealerinfo.dl_pic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_pic}>" target="_blank" ><{$dealerinfo.dl_pic_str}></a></neq>
+				  </td>
+			  </tr>
+			  <if condition="$dealerinfo.dl_stockpic neq ''">
+				  <tr>     
+	                  <td height="40"  class="txtright" >股权证书：</td>
+					  <td  class="txtleft"  style="padding:10px 0 10px 0">
+					  <neq name="dealerinfo.dl_pic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_stockpic}>" target="_blank" ><{$dealerinfo.dl_stockpic_str}></a></neq>
+					  </td>
+				  </tr>
+			   </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft"   ><textarea cols="60" rows="5" name="dl_remark"  ><{$dealerinfo.dl_remark}></textarea>(100字内)</td>
+			  </tr>
+              <eq name="qypurview.10005" value="10005">
+			  <tr>     
+                  <td height="40"  class="txtright" >经销商级别：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dlt_name}>
+				  </td>
+			  </tr>
+			   </eq>
+			    <neq name="dealerinfo.dlstt_name" value="">
+			    <tr>     
+					  <td height="40"  class="txtright" >门店级别：</td>
+					  <td  class="txtleft" >
+					   <{$dealerinfo.dlstt_name}>
+					  </td>
+				  </tr>
+			   </neq>
+			   
+			   <eq name="qypurview.90003" value="90003">
+			  <tr>     
+                  <td height="40"  class="txtright" >上家经销：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_belong_name}> 
+				  </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >推荐人：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_referee_name}> 
+				  </td>
+			  </tr>
+			   </eq>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >&nbsp;&nbsp;&nbsp;&nbsp;<if condition="$atitle2 neq ''"><input type="submit" name="Submit" value="<{$atitle2}>" class="botton" ></if><a href="<{:U('Mp/Dealer/index?dl_type='.$dl_type.'&dl_status='.$dl_status.'')}>" class="botton"><< 返 回</a>
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

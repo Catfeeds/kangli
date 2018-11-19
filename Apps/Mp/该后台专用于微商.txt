@@ -1,0 +1,3 @@
+该后台专用于微商
+jquery-confirm
+http://craftpip.github.io/jquery-confirm/#installation

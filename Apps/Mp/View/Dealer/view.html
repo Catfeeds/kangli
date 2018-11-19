@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#">经销商详情</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			 
+              <if condition="$qypurview.90002 eq '90002'" >
+			  <notempty  name="dealerinfo.dl_openid" >
+			   <tr>     
+                  <td height="40"   class="txtright" >已绑定微信</td>
+				  <td class="txtleft" ></td>
+			  </tr>
+			  <tr>
+				  <td height="40"  class="txtright" > OpenID：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_openid}>
+				  </td>
+			  </tr>
+              </notempty>
+              <notempty  name="dealerinfo.dl_wxnickname" >
+			  <tr>
+				  <td height="40"  class="txtright" > 微信名称：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_wxnickname}>
+				  </td>
+			  </tr>
+              </notempty>
+			  
+			  <notempty  name="dealerinfo.dl_wxheadimg" >
+			  <tr>
+				  <td height="40"  class="txtright" > 头像：</td>
+				  <td  class="txtleft" > <img src="<{$dealerinfo.dl_wxheadimg}>"    style="width:60px; height:60px" />
+				  </td>
+			  </tr>
+              </notempty>
+			  </if>
+			
+               <if condition="$qypurview.90001 eq '90001'" >
+				  <tr>     
+					  <td height="40"  class="txtright" > 登录账户：</td>
+					  <td  class="txtleft" >
+						  <notempty  name="dealerinfo.dl_username" >
+						  <{$dealerinfo.dl_username}>
+						  </notempty>
+					  </td>
+				  </tr>
+			  </if>
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商编号：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_number}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 经销商名称：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_name}></td>
+			  </tr>
+			   <eq name="qypurview.10005" value="10005">
+				  <tr>     
+					  <td height="40"  class="txtright" >经销商级别：</td>
+					  <td  class="txtleft" >
+					   <{$dealerinfo.dl_type_str}>
+					  </td>
+				  </tr>
+			   </eq>
+			   <neq name="dealerinfo.dlstt_name" value="">
+			    <tr>     
+					  <td height="40"  class="txtright" >门店级别：</td>
+					  <td  class="txtleft" >
+					   <{$dealerinfo.dlstt_name}>
+					  </td>
+				  </tr>
+			   </neq>
+			   
+			   <eq name="qypurview.90003" value="90003">
+			  <tr>     
+                  <td height="40"  class="txtright"  >上家经销：</td>
+				  <td  class="txtleft" >
+				    <{$dealerinfo.dl_belong_name}>
+				  </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >推荐人：</td>
+				  <td  class="txtleft" >
+				    <{$dealerinfo.dl_referee_name}>
+				  </td>
+			  </tr>
+			   </eq>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系人：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_contact}></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_tel}></td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >传真：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_fax}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地址：</td>
+				  <td  class="txtleft" ><eq name="dealerinfo.dl_country" value="1" >缅甸 </eq><{$dealerinfo.dl_address}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_email}></td>
+			  </tr>
+			 
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_qq}></td>
+			  </tr>
+			    <tr>     
+                  <td height="40"  class="txtright" >微信号：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_weixin}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >身份证：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_idcard}></td>
+			  </tr>
+              <neq name="dealerinfo.dl_idcardpic_str" value="">
+			  <tr>     
+                  <td height="40"  class="txtright" >身份证图片：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_idcardpic}>" target="_blank" ><{$dealerinfo.dl_idcardpic_str}></a>
+				  <neq name="dealerinfo.dl_idcardpic2_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_idcardpic2}>" target="_blank" ><{$dealerinfo.dl_idcardpic2_str}></a></neq>
+				  </td>
+			  </tr>
+              </neq>
+			  
+			   <neq name="dealerinfo.dl_paypic" value="">
+			  <tr>     
+                  <td height="40"  class="txtright" >支付凭证：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_paypic}>" target="_blank" ><img src="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_paypic}>"   border="0" style="vertical-align:middle; width:15%" ></a>
+				  </td>
+			  </tr>
+              </neq>
+			  
+			  
+			  <tr>     
+                  <td height="40"  class="txtright" >授权证书：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <neq name="dealerinfo.dl_pic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_pic}>" target="_blank" ><{$dealerinfo.dl_pic_str}></a></neq>
+				  </td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright"  >备注：</td>
+			     <td  class="txtleft" ><{$dealerinfo.dl_remark|nl2br}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >注册时间：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_addtime|date='Y-m-d H:i:s',###}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >有效时间：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_date_str}></td>
+			  </tr>
+			  
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			  
+			   <tr>
+			   <td height="60"  colspan="2">
+			   
+				   <table width="80%" border="0" cellspacing="0" cellpadding="0"  style="margin:0 auto" >
+					  <tr>     
+						  <td height="40"  colspan="4" class="txtleft" ><b>操作日志：</b></td>
+					  </tr>
+					  <tr>     
+						  <td height="40"   width="35%" class="txtleft" >操作</td>
+						  <td width="25%" class="txtleft" >操作人</td>
+						  <td width="20%" class="txtleft" >时间</td>
+						  <td width="20%" class="txtleft" >IP</td>
+					  </tr>
+					  <foreach name='logslist' item='item'  key='key'>
+					   <tr>     
+						  <td height="28" class="txtleft" ><{$item.dlg_action}></td>
+						  <td  class="txtleft" ><{$item.dlg_operatstr}></td>
+						  <td  class="txtleft" ><{$item.dlg_addtime|date='Y-m-d H:i:s',###}></td>
+						  <td  class="txtleft" ><{$item.dlg_ip}></td>
+					  </tr>
+					  </foreach>
+					  
+				   </table>
+			   </td>
+
+            </td>
+			  </tr>
+			  
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

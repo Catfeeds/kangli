@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>增减预付</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Capital/index')}>">代理资金</A>　&gt;　<A href="#">增减预付</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Capital/yufukuanadd_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data"  >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" ><span style="font-size:16px">增减预付款　</span></td>
+				  <td  class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >增减代理对象：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_name_str}></td>
+			  </tr>
+              <tr>     
+                  <td height="40"  class="txtright" >增减选择：</td>
+				  <td  class="txtleft" >
+				  <select name="yfk_add"   class="select"   >
+					<option value="1" >增加　</option>
+					<option value="2" >减少　</option>
+				  </select>　
+				  </td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >金额：</td>
+				  <td  class="txtleft" ><input type="text" size="8" maxlength="8"  name="yfk_money" class="input" value="" > 元  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" ><input type="text" size="40" maxlength="100"  name="yfk_remark" class="input" value="" > </td>
+			  </tr>
+              <tr>     
+                  <td height="40"  class="txtright" >登录密码：</td>
+				  <td  class="txtleft" ><input type="password" size="20" maxlength="30"  name="pwd" class="input" value="" > </td>
+			  </tr>
+
+
+			  
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认提交" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+
+			  
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

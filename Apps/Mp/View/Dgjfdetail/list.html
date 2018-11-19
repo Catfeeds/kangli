@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导购积分明细</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>"  >首页</a>　&gt;　<A href="#">导购积分明细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<form action="<{:U('Mp/Dgjfdetail/index')}>"   method="post" name="fmmm"  >
+<input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="5%" ><span>ID</span></th>
+<th  width="10%" ><span>积分用户</span></th>
+<th  width="10%" ><span>姓名</span></th>
+<th  width="7%" ><span>积分</span></th>
+<th  width="10%" ><span>积分类型</span></th>
+<th  width="12%" ><span>积分码</span></th>
+<th  width="10%"  ><span>日期</span></th>
+<th  width="23%"  style="text-align:left"  ><span>积分说明</span></th>
+<th  width="10%" ><span>操作</span></th>
+<th  width="3%"  ><span>备</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data"><span><{$item.dgjf_id}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Dguser/view?dguser_id='.$item['dgjf_userid'].'')}>"><{$item.dgjf_username}></a></span></td>
+<td class="data"><span><{$item.dgjf_user_truename}></span></td>
+<td class="data"><span><{$item.dgjf_jf}></span></td>
+<td class="data"><span><{$item.dgjf_typestr}></span></td>
+<td class="data"><span><{$item.dgjf_code}></span></td>
+<td class="data"><span><{$item.dgjf_addtime|date='Y-m-d H:m:s',###}></span></td>
+<td class="data" style="text-align:left"  ><span><{$item.dgjf_detailstr}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Dgjfdetail/view?dgjf_id='.$item['dgjf_id'].'')}>">查看详细</a></span></td>
+<td class="data"><neq name="item.dgjf_remark" value=""><span  title="<{$item.dgjf_remark}>"  style="cursor:pointer" >...</span></neq></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

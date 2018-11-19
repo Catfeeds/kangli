@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>基本设置</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfmobi/basic')}>">基本设置</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Jfmobi/edit_save/action/basic')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$basicinfo.bas_id}>" name="bas_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+				  <td class="txtcenter" colspan="2" height="40" ><include file="Com/mobibase" /></td>
+			  </tr>
+			  <eq name="qypurview.70010" value="70010">
+             <tr>     
+                  <td height="40"   width="25%" class="txtright"  style="font-size:14px; font-weight:bold; padding-top:20px" >编辑基本信息:</td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 网站名称：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="bas_sitename" class="input" value="<{$basicinfo.bas_sitename}>" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 公司名称：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="50"  name="bas_company" class="input" value="<{$basicinfo.bas_company}>" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 详细地址：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="50"  name="bas_address" class="input" value="<{$basicinfo.bas_address}>" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 热　　线：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="bas_hotline" class="input" value="<{$basicinfo.bas_hotline}>" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 联系电话：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="bas_tel" class="input" value="<{$basicinfo.bas_tel}>" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 传　　真：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="bas_fax" class="input" value="<{$basicinfo.bas_fax}>" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 官方网站：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="200"  name="bas_website" class="input" value="<{$basicinfo.bas_website}>" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 微信链接：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="200"  name="bas_weixin" class="input" value="<{$basicinfo.bas_weixin}>" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 微博链接：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="200"  name="bas_weibo" class="input" value="<{$basicinfo.bas_weibo}>" ></td>
+			  </tr>   
+
+			  <tr>  <td height="60" ></td>
+              <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			  </eq>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

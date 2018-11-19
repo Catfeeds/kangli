@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单管理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Orders/qborders')}>">订单管理</A>　&gt;　<A href="#">所有订单</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%">
+<form action="<{:U('Mp/Orders/qborders')}>"   method="post" name="fmmm"  >
+<input    type="text" size="30" maxlength="30"  name="keyword"  class="input"  onfocus="this.value=''"   value="请填写订单号查询"   style="color:#999999"   >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:69%; text-align:right">
+<form action="<{:U('Mp/Orders/qborders')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　
+<select name="od_state"   class="select" >
+					<option value=""  <if condition="$od_state eq '' "  >selected</if>  >按状态过滤　</option>
+
+					<option value="0" <if condition="$od_state eq '0' " >selected</if>  >待确认</option>
+					<option value="1" <if condition="$od_state eq '1' " >selected</if>  >代发货</option>
+					<option value="3" <if condition="$od_state eq '3' " >selected</if>  >已发货</option>
+					<option value="8" <if condition="$od_state eq '8' " >selected</if>  >已完成</option>
+				    <option value="9" <if condition="$od_state eq '9' " >selected</if>  >已取消</option>
+				  </select>　
+<input    type="text" size="20" maxlength="20"  name="dlusername"  class="input"   onfocus="if(this.value=='请填写下单代理账号')this.value=''"   value="<{$dlusername}>"   style="color:#999999"  >　<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results2" > 
+<thead><tr>
+<th  width="35%" style="text-align:left; border-left:solid 1px #ddd" ><span>订单详细</span></th>
+<th  width="12%" ><span></span></th>
+<th  width="9%" ><span>下单代理</span></th>
+<th  width="9%"  ><span>接单代理</span></th>
+<th  width="10%"  ><span>金额</span></th>
+<th  width="10%"  ><span>状态</span></th>
+<th  width="15%"   ><span>操作</span></th>
+</tr></thead>
+<tbody>
+
+<foreach name='orderlist' item='item'  key='key'>
+<tr >
+<td class="data"   style="border-right:none; border-left:none; height:10px"  colspan="7"></td>
+</tr>
+<tr class="even" >
+<td class="data" style="text-align:left; border-left:solid 1px #ddd" ><span><b>订单号：<{$item.od_orderid}></b>　　<{$item.od_addtime|date='Y-m-d H:i:s',###}></span></td>
+<td class="data"><span></span></td>
+<td class="data"><span></span></td>
+<td class="data"><span></span></td>
+<td class="data"><span></span></td>
+<td class="data"><span></span></td>
+<td class="data"><span></span></td>
+</tr>
+
+<foreach name="item['orderdetail']" item='item2'  key='key2'>
+<tr class="odd" >
+<td class="data" style="text-align:left; border-left:solid 1px #ddd" ><span>
+<if condition="$item2.oddt_propic eq '' ">
+<img src="__PUBLIC__/demo82/static/nophoto.jpg" style="vertical-align:middle; width:10%" />
+<else/>
+<img src="__PUBLIC__/uploads/product/<{$item2.oddt_propic}>" style="vertical-align:middle; width:10%" />
+</if>
+　<{$item2.oddt_proname}>  (<{$item2.oddt_pronumber}>) </span></td>
+<td class="data"><span><if condition="$item2.oddt_dlprice neq '' ">单价：<{$item2.oddt_dlprice|number_format=2,'.',''}> 元</if><br>订购：<{$item2.oddt_qty}><{$item2.oddt_prounits}><{$item2.oddt_totalqty}><br>已发：<{$item2.oddt_shipqty}></span></td>
+<if condition="$key2 eq '0' ">
+<td class="data"  rowspan="<{$item.countdetail}>" ><span><{$item.od_dl_name}><br>(<{$item.od_dl_username}>)</span></td>
+<td class="data"  rowspan="<{$item.countdetail}>" ><span><{$item.od_rcdl_name}><if condition="$item.od_rcdl_username neq '' "  ><br>(<{$item.od_rcdl_username}>)</if></span></td>
+<td class="data"  rowspan="<{$item.countdetail}>" ><span><{$item.odbl_total|number_format=2,'.',''}> 元</span></td>
+<td class="data"  rowspan="<{$item.countdetail}>" ><span><{$item.od_state_str}></span></td>
+<td class="data"  rowspan="<{$item.countdetail}>" style="line-height:25px" ><span><{$item.caozuostr}></span></td>
+</if>
+</tr>
+</foreach>
+</foreach>
+
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

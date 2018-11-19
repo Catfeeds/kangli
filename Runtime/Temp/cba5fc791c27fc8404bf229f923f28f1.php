@@ -1,0 +1,3 @@
+<?php
+//000000000600a:17:{s:6:"dlt_id";s:1:"8";s:12:"dlt_unitcode";s:4:"9999";s:8:"dlt_name";s:9:"体验店";s:9:"dlt_level";s:1:"2";s:10:"dlt_fanli1";s:7:"6000.00";s:10:"dlt_fanli2";s:7:"2000.00";s:10:"dlt_fanli3";s:4:"0.00";s:10:"dlt_fanli4";s:4:"0.00";s:10:"dlt_fanli5";s:4:"0.00";s:10:"dlt_fanli6";s:4:"0.00";s:10:"dlt_fanli7";s:4:"0.00";s:10:"dlt_fanli8";s:4:"0.00";s:10:"dlt_fanli9";s:4:"0.00";s:11:"dlt_fanli10";s:4:"0.00";s:14:"dlt_firstquota";s:4:"0.00";s:10:"dlt_minnum";s:1:"0";s:9:"dlt_butie";s:7:"2000.00";}
+?>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>价格体系</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Product/proprice')}>">价格体系</A>　&gt;　<A href="#">修改价格体系</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Product/propriceedit_save')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$proinfo.pro_id}>" name="pro_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >产品名称：</td>
+				  <td class="txtleft" ><{$proinfo.pro_name}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品编号：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_number}></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >零售价：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_price|number_format=2,'.',''}> 元</td>
+			  </tr>
+			  <foreach name='typelist' item='item'  key='key'>
+			  <tr>     
+                  <td height="40"  class="txtright" ><{$item.dlt_name}>：</td>
+				  <td  class="txtleft" >
+				  价格：<input    type="text"  size="6" maxlength="6"  name="pri_price<{$item.dlt_id}>"  class="input"  value="<{$item.priprice|number_format=2,'.',''}>"   > 元
+				  　　最低补货：<input    type="text"  size="6" maxlength="6"  name="pri_minimum<{$item.dlt_id}>"  class="input"  value="<{$item.pri_minimum}>"   > 
+				 <if condition="$qypurview.15001 eq '15001' "> 　　代理积分：<input    type="text"  size="6" maxlength="6"  name="pri_jifen<{$item.dlt_id}>"  class="input"  value="<{$item.pri_jifen}>"   >  </if>
+				  
+				  </td>
+			  </tr>
+              </foreach>
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

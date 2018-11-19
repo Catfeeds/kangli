@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>代理积分</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>" >首页</a>　&gt;　<A href="#" >代理积分</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:40%">
+<form action="<{:U('Mp/Dljf/index')}>"   method="post" name="fmmm"  >
+<input    type="text" size="30" maxlength="25"  name="keyword"  class="input"   onfocus="this.value=''"   value="输入经销商编号、名称、电话、微信号"   style="color:#999999"  >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:59%; text-align:right">　
+<select name="dl_status"   class="select"   onChange="document.location.href ='<{:U('Mp/Dljf/index')}>?dl_type=<{$dl_type}>&dl_status='+this.value;" >
+					<option value="" <if condition="$dl_status eq '' " >selected</if> >全部　　</option>
+					<option value="0"  <if condition="$dl_status eq '0' " >selected</if> >新申请</option>
+					<option value="1"  <if condition="$dl_status eq '1' " >selected</if> >正常</option>
+					<option value="9"  <if condition="$dl_status eq '9' " >selected</if> >已禁用</option>
+</select>
+　
+<select name="dl_type"   class="select" style="width:140px" onChange="document.location.href ='<{:U('Mp/Dljf/index')}>?dl_status=<{$dl_status}>&dl_type='+this.value;" >
+					<option value="0" >按经销商级别过滤</option>
+					<volist name='dltypelist' id='vo' key='key' >
+					<option value="<{$vo.dlt_id}>"  <if condition="$vo.dlt_id eq $dl_type" >selected</if> ><{$vo.dlt_name}></option>
+					</volist>
+</select>
+
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="16%" style="text-align:left"><span>经销商名称</span></th>
+<th  width="10%"   ><span>经销商编号</span></th>
+<th  width="10%" ><span>电话</span></th>
+<th  width="10%" ><span>级别</span></th>
+<th  width="12%" ><span>上家代理</span></th>
+<th  width="12%"  ><span>推荐人</span></th>
+<th  width="10%"  ><span>累计积分</span></th>
+<th  width="10%"  ><span>剩余积分</span></th>
+<th  width="10%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" style="text-align:left"  ><span><{$item.dl_name}> (<{$item.dl_username}>)</span></td>
+<td class="data" ><span><{$item.dl_number}></span></td>
+<td class="data"><span><{$item.dl_tel}></span></td>
+<td class="data"><span><{$item.dl_type_str}></span></td>
+<td class="data"><span><{$item.dl_belong_str}></span></td>
+<td class="data"><span><{$item.dl_referee_str}></span></td>
+<td class="data"><span><{$item.dl_totaljf}></span></td>
+<td class="data"><span><{$item.dl_surplusjf}></span></td>
+<td class="data"><span><eq name="qypurview.15004" value="15004"><a href="<{:U('Mp/Dljf/changedjf?dl_id='.$item['dl_id'].'')}>">增减分</a>&nbsp;</eq><a href="<{:U('Mp/Dljf/dljflist?dlusername='.$item['dl_username'].'')}>">明细</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

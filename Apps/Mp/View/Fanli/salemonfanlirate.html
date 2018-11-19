@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>销售奖设置</title>
+<include file="Com/head" />
+
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">销售奖设置</A></div>
+<div class="nav_r"><a href="<{:U('Mp/Fanli/salemonthly')}>">销售奖列表</a><eq name="qypurview.99999" value="99999">　　<a href="<{:U('Mp/Fanli/salemonfanlirate_add')}>">添加设置</a></eq></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%">
+
+</div>
+<div style="float:right; width:69%; text-align:right">
+
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="20%" style="text-align:left"><span>级别</span></th>
+<th  width="25%"  style="text-align:left" ><span>业绩区间</span></th>
+<th  width="15%" ><span>奖金</span></th>
+<th  width="30%" ><span>备注</span></th>
+<th  width=""  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" style="text-align:left"  ><span><{$item.dlt_name}></span></td>
+<td class="data" style="text-align:left" ><span><{$item.smfr_countdatestr}><{$item.smfr_saleunitstr}> <{$item.smfr_minsalestr}> - <{$item.smfr_maxsalestr}></span></td>
+<td class="data"><span><{$item.smfr_fanlievalstr}><{$item.smfr_fanliratestr}></span></td>
+<td class="data"><span><{$item.smfr_remark}></span></td>
+<td class="data"><span><eq name="qypurview.99999" value="99999"><a href="<{:U('Mp/Fanli/salemonfanlirate_edit?smfr_id='.$item['smfr_id'].'')}>">修改</a> <a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Fanli/salemonfanlirate_del?smfr_id='.$item['smfr_id'].'')}>';" >删除</a></eq></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

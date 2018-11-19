@@ -1,0 +1,16 @@
+/*自定义样式 非UI框架自带*/
+.page{
+    border-radius: 5px;
+    margin: 0.8em 0;
+	width:auto;
+	float:right;
+
+}
+.page a{text-decoration:none;}
+.page td{padding: 0.7em;}
+.page .current{padding:0 0.3em; color:#027cff; border:solid 1px #ddd; margin:0 0.3em}
+.page a.num{padding:0 0.3em;border:solid 1px #fff; margin:0 0.3em;}
+.page a.num:hover{padding:0 0.3em;border:solid 1px #027cff; margin:0 0.3em}
+
+#prodesc img{width:100%}
+#newsdesc img{width:100%}

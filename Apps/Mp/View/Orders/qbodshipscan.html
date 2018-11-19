@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单产品出货</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Orders/qborders')}>">订单管理</A>　&gt;　<A href="#">订单产品出货</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Orders/qbodshipscanres')}>"   method="post" name="fmmm" >
+<input type="hidden" name="od_id" value="<{$od_id}>" />
+<input type="hidden" name="odbl_id" value="<{$odbl_id}>" />
+<input type="hidden" name="oddt_id" value="<{$oddt_id}>" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >出货订单：</td>
+				  <td class="txtleft" ><b><{$ordersinfo.oddt_orderid}></b> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货产品：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_proname}> (<{$ordersinfo.oddt_pronumber}>)
+		      </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >收货代理：</td>
+				  <td  class="txtleft" >
+				  <{$ordersbase.od_dl_name}> (<{$ordersbase.od_dl_username}>)
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >订购数量：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_qty}><{$ordersinfo.oddt_prounits}><{$ordersinfo.oddt_totalqty}>
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >已发数量：</td>
+				  <td  class="txtleft" >
+				  <{$ordersinfo.oddt_shipqty}>
+		      </td>
+			  </tr>
+			  
+			    <tr>     
+                  <td height="40"  class="txtright" >出货仓库：</td>
+				  <td  class="txtleft" >
+				  <select name="ship_whid"   class="select"  >
+					<option value="0"   >选择仓库　</option>
+					<volist name='warehouselist' id='vo' key='key' >
+					<option value="<{$vo.wh_id}>" <if condition="$shipmentinfo.ship_whid eq $vo.wh_id ">selected</if> ><{$vo.wh_name}></option>
+					</volist>
+				  </select> *
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品条码：</td>
+				  <td  class="txtleft" >
+                  <textarea name="ship_barcode" rows="5" cols="40"></textarea>
+				  <br />
+				  注:产品条码可以录入多个，每个条码一行，建议每次录入不要超过50个条码
+				  <br />
+				  <br />
+				  
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" style="padding:10px 0 5px 0" >
+				  <textarea name="ship_remark" rows="2" cols="40"></textarea>
+		      </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="下一步出货" class="botton"   id="submit" >　　　　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

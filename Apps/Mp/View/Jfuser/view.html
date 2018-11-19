@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>积分会员管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfuser/index')}>">积分会员管理</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <if condition="$qypurview.40005 eq '40005' ">
+			  <notempty name="jfuserinfo.jfuser_openid">
+			   <tr>     
+                  <td height="40"  class="txtright" >已绑定微信　</td>
+				  <td  class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >Openid：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_openid}></td>
+			  </tr>
+			  </notempty>
+			  <notempty  name="jfuserinfo.jfuser_wxheadimg" >
+			  <tr>
+				  <td height="40"  class="txtright" > 头像：</td>
+				  <td  class="txtleft" > <img src="<{$jfuserinfo.jfuser_wxheadimg}>"    style="width:60px; height:60px" />
+				  </td>
+			  </tr>
+              </notempty>
+			  <tr>     
+                  <td height="40"  class="txtright" >微信昵称：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_wxnickname}></td>
+			  </tr>
+			  <else/>
+			  <tr>     
+                  <td height="40"   class="txtright" >登录账号：</td>
+				  <td class="txtleft" ><{$jfuserinfo.jfuser_username}> </td>
+			  </tr>
+			  </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >姓名：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_truename}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_tel}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_email}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_qq}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地区：</td>
+				  <td  class="txtleft" ><if condition="$jfuserinfo.jfuser_diqustr neq '' "><{$jfuserinfo.jfuser_diqustr}><else/><if condition="$qypurview.40005 eq '40005' "><{$jfuserinfo.jfuser_wxprovince}><{$jfuserinfo.jfuser_wxcity}><else/><{$jfuserinfo.jfuser_diqustr}></if></if>
+				   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地址：</td>
+				  <td  class="txtleft" ><{$jfuserinfo.jfuser_address}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft" ><{$jfuserinfo.jfuser_remark|nl2br}></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

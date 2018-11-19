@@ -1,0 +1,38 @@
+[ 2018-09-12T11:20:28+08:00 ] ::1 /Kangli/Kangli/Product/index/stock/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.043059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.043059s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_product` WHERE `pro_unitcode` = '9999' AND `pro_active` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_product` WHERE `pro_unitcode` = '9999' AND `pro_active` = 1 ORDER BY pro_order ASC LIMIT 0,20   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fw_proprice` [ RunTime:0.0370s ]
+NOTIC: [8] Undefined variable: dl_type D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\ProductController.class.php 第 72 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = 5 AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: dl_type D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\ProductController.class.php 第 72 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = 7 AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: dl_type D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\ProductController.class.php 第 72 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = 11 AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_protype` [ RunTime:0.0140s ]
+SQL: SELECT `pro_typeid` FROM `fw_product` WHERE `pro_unitcode` = '9999' AND `pro_active` = 1 GROUP BY pro_typeid  [ RunTime:0.0010s ]
+SQL: SELECT `protype_id`,`protype_name` FROM `fw_protype` WHERE `protype_unitcode` = '9999' AND `protype_iswho` = 0 AND `protype_id` = 3 ORDER BY protype_id ASC LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: protype_name D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\ProductController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+

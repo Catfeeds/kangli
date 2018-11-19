@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#">审核/设置</A></div>
+<div class="nav_r"><A href="<{:U('Mp/Dealer/index?dl_type='.$dl_type.'&dl_status='.$dl_status.'')}>"  ><< 返 回</A></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">审核/禁用经销商：</div>
+	<form action="<{:U('Mp/Dealer/active')}>" method="post" name="fmmm" >
+		<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+			<tr>
+				<td height="20"   width="25%" class="txtright" ></td>
+				<td width="75%" class="txtleft" ></td>
+			</tr>
+
+			<tr>
+				<td height="40"   class="txtright" >经销商：</td>
+				<td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>)</td>
+			</tr>
+			<tr>
+				<td height="40"   class="txtright" >当前状态：</td>
+				<td class="txtleft" ><{$dealerinfo.dl_status_str}></td>
+			</tr>
+			<tr>
+				<td height="40"   class="txtright" >修改状态为：</td>
+				<td class="txtleft" >
+					<select name="dl_status"   class="select"  >
+						<option  value="0"  >新申请　</option>
+						<option  value="1"  >正常　</option>
+						<option  value="9"  >禁用　</option>
+					</select>  </td>
+			</tr>
+
+			<tr>  <td height="60" ></td>
+				<td  class="txtleft"  >
+					<input type="submit" name="Submit" value="确认修改" class="botton" >
+				</td>
+			</tr>
+		</table>
+	</form>
+
+<eq name="qypurview.10012" value="10012">
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">保证金：</div>
+<form action="<{:U('Mp/Dealer/deposit_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="20"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>)</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >当前保证金：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_deposit|number_format=2,'.',''}> 元</td>
+			  </tr>
+			    <tr>     
+                  <td height="40"   class="txtright" >修改为：</td>
+				  <td class="txtleft" >
+				  <input type="text" size="6" maxlength="8"  name="dl_deposit" class="input" value="" >
+				  </td>
+			    </tr>
+				<tr>     
+                  <td height="40"   class="txtright" >支付凭证：</td>
+				  <td class="txtleft" >
+				<neq name="dealerinfo.dl_depositpic_str" value=""><a href="__PUBLIC__/uploads/dealer/<{$dealerinfo.dl_depositpic}>" target="_blank" ><{$dealerinfo.dl_depositpic_str}></a></neq> <input name="pic_file" type="file" /> (建议图片大小不要超500k)  <input type="hidden"  value="<{$dealerinfo.dl_depositpic}>" name="old_depositpic" />
+                  </td>
+			    </tr>
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</eq>
+
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">修改经销商级别：</div>
+<form action="<{:U('Mp/Dealer/update_dltype')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" >注：修改级别时，系统会同时调整该经销商的上家，谨慎修改</td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>)</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >当前级别：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_type_str}></td>
+			  </tr>
+			    <tr>     
+                  <td height="40"   class="txtright" >修改级别为：</td>
+				  <td class="txtleft" >
+				  <select name="dl_type"   class="select"  >
+				  <foreach name='dltypelist' item='item'  key='key'>
+				  <option  value="<{$item.dlt_id}>"  ><{$item.dlt_name}>　</option>
+                 </foreach>
+				  </select>  </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">修改经销商上家：</div>
+<form action="<{:U('Mp/Dealer/update_belong')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" >注：修改上家时，请注意参考该经销商的推荐人路线,谨慎修改</td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>) </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >当前上家：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_belong_name}> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >当前推荐人：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_referee_name}></td>
+			  </tr>
+			    <tr>     
+                  <td height="40"   class="txtright" >上家修改为：</td>
+				  <td class="txtleft" >
+				  <select name="belong"   class="select"  >
+				  <foreach name='belong_arrs' item='item'  key='key'>
+				  <option   value="<{$item.id}>"  ><{$item.name}>　</option>
+				  </foreach>
+				  </select>  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >推荐人路线：</td>
+				  <td class="txtleft" ><{$dealerinfo.referee_lines}></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+
+
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">修改经销商推荐人：</div>
+<form action="<{:U('Mp/Dealer/update_referee')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" >注：只允许上家为总公司的代理修改推荐人，修改推荐人后再根据该推荐路线修改上家</td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>) </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >当前上家：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_belong_name}> </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >当前推荐人：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_referee_name}> </td>
+			  </tr>
+			    <tr>     
+                  <td height="40"   class="txtright" >推荐人修改为：</td>
+				  <td class="txtleft" >
+				  <input type="text" size="15" maxlength="20"  name="dl_referee" class="input" value="" > 请填写推荐人的账号，0为总公司 </td>
+			  </tr>
+			  
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+
+
+<div  style="padding:20px 0 0 0; border-bottom:solid 1px #e2e9ee;font-weight:bold; width:70%; margin:0 auto; font-size:14px">修改经销商有效时间：</div>
+<form action="<{:U('Mp/Dealer/update_date')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="20"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_name}> (<{$dealerinfo.dl_username}>) </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >当前有效时间：</td>
+				  <td class="txtleft" ><{$dealerinfo.dl_date_str}> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >起始时间：</td>
+				  <td class="txtleft" ><input   type="text" size="15" maxlength="15"   name="begintime"  class="easyui-datebox"  value=""   id="begintime"  ></td>
+			  </tr>
+			  
+			  <tr>     
+                  <td height="40"   class="txtright" >有效期：</td>
+				  <td class="txtleft" >
+				  <select name="addyear"   class="select"  >
+				  <option  value="0" <eq name="dltinfo.dlt_level" value="0" >selected</eq> >请选择年数　</option>
+				  <option  value="1" <eq name="dltinfo.dlt_level" value="1" >selected</eq> >1年　</option>
+				  <option  value="2" <eq name="dltinfo.dlt_level" value="2" >selected</eq> >2年　</option>
+				  <option  value="2" <eq name="dltinfo.dlt_level" value="3" >selected</eq> >3年　</option>
+				  <option  value="2" <eq name="dltinfo.dlt_level" value="3" >selected</eq> >4年　</option>
+				  <option  value="2" <eq name="dltinfo.dlt_level" value="3" >selected</eq> >5年　</option>
+				  <option  value="2" <eq name="dltinfo.dlt_level" value="3" >selected</eq> >99年　</option>
+				  </select>  </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >　　　　<a href="<{:U('Mp/Dealer/index?dl_type='.$dl_type.'&dl_status='.$dl_status.'')}>" class="botton"><< 返 回</a>
+            </td>
+			  </tr>
+			</table>
+</form>
+<div class="height20"></div>
+<div class="height20"></div>
+<div class="height20"></div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

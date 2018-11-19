@@ -1,0 +1,45 @@
+<div class="menu_list">
+<div class="menu_top">
+系统管理
+</div>   
+<div class="menu_parent">
+	<ul class="menu_sontitle"  id="fu01"  onClick="nemuclose('#zi01',this)" >企业管理</ul>
+	<ul class="menu_son"  id="zi01" >
+		<li><A href="<{:U('Sysadmin/Company/index')}>" class="<{$curr =='lists' ?'curr':''}>" >企业列表</A></li>
+		<li><A href="<{:U('Sysadmin/Company/add')}>"  class="<{$curr =='add' ?'curr':''}>" >添加企业</A></li>
+	</ul>	
+</div> 
+<div class="menu_parent">
+	<ul class="menu_sontitle"  id="fu02"  onClick="nemuclose('#zi02',this)" >防伪码管理</ul>
+	<ul class="menu_son"  id="zi02" >
+	    <li><A href="<{:U('Sysadmin/Sellrecord/index')}>" class="<{$curr =='sellrecord' ?'curr':''}>" >发行记录</A></li>
+	</ul>	
+</div> 
+<div class="menu_parent">
+	<ul class="menu_sontitle"  id="fu03"  onClick="nemuclose('#zi03',this)" >查询管理</ul>
+	<ul class="menu_son"  id="zi03" >
+		<li><A href="<{:U('Sysadmin/Queryrecord/record')}>" class="<{$curr =='record' ?'curr':''}>">查询记录</A></li>
+	</ul>	
+</div> 
+<div class="menu_parent">
+	<ul class="menu_sontitle" id="fu06" onClick="nemuclose('#zi06',this)" >系统管理</ul>
+	<ul class="menu_son" id="zi06" >
+	    <li><A href="<{:U('Sysadmin/Express/index')}>" class="<{$curr =='express' ?'curr':''}>"  >快递设置</A></li>
+	    <li><A href="<{:U('Sysadmin/Denyip/index')}>" class="<{$curr =='denyip' ?'curr':''}>"  >禁止IP</A></li>
+	    <li><A href="<{:U('Sysadmin/Logs/index')}>" class="<{$curr =='logs' ?'curr':''}>"  >操作日志</A></li>
+		<li><A href="<{:U('Sysadmin/Login/quit')}>"  >退出系统</A></li>
+	</ul>
+</div>      
+</div>
+<script type="text/javascript" >
+function nemuclose(z,obj){
+  $(z).toggle();
+  if($(z).css("display")=="none"){
+      $(obj).removeClass();
+      $(obj).addClass("menu_sontitle2");
+  }else{
+      $(obj).removeClass();
+      $(obj).addClass("menu_sontitle");
+  }
+}
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PDA出货授权</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">PDA出货授权</A></div>
+<div class="nav_r"><a href="<{:U('Mp/Shipment/appsubuseradd')}>">添加用户</a>　<a href="<{:U('Mp/Shipment/index')}>">返 回</a></div>
+</div>
+<div class="height10"></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="20%" ><span>用户名</span></th>
+<th  width="20%"  ><span>名称</span></th>
+<th  width="20%"  ><span>最近登录</span></th>
+<th  width="15%"  ><span>授权</span></th>
+<th  width="15%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<volist name='qysubuserlist' id='vo' key='key' >
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$vo.su_username}></span></td>
+<td class="data" ><span><{$vo.su_name}></span></td>
+<td class="data" ><span><if condition="$vo.su_logintime neq '0' "><{$vo.su_logintime|date='Y-m-d H:i:s',###}></if></span></td>
+<td class="data" ><span><a href="<{:U('Mp/Shipment/appsuactive?su_id='.$vo['su_id'].'&su_status='.$vo['su_status'].'')}>" ><img src="__PUBLIC__/mp/static/<{$vo['su_status'] == 0?'no':'yes'}>.gif" /></a></span></td>
+<td class="data" ><span><a href="<{:U('Mp/Shipment/appsubuseredit?su_id='.$vo['su_id'].'')}>">修改</a>　<a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Shipment/appsudelete?su_id='.$vo['su_id'].'')}>';" >删除</a></span></td>
+</tr>
+</volist>
+</tbody>
+</table>
+<div class="height20"></div>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

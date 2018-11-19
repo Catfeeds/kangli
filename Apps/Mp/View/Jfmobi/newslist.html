@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>企业动态</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfmobi/newslist?news_type='.$news_type.'')}>"><{$ntitle}></A></div>
+<div class="nav_r"><a href="<{:U('Mp/Jfmobi/newsadd?news_type='.$news_type.'')}>">添 加</a></div>
+</div>
+
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="10%" ><span>图</span></th>
+<th  width="45%"  style="text-align:left" ><span>标题</span></th>
+<th  width="15%" ><span>分类</span></th>
+<th  width="15%" ><span>日期</span></th>
+<th  width="15%" ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$item.news_pic_str}></span></td>
+<td class="data" style="text-align:left"  ><span><{$item.news_title}></span></td>
+<td class="data"><span><{$item.news_type_str}></span></td>
+<td class="data"><span><{$item.news_addtime|date='Y-m-d H:i:s',###}></span></td>
+<td class="data"><span><{$item.news_isgg_str}> <a href="<{:U('Mp/Jfmobi/newsedit?news_id='.$item['news_id'].'')}>" >修改</a> <a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Jfmobi/news_delete?news_id='.$item['news_id'].'')}>';" >删除</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

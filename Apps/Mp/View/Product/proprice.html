@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>价格体系</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">价格体系</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<form action="<{:U('Mp/Product/proprice')}>"   method="post" name="fmmm"  >
+<input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="20%" style="text-align:left" ><span>产品名称</span></th>
+<th  ><span>零售价</span></th>
+<foreach name='typelist' item='item'  key='key'>
+<th ><span><{$item.dlt_name}></span></th>
+</foreach>
+<th  width="5%"  ><span>状态</span></th>
+<th  width="10%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+
+<td class="data" style="text-align:left" ><span><{$item.pro_name}> <{$item.pro_number}></span></td>
+<td class="data"  ><span><{$item.pro_price|number_format=2,'.',''}> 元</span></td>
+<foreach name="item['priprice']" item='item2'  key='key2'>
+<td class="data"><span><{$item2|number_format=2,'.',''}> 元</span></td>
+</foreach>
+<td class="data"><span><img src="__PUBLIC__/mp/static/<{$item['pro_active'] == 0?'no':'yes'}>.gif" /></span></td>
+<td class="data"><span><a href="<{:U('Mp/Product/propricedetail?pro_id='.$item['pro_id'].'')}>" >详细</a> <eq name="qypurview.20002" value="20002"><a href="<{:U('Mp/Product/propriceedit?pro_id='.$item['pro_id'].'')}>">修改</a></eq> <eq name="qypurview.99999" value="99999"><a href="<{:U('Mp/Product/profanli?pro_id='.$item['pro_id'].'')}>">返利</a></eq></span></td>
+
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

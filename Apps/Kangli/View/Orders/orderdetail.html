@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="__PUBLIC__/Kangli/static/chuanshu_min.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no">
+		<title>
+			<{$Think.config.QY_COMPANY}>-订单详情</title>
+		<include file="Com/head" />
+		<style type="text/css">
+			.icon_lists {
+				width: 100% !important;
+			}
+			
+			.icon_lists li {
+				float: left;
+				width: 20%;
+				height: 180px;
+				text-align: center;
+				list-style: none !important;
+			}
+			
+			.icon_lists li img {
+				width: 2rem;
+				margin: 0.3rem;
+			}
+			
+			.icon_lists li a {
+				text-decoration: none;
+			}
+			
+			.icon_lists .iconfont {
+				font-size: 25px;
+				line-height: 30px;
+				margin: 10px 0;
+				color: #7e7e7e;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.icon_lists .iconfont.active,
+			.icon_lists .iconfont:active {
+				font-size: 25px;
+				color: #f08519;
+			}
+			
+			.icon_lists .name {
+				font-size: 12px;
+			}
+			
+			.bar-tab .tab-item.active,
+			.bar-tab .tab-item:active {
+				color: #f08519;
+			}
+			.modal-button {
+        		font-size: .5rem;
+      		}
+		</style>
+	</head>
+
+	<body ontouchstart="" style="background-color:#FAFAFA">
+		<div class="page">
+			<header class="bar bar-nav" style="background-color:#006db2;">
+<!-- 				<if condition="$ly_status gt 0">
+					<a href="<{:U('./Kangli/Orders/index/ly_status/1')}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				<else/>
+					<a href="javascript:;" onClick="javascript :history.back(-1);" class="icon icon-left pull-left" style="color:#fff"></a>
+				</if> -->
+				<if condition="$ly_status eq 1">
+					<a href="<{:U('./Kangli/Orders/index/ly_status')}>/<{$ly_status}>/od_state/<{$od_state}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				<else/>
+					<a href="<{:U('./Kangli/Orders/dlycorders')}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				</if>
+				<h1 class="title" style="color:#fff">订单详情</h1>
+			</header>
+			<div class="content">
+				<div class="kl-layout-horizontally" style="width:100%;padding:.5rem;background: #75787f;">
+					<i class="iconfont icon-dingdan" style="font-size:1rem;color: #fff"></i>
+					<div style="width: 100%;color:#fff">
+						<div class="kl-layout-horizontally-between">
+							<div class="pro_name" style="padding: .0 .3rem .3rem .3rem">
+								订单号：
+								<{$ordersinfo.od_orderid}>
+							</div>
+							<div class="order-price" style="padding: .0 0 .3rem 0">
+								<{$ordersinfo.od_state_str}>
+							</div>
+						</div>
+						<div class="pro_name" style="padding: .0 .3rem .3rem .3rem">
+							<if condition="$ordersinfo.od_expressname neq ''">物流信息：
+								<{$ordersinfo.od_expressname}>
+									<if condition="$ordersinfo.od_expressnum neq ''">单号
+										<{$ordersinfo.od_expressnum}>
+									</if>
+							</if>
+						</div>
+						<div class="pro_name" style="padding: .0 .3rem 0rem .3rem;font-size: 0.3rem; color: #c1c1c1">
+							<{$ordersinfo.od_addtime|date='Y-m-d h:i:s' ,###}>
+						</div>
+					</div>
+				</div>
+				<div class="kl-layout-horizontally-vcenter" id="dl_address" style="background:#fff;margin-top:0.3rem;">
+					<i class="iconfont icon-hongjiuchengicondizhi" style="font-size:1.5rem;margin:.3rem 0.5rem;color: #7e7e7e"></i>
+					<div class="kl-layout-horizontally-vcenter" style="width:100%;margin-right:0.3rem;padding:.3rem 0;">
+						<div style="margin: 0 .3rem 0 0;width:100%;">
+							<div class="kl-layout-horizontally-between">
+								<div class="pro_name">
+									<{$ordersinfo.od_contact}></div>
+								<div class="order-price">
+									<{$ordersinfo.od_tel}>
+								</div>
+							</div>
+							<div class="pro_name" style="color: #c1c1c1;padding:.2rem 0;max-height:2rem">
+								<{$ordersinfo.od_address}>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="list-block media-list" style="margin:.3rem 0 0 0; ">
+					<ul>
+						<li>
+							<div class="order-list all_odlist">
+								<foreach name="ordersinfo['orderdetail']" item='item' key='key'>
+									<div class="order-content" style="padding-bottom: 0.2rem">
+										<div class="item-media"><img src="__PUBLIC__/uploads/mobi/<{$item.oddt_propic}>" style="width:3.5rem;" onerror="this.src='__PUBLIC__/Kangli/static/logo_icon.png'"></div>
+										<div class="order-inner">
+											<div class="item-subtitle" style="font-size: 0.5rem">
+												<{$item.oddt_proname}>
+											</div>
+											<div class="order-remark">
+												<div class="kl-layout-horizontally-between">
+													<div>
+														<div class="pro_name" style="color: red;">￥<span style="font-size:.75rem"><{$item.oddt_dlprice|number_format=2,'.',''}></span>
+															<if condition="$item.oddt_price gt 0"><span style="padding-right:.2rem; text-decoration:line-through;color:#c1c1c1">￥<{$item.oddt_price|number_format=2,'.',''}></span></if>
+														</div>
+														<div class="pro_name">订购：
+															<{$item.oddt_qty}>
+																<{$item.oddt_prounits}>
+																	<{$item.oddt_totalqty}>　已发：
+																		<{$item.oddt_shipqty}>
+														</div>
+													</div>
+													<!-- <if condition="($item.od_state eq 1) or ($item.od_state eq 2)">
+																							<i class="iconfont icon-saomiao all_odsaomian" style="font-size: 2rem;color: #167abe;"></i>
+																						</if> -->
+												</div>
+											</div>
+											<div class="order-type">
+												<if condition="$item.oddt_color neq '' ">颜色尺码：
+													<{$item.oddt_color}>
+														<{$item.oddt_size}>
+												</if>
+											</div>
+										</div>
+									</div>
+								</foreach>
+								<div class="order-number">
+									<div class="kl-layout-horizontally-vcenter"><i class="iconfont icon-user" style="font-size:1rem;color: #7e7e7e"></i><span style="margin:0 0.2rem;"><{$ordersinfo.od_dl_name}></span><span><{$ordersinfo.od_addtime|date='Y-m-d',###}></span></div>
+									<span style="color:#000">共<span style="color: red"> <{$ordersinfo.odtotalqty}> </span>件商品，合计：<span style="color:#000">￥<{$ordersinfo.od_total|number_format=2,'.',''}></span></span>
+								</div>
+								<div class="order-bottom">
+									<div class="order-button-type">
+										<if condition="$ordersinfo.od_state eq 0">
+											<a href="#" class="button button-light button-round order-button" id="dtl_odcancel" style="color:#ccc;margin-left:.5rem; border-radius:0.2rem;">删除订单</a>
+										</if>
+										<if condition="$ordersinfo.od_state eq 3">
+											<a href="#" class="button button-warning button-round order-button" id="dtl_odshouhuo" style="margin-left:.5rem;border-radius:0.2rem;">确定收货</a>
+										</if>
+										<if condition="$ordersinfo.od_state lt 3">
+											<a href="#" class="button button-warning button-round order-button" id="dtl_odpingzheng" style="margin-left:.5rem;border-radius:0.2rem;">上传凭证</a>
+										</if>
+									</div>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div style="background: #fff; margin-top:0.25rem;padding: .5rem">
+					 <div style="margin: 0.3rem 0"><h1>下单代理</h1></div>
+					 <div ><span style="color: #c1c1c1">微信：<{$ordersinfo.od_dl_weixin}></span></div>
+					 <div ><span style="color: #c1c1c1">姓名：<{$ordersinfo.od_dl_name}></span></div>
+					 <div ><span style="color: #c1c1c1">电话：<{$ordersinfo.od_dl_tel}></span></div>
+					 <div style="margin: 0.3rem 0"><h1>支付凭证：</h1></div>
+					 <if condition="$ordersinfo.od_paypic_str neq ''">
+					 <div class="item-input" style="margin: 0.3rem 0"><img class="kl-img-thumbnail" id="img_file" src="<{$ordersinfo.od_paypic_str}>" style="width:4rem;margin-top:.2rem;"></div>
+					</if>
+					<div><span style="color: #c1c1c1"><{$ordersinfo.od_remark}></span></div>
+				</div>
+
+				<div style="background: #fff; margin-top:0.25rem;padding: .5rem">
+					 <div style="margin: 0.3rem 0"><h1>操作日记</h1></div>
+					    <foreach name="orderlogs" item="item"  key="key">
+  						 <p style="color:#c1c1c1"><b><{$item.odlg_action}></b>　<{$item.odlg_dlname}>　<{$item.odlg_addtime|date='Y-m-d H:i:s',###}></p>
+  						</foreach>
+				</div>
+			</div>
+		</div>
+	</body>
+	<include file="Com/sj" />
+	<script type="text/javascript">
+		$.init();
+		$(function() {
+			var odObject=<{:json_encode($ordersinfo)}>;
+			var ly_status="<{$ly_status}>"
+			// console.log(JSON.stringify(odObject));
+			$("#dtl_odpingzheng").click(function(){
+				if($.isPlainObject(odObject))
+				{
+					window.location.href="<{:U('./Kangli/Orders/uploadpaypic/od_id')}>/"+odObject['od_id']+"/ly_status/"+ly_status;
+				}
+			});
+			$("#dtl_odcancel").click(function(){
+				if ($.isPlainObject(odObject))
+				{
+					 $.confirm('是否确定取消该订单?',function () {
+					 	// $.toast("取消");
+		               window.location.href="<{:U('./Kangli/Orders/canceldlorder/od_id')}>/"+odObject['od_id']+"/state/9/od_state/10/ly_status/1";
+		            });
+				}
+			});
+			$("#dtl_odshouhuo").click(function(){
+				if ($.isPlainObject(odObject))
+				{
+					 $.confirm('是否确定收货?',function () {
+					 	// $.toast("取消");
+		               window.location.href="<{:U('./Kangli/Orders/confirmreceipt/od_id')}>/"+odObject['od_id']+"/od_state/10/ly_status/1";
+		            });
+				}
+			});
+		});
+	</script>
+
+</html>

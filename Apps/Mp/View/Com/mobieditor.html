@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/kedt4110/themes/default/default.css" />
+<script type="text/javascript" src="__PUBLIC__/kedt4110/kindeditor-min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/kedt4110/lang/zh_CN.js"></script>
+<script type="text/javascript" >
+KindEditor.lang({
+		shipin : '插入视频外链'
+});
+
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('#econtent', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : false,
+					allowFlashUpload : false,
+					allowMediaUpload : false,
+					allowFileUpload : false,
+					allowFileManager : true,
+					filterMode : true,
+					fileManagerJson : '__PUBLIC__/kedt4110/php/mobi_file_manager_json.php?sture=<{$sture}>&ttamp=<{$ttamp}>&uid=<{$uid}>',
+					afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=fmmm]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=fmmm]')[0].submit();
+					});
+				    },
+					items : [
+						'undo', 'redo','|','preview','plainpaste','|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|','table', 'image', 'link','unlink','shipin'],
+						
+					htmlTags:{
+						font : ['color', 'size', 'face', '.background-color'],
+						span : [
+								'.color', '.background-color', '.font-size', '.font-family', '.background',
+								'.font-weight', '.font-style', '.text-decoration', '.vertical-align', '.line-height'
+						],
+						div : [
+								'align', '.border', '.margin', '.padding', '.text-align', '.color',
+								'.background-color', '.font-size', '.font-family', '.font-weight', '.background',
+								'.font-style', '.text-decoration', '.vertical-align', '.margin-left'
+						],
+						table: [
+								'border', 'cellspacing', 'cellpadding', 'width', 'height', 'align', 'bordercolor',
+								'.padding', '.margin', '.border', 'bgcolor', '.text-align', '.color', '.background-color',
+								'.font-size', '.font-family', '.font-weight', '.font-style', '.text-decoration', '.background',
+								'.width', '.height', '.border-collapse'
+						],
+						'td,th': [
+								'align', 'valign', 'width', 'height', 'colspan', 'rowspan', 'bgcolor',
+								'.text-align', '.color', '.background-color', '.font-size', '.font-family', '.font-weight',
+								'.font-style', '.text-decoration', '.vertical-align', '.background', '.border'
+						],
+						a : ['href', 'target', 'name'],
+						embed : ['src', 'width', 'height', 'type', 'loop', 'autostart', 'quality', '.width', '.height', 'align', 'allowscriptaccess'],
+						img : ['src','align','width','height'],
+						'p,ol,ul,li,blockquote,h1,h2,h3,h4,h5,h6' : [
+								'align', '.text-align', '.color', '.background-color', '.font-size', '.font-family', '.background',
+								'.font-weight', '.font-style', '.text-decoration', '.vertical-align', '.text-indent', '.margin-left'
+						],
+						pre : ['class'],
+						hr : ['class', '.page-break-after'],
+						'br,tbody,tr,strong,b,sub,sup,em,i,u,strike,s,del' : [],
+						iframe : ['src', 'frameborder','width','height']
+						
+				    }
+
+				});
+				
+			});
+</script>
+<style>
+.ke-icon-shipin {
+	background-position: 0px -528px;
+	width: 16px;
+	height: 16px;
+}
+</style>

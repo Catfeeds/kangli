@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>基本设置</title>
+<include file="Com/head" />
+<include file="Com/mobieditor" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfmobi/basic')}>">基本设置</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Jfmobi/edit_save/action/contact')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$basicinfo.bas_id}>" name="bas_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+     <tr>     
+				  <td class="txtcenter" colspan="2" height="40" ><include file="Com/mobibase" /></td>
+			  </tr>
+             <tr>     
+                  <td height="40"   width="25%" class="txtright"  style="font-size:14px; font-weight:bold; padding-top:20px" >编辑联系方式:</td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > </td>
+				  <td  class="txtleft" >
+				  <textarea name="econtent" id="econtent" style="width:640px;height:500px;visibility:hidden;"><{$basicinfo.bas_contact|htmlspecialchars}></textarea>
+				  </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+              <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认修改" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

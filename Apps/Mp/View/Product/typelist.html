@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">产品分类管理</A></div>
+<div class="nav_r"><a href="<{:U('Mp/Product/typeadd')}>">添加产品分类</a></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="10%"  ><span>ID</span></th>
+<th  width="50%"  style="text-align:left" ><span>类型名称</span></th>
+<th  width="40%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<volist name='list' id='vo' key='key' >
+<tr class="even" >
+<td class="data" ><span><{$vo.protype_id}></span></td>
+<td class="data" style="text-align:left" ><span><{$vo.protype_name}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Product/typeorder?protype_id='.$vo['protype_id'].'&active=shang')}>"  title="上移">↑</a>　<a href="<{:U('Mp/Product/typeorder?protype_id='.$vo['protype_id'].'&active=xia')}>" title="下移" >↓</a>　<a href="<{:U('Mp/Product/typeedit?protype_id='.$vo['protype_id'].'')}>">修改</a>　<a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Product/typedelete?protype_id='.$vo['protype_id'].'')}>';" >删除</a></span></td>
+</tr>
+<volist name="vo['subarr']" id="sub">
+<tr class="odd" >
+<td class="data" ><span><{$sub.protype_id}></span></td>
+<td class="data" style="text-align:left" ><span>　　<{$sub.protype_name}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Product/typeorder?protype_id='.$sub['protype_id'].'&active=shang')}>"  title="上移">↑</a>　<a href="<{:U('Mp/Product/typeorder?protype_id='.$sub['protype_id'].'&active=xia')}>" title="下移" >↓</a>　<a href="<{:U('Mp/Product/typeedit?protype_id='.$sub['protype_id'].'')}>">修改</a>　<a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Product/typedelete?protype_id='.$sub['protype_id'].'')}>';" >删除</a></span></td>
+</tr>
+</volist>
+</volist>
+</tbody>
+</table>
+<div class="height10"></div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

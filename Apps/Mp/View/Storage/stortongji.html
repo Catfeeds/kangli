@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>入库统计</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">入库统计</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%;">
+统计日期：从 <b  style="font-size:14px"><{$begintime}></b> 到 <b  style="font-size:14px"><{$endtime}></b>
+</div>
+<div style="float:right; width:65%; text-align:right">
+<form action="<{:U('Mp/Storage/stortongji')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　
+<select name="whid"  ID="whid" >
+<option value=0  >请选择仓库　</option>	
+<volist name='warehouselist' id='vo' key='key' >
+	<option value="<{$vo.wh_id}>"  <if condition="$whid eq $vo.wh_id ">selected</if> ><{$vo.wh_name}></option>
+</volist>
+</select>　
+<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="50%"   style="text-align:left"><span>产品</span></th>
+<!-- <th  width="30%"   ><span >颜色尺码</span></th> -->
+<th  width="20%"   ><span >入库统计</span></th>
+</tr></thead>
+<tbody>
+<empty name="list">
+<tr class="odd" >
+<td class="data"  colspan="7"  style="text-align:center">没有记录</td>
+</tr>
+<else />
+<volist name='list' id='vo' key='key' > 
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+
+<td class="data" style="text-align:left"><span><{$vo.pro_name}>(<{$vo.pro_number}>)</span></td>
+<!-- <td class="data" ><span><{$vo.attr_color}>--<{$vo.attr_size}></span></td> -->
+<td class="data" ><span><{$vo.count1}></span></td>
+
+</tr>
+</volist>
+</empty> 
+</tbody>
+</table>
+
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

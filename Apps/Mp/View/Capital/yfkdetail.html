@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>预付款详细</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Capital/yufukuan')}>">预付款明细</A>　&gt;　<A href="#">预付款详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >资金类别：</td>
+				  <td  class="txtleft" ><{$yfkinfo.yfk_typestr}></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >收款代理：</td>
+				  <td  class="txtleft" ><{$yfkinfo.dl_name_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >付款代理：</td>
+				  <td  class="txtleft" ><{$yfkinfo.dl_sendname_str}></td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >金额：</td>
+				  <td  class="txtleft" ><{$yfkinfo.yfk_moneystr}> 元</td>
+			  </tr>
+			  <if condition="($yfkinfo.yfk_orderid neq '') AND ($yfkinfo.yfk_orderid neq '0') ">
+			   <tr>     
+                  <td height="40"  class="txtright" >相关订单号：</td>
+				  <td  class="txtleft" ><{$yfkinfo.yfk_orderid}></td>
+			  </tr>
+			  </if>
+			   <tr>     
+                  <td height="40"  class="txtright"  >说明：</td>
+			     <td  class="txtleft" ><{$yfkinfo.yfk_remark}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >时间：</td>
+				  <td  class="txtleft" ><{$yfkinfo.yfk_addtime|date='Y-m-d H:i:s',###}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >状态：</td>
+				  <td  class="txtleft" ><{$yfkinfo.yfk_state_str}></td>
+			  </tr>
+
+			  
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+
+			  
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

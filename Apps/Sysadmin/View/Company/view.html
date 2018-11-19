@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('/Sysadmin')}>">首页</a>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >企业代号：</td>
+				  <td class="txtleft" ><{$qyinfo.qy_code}>（与本地服务器企业代号对应）</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" > 登录账户：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_username}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" > 企业名称：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_name}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系人：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_contact}></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_tel}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Logo：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <neq name="qyinfo.qy_pic_str" value=""><{$qyinfo.qy_pic_str}></neq> 
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >微站目录：</td>
+				  <td  class="txtleft" ><neq name="qyinfo.qy_folder" value=""><a href="http://www.cn315fw.com/<{$qyinfo.qy_folder}>" target="_blank">http://www.cn315fw.com/<{$qyinfo.qy_folder}></a></neq></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >6小时内允许查询次数：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_querytimes}> (防止恶意查询)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >关联企业码：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_relation}> (如果有多个企业码同属于一个公司，查询时用其中一组fwkey即可)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >FWKEY：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_fwkey}>  (用于给第三方调用接口)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >FWSECRET：</td>
+				  <td  class="txtleft" ><{$qyinfo.qy_fwsecret}> (用于给第三方调用接口)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft"  ><{$qyinfo.qy_remark|nl2br}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >首次查显示：</td>
+				  <td  class="txtleft"  ><{$qyinfo.smsnote}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >多次查显示：</td>
+				  <td  class="txtleft"  ><{$qyinfo.renote}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >防伪码长度：</td>
+				  <td  class="txtleft"   ><{$qyinfo.codelen}> (除去4位企业码的长度)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >物流码类型：</td>
+				  <td  class="txtleft" ><{$qyinfo.sntype}></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >权限：</td>
+				  <td  class="txtleft" >
+<table cellspacing="1" cellpadding="1"  class="purview" >
+ <tbody>
+ <tr>
+  <td width="15%"    class="tdl" >
+    <input type="checkbox" onclick="return false"  <eq name="purview_arr.10000" value="10000" >checked</eq> > 经销商管理</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="10001" onclick="return false"  <eq name="purview_arr.10001" value="10001">checked</eq> > 经销商列表</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="10002" onclick="return false"  <eq name="purview_arr.10002" value="10002">checked</eq> > 添加经销商</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="10003" onclick="return false"  <eq name="purview_arr.10003" value="10003">checked</eq> > 删除经销商</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="10004" onclick="return false"  <eq name="purview_arr.10004" value="10004">checked</eq> > 修改经销商</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="10005" onclick="return false"  <eq name="purview_arr.10005" value="10005">checked</eq> > 经销商分类</div>
+    </td>
+ </tr>
+ 
+ <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"   <eq name="purview_arr.90000" value="90000" >checked</eq> > 经销商登录</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="90001" onclick="return false"  <eq name="purview_arr.90001" value="90001">checked</eq> > 会员号登录</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="90002" onclick="return false" <eq name="purview_arr.90002" value="90002">checked</eq> > 微信号登录</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="90003" onclick="return false"  <eq name="purview_arr.90003" value="90003">checked</eq> > 经销商上下级</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="90004" onclick="return false"  <eq name="purview_arr.90004" value="90004">checked</eq> > 经销商出货</div>
+    </td>
+ </tr>
+ 
+ <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"  <eq name="purview_arr.20000" value="20000" >checked</eq> > 产品管理</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="20001" onclick="return false"  <eq name="purview_arr.20001" value="20001">checked</eq> > 产品列表</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="20002" onclick="return false"  <eq name="purview_arr.20002" value="20002">checked</eq> > 添加/修改产品</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="20003" onclick="return false"  <eq name="purview_arr.20003" value="20003">checked</eq> > 删除产品</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="20004" onclick="return false"  <eq name="purview_arr.20004" value="20004">checked</eq> > 产品分类管理</div>
+    </td>
+ </tr>
+ 
+ <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"  <eq name="purview_arr.30000" value="30000" >checked</eq> > 出货管理</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="30001" onclick="return false"  <eq name="purview_arr.30001" value="30001">checked</eq> > 出货列表</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="30002" onclick="return false"  <eq name="purview_arr.30002" value="30002">checked</eq> > 出货扫描</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="30003" onclick="return false"  <eq name="purview_arr.30003" value="30003">checked</eq> > 出货导入</div>
+    </td>
+ </tr>
+ 
+ <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"   <eq name="purview_arr.40000" value="40000" >checked</eq> > 会员管理</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="40001" onclick="return false"  <eq name="purview_arr.40001" value="40001">checked</eq> > 会员列表</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="40002" onclick="return false"  <eq name="purview_arr.40002" value="40002">checked</eq> > 添加会员(会员登录)</div>
+		<div class="son"><input type="checkbox" class="sonbox"  onclick="return false"  <eq name="purview_arr.40003" value="40003">checked</eq> > 修改会员</div>
+        <div class="son"><input type="checkbox" class="sonbox"  onclick="return false"  <eq name="purview_arr.40004" value="40004">checked</eq> > 删除会员</div>
+		<div class="son"><input type="checkbox" class="sonbox"  onclick="return false"  <eq name="purview_arr.40005" value="40005">checked</eq> > 微信号登录(与添加会员只能选其一)</div>
+    </td>
+ </tr>
+ 
+  <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"   <eq name="purview_arr.50000" value="50000" >checked</eq> > 积分管理</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="50001" onclick="return false"  <eq name="purview_arr.50001" value="50001">checked</eq> > 积分明细</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="50002" onclick="return false"  <eq name="purview_arr.50002" value="50002">checked</eq> > 积分兑换</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="50003" onclick="return false"  <eq name="purview_arr.50003" value="50003">checked</eq> > 礼品管理</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="50004" onclick="return false"  <eq name="purview_arr.50004" value="50004">checked</eq> > 实物礼品</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="50005" onclick="return false"  <eq name="purview_arr.50005" value="50005">checked</eq> > 虚拟礼品</div>
+    </td>
+  </tr>
+  
+  <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"   id="parent_70000"  <eq name="purview_arr.70000" value="70000" >checked</eq> > 前台端</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="70001" onclick="return false"  <eq name="purview_arr.70001" value="70001">checked</eq> > 基本设置</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70010" onclick="return false"  <eq name="purview_arr.70010" value="70010">checked</eq> > 基本信息</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70011" onclick="return false"  <eq name="purview_arr.70011" value="70011">checked</eq> > 公司简介</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70012" onclick="return false"  <eq name="purview_arr.70012" value="70012">checked</eq> > 联系方式</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="70002" onclick="return false"  <eq name="purview_arr.70002" value="70002">checked</eq> > 积分说明</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="70003" onclick="return false"  <eq name="purview_arr.70003" value="70003">checked</eq> > 帮助中心</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70004" onclick="return false"  <eq name="purview_arr.70004" value="70004">checked</eq> > 注册协议</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70005" onclick="return false"  <eq name="purview_arr.70005" value="70005">checked</eq> > 产品展示</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70008" onclick="return false"  <eq name="purview_arr.70008" value="70008">checked</eq> > 产品分类</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="70006" onclick="return false" <eq name="purview_arr.70006" value="70006">checked</eq> > 企业动态</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70007" onclick="return false"  <eq name="purview_arr.70007" value="70007">checked</eq> > 图片管理</div>
+		<div class="son"><input type="checkbox" class="sonbox"  value="70009" onclick="return false"  <eq name="purview_arr.70009" value="70009">checked</eq> > 留言反馈</div>
+	</td>
+  </tr>
+  
+  <tr>
+  <td    class="tdl" >
+    <input type="checkbox"  onclick="return false"   <eq name="purview_arr.80000" value="80000" >checked</eq> > 查询</td>
+    <td class="tdr" >
+        <div class="son"><input type="checkbox" class="sonbox"  value="80001" onclick="return false"  <eq name="purview_arr.80001" value="80001">checked</eq> > 防窜货查询</div>
+        <div class="son"><input type="checkbox" class="sonbox"  value="80002" onclick="return false"  <eq name="purview_arr.80002" value="80002">checked</eq> > 防伪码查询记录</div>
+
+	</td>
+  </tr>
+ 
+</tbody>
+</table>
+				  </td>
+			  </tr>
+
+			  <tr>  <td height="60"  ></td>
+                    <td  class="txtleft"  ><input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼品兑换</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dgjfexchange/index')}>">礼品兑换</A>　&gt;　<A href="#">处理兑换</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dgjfexchange/deal_save')}>"   method="post" name="fmmm"  >
+<input type="hidden" value="<{$jfexchangeinfo.exch_id}>" name="exch_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >用户：</td>
+				  <td class="txtleft" ><{$jfexchangeinfo.exch_username}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 联系人：</td>
+				  <td  class="txtleft" ><{$jfexchangeinfo.exch_contact}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系电话：</td>
+				  <td  class="txtleft" ><{$jfexchangeinfo.exch_tel}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系地址：</td>
+				  <td  class="txtleft" ><{$jfexchangeinfo.exch_address}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >用户留言：</td>
+				  <td  class="txtleft" ><{$jfexchangeinfo.exch_msg}></td>
+			  </tr>
+
+			    <tr>     
+                  <td height="40"  class="txtright"  style="vertical-align:top;">兑换礼品：</td>
+				  <td  class="txtleft" >
+				   <table width="80%" border="0" cellpadding="1" cellspacing="1"  style="background-color:#ddd">
+					  <tr>
+					    <td style="background-color:#eee; padding:5px; text-align:center" width="10%" >ID</td>
+						<td style="background-color:#eee; padding:5px; text-align:left" width="60%" >礼品名称</td>
+						<td style="background-color:#eee; padding:5px; text-align:center" width="15%">所需积分</td>
+						<td style="background-color:#eee; padding:5px; text-align:center" width="15%">兑换数量</td>
+					  </tr>
+					  <foreach name='exchdetail' item='item'  key='key'>
+					  <tr>
+					    <td style="background-color:#FFFFFF; padding:5px; text-align:center" ><{$item.detail_giftid}></td>
+						<td style="background-color:#FFFFFF; padding:5px; text-align:left" ><{$item.detail_giftname}></td>
+						<td style="background-color:#FFFFFF; padding:5px; text-align:center"><{$item.detail_jf}></td>
+						<td style="background-color:#FFFFFF; padding:5px; text-align:center"><{$item.detail_qty}></td>
+					  </tr>
+					  </foreach>
+					</table>
+
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >当前状态：</td>
+				  <td  class="txtleft" >
+				  <{$jfexchangeinfo.exch_state_str}>
+				   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >处理动作：</td>
+				  <td  class="txtleft" >
+				  <select id="deal" name="deal"  class="input"  >
+				  <option  value="0" <eq name="jfexchangeinfo.exch_state" value="0" >selected</eq> >待处理</option>
+				  <option value="1"  <eq name="jfexchangeinfo.exch_state" value="1" >selected</eq> >待发货</option>
+				  <option value="2"  <eq name="jfexchangeinfo.exch_state" value="2" >selected</eq> >已发货</option>
+				  <option value="9"  <eq name="jfexchangeinfo.exch_state" value="9" >selected</eq> >无效</option>
+				  </select>
+				   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >发货快递：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="exch_kuaidi" class="input" value="<{$jfexchangeinfo.exch_kuaidi}>" > (发货时填写)</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >快递单号：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="exch_kdhao" class="input" value="<{$jfexchangeinfo.exch_kdhao}>" > (发货时填写)</td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >处理备注：</td>
+			     <td  class="txtleft" ><textarea cols="50" rows="3" name="exch_remark"  ><{$jfexchangeinfo.exch_remark}></textarea></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认处理" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>防窜货查询</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">防窜货查询</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >输入防伪码：</td>
+				  <td class="txtleft" ><b><{$fwcode}></b></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >对应条码：</td>
+				  <td class="txtleft" ><b><{$barcode.code}></b></td>
+			  </tr>
+			  <neq name="barcode.dabiao" value="">
+			   <tr>     
+                  <td height="40"  class="txtright" > 大标条码：</td>
+				  <td  class="txtleft" ><{$barcode.dabiao}></td>
+			  </tr>
+			  </neq>
+			    <tr>     
+                  <td height="40"  class="txtright" >出货仓库：</td>
+				  <td  class="txtleft" ><{$shipmentinfo.warehouse}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >对应产品：</td>
+				  <td  class="txtleft" ><{$shipmentinfo.pro_name}> (<{$shipmentinfo.pro_number}>)</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >包装数量：</td>
+				  <td  class="txtleft" ><{$barcode.qty}></td>
+			  </tr>
+			  
+
+			 
+			   <tr>     
+                  <td height="40"  class="txtright"  valign="top" style="padding-top:5px;line-height:24px;">流向：</td>
+				  <td  class="txtleft"  style="line-height:24px;padding-top:5px"  valign="top" >
+
+				 <b><{$shipmentinfo.ship_date|date='Y-m-d',###}></b>   由 <b>总公司</b>  发向  <b><{$shipmentinfo.dl_name}></b> <br/>
+
+				 <notempty name="shipmentinfo.sub">
+				 <b><{$shipmentinfo.sub.ship_date|date='Y-m-d',###}></b>   由 <b><{$shipmentinfo.dl_name}></b>  发向  <b><{$shipmentinfo.sub.dl_name}></b> <br/>
+				 </notempty>
+				 
+				  <notempty name="shipmentinfo.sub.sub">
+				 <b><{$shipmentinfo.sub.sub.ship_date|date='Y-m-d',###}></b>   由 <b><{$shipmentinfo.sub.dl_name}></b>  发向  <b><{$shipmentinfo.sub.sub.dl_name}></b> <br/>
+				 </notempty>
+				 
+				  <notempty name="shipmentinfo.sub.sub.sub">
+				 <b><{$shipmentinfo.sub.sub.sub.ship_date|date='Y-m-d',###}></b>   由 <b><{$shipmentinfo.sub.sub.dl_name}></b>  发向  <b><{$shipmentinfo.sub.sub.sub.dl_name}></b> <br/>
+				 </notempty>
+				 
+				  <notempty name="shipmentinfo.sub.sub.sub.sub">
+				 <b><{$shipmentinfo.sub.sub.sub.sub.ship_date|date='Y-m-d',###}></b>   由 <b><{$shipmentinfo.sub.sub.sub.dl_name}></b>  发向  <b><{$shipmentinfo.sub.sub.sub.sub.dl_name}></b> <br/>
+				 </notempty>
+		 
+			
+				  </td>
+			  </tr>
+			 
+			
+			   
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

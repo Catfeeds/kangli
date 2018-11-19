@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>增加库存</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dlkucun/xnkclist')}>">代理库存</A>　&gt;　<A href="#">增加库存</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dlkucun/xnkcadd_save')}>"   method="post" name="fmmm"    >
+<input type="hidden" value="<{$dealerinfo.dl_belong}>" name="dl_belong" />
+<input type="hidden" value="<{$dealerinfo.dl_id}>" name="dl_id" />
+<input type="hidden" value="<{$prolist.0.pro_id}>" name="pro_id" />
+<input type="hidden" value="<{$dealerinfo.dl_belong_stock}>" name="dl_belong_stock" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			    <tr>     
+                  <td height="40"  class="txtright" ><span style="font-size:16px">增加库存　</span></td>
+				  <td  class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >代理：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_name_str}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品：</td>
+				  <td  class="txtleft" >
+				  <{$prolist.0.pro_name}> (<{$prolist.0.pro_number}>)
+				  
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >代理上家：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_belong_str}></td>
+			  </tr>
+			  <if condition="$dealerinfo.dl_belong gt '0' ">
+			   <tr>     
+                  <td height="40"  class="txtright" >上家库存：</td>
+				  <td  class="txtleft" ><{$dealerinfo.dl_belong_stock}></td>
+			  </tr>
+             </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >增加库存：</td>
+				  <td  class="txtleft" ><input type="text" size="8" maxlength="8"  name="kc_add" class="input" value="" >   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" ><input type="text" size="60" maxlength="100"  name="kc_remark" class="input" value="" > </td>
+			  </tr>
+
+
+
+			  
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认提交" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+
+			  
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

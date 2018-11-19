@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出货管理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+function sub_dealer(nextselect,id){
+	id=parseInt(id);
+	if(id>0){
+	    if(nextselect=='#ship_dealer2'){
+		   $("#ship_dealer2").hide();
+		   $("#ship_dealer3").hide();
+	    }else if(nextselect=='#ship_dealer3'){
+		   $("#ship_dealer3").hide();
+	    }
+		$.post("<{:U('Mp/Shipment/subdealerarr')}>", {Action:"post",dl_id:id}, function (data, textStatus){
+		   if(data.length>0){
+		       var str="<option value='0'   >下级经销商</option>";
+			   for(var p in data){
+				  str = str+ "<option value='"+data[p]['dl_id']+"'   >"+data[p]['dl_number']+" "+data[p]['dl_name']+" "+data[p]['dl_contact']+"</option>" ;
+			   }
+			   $(nextselect).html(str);
+			   $(nextselect).show();
+		   }
+		}, "json");
+	}else{
+           if(nextselect=='#ship_dealer2'){
+		       $("#ship_dealer2").hide();
+			   $("#ship_dealer3").hide();
+		   }else if(nextselect=='#ship_dealer3'){
+		       $("#ship_dealer3").hide();
+		   }
+	}
+}
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Shipment/index')}>">出货管理</A>　&gt;　<A href="#">出货导入</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Shipment/import_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >出货日期：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="ship_date"  class="easyui-datebox"  value=""   id="ship_date"    >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货单号：</td>
+				  <td  class="txtleft" >
+				  <input    type="text" size="25" maxlength="32"  name="ship_number"  class="input"  value=""   >  * 
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货仓库：</td>
+				  <td  class="txtleft" >
+				  <select name="ship_whid"   class="select" >
+					<option value="0"   >选择仓库</option>
+					<volist name='warehouselist' id='vo' key='key' >
+					<option value="<{$vo.wh_id}>"  ><{$vo.wh_name}></option>
+					</volist>
+				  </select> *
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >收货经销商：</td>
+				  <td  class="txtleft" >
+		          <select name="ship_dealer"  id="ship_dealer"     class="select"     >
+					<option value="0"   >选择经销商客户</option>
+					<volist name='dealerlist' id='vo' key='key' >
+					<option value="<{$vo.dl_id}>"  ><{$vo.dl_number}> <{$vo.dl_name}> (<{$vo.dl_username}>)</option>
+					</volist>
+				  </select>
+				  
+				  <select name="ship_dealer2" id="ship_dealer2"   class="select"   onChange="javascript:sub_dealer('#ship_dealer3',this.value);"    style="display:none" >
+				  </select>
+				  
+				  <select name="ship_dealer3" id="ship_dealer3"   class="select"      style="display:none"  >
+				  </select>
+				  
+				   *
+		      </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >出货产品：</td>
+				  <td  class="txtleft" >
+				  <select name="ship_pro"   class="select" >
+					<option value="0"   >选择产品</option>
+					<volist name='productlist' id='vo' key='key' >
+					<option value="<{$vo.pro_id}>"  ><{$vo.pro_name}></option>
+					</volist>
+				  </select> *
+		      </td>
+			  </tr>
+			   
+			   <tr>     
+                  <td height="40"  class="txtright" >条码文件：</td>
+				  <td  class="txtleft" >
+				   <input name="barcode_file" type="file" />
+		      </td>
+			  </tr>
+			    <tr>     
+                  <td height="40"  class="txtright" ></td>
+				  <td  class="txtleft" >
+				  注：条码文件为txt文件，每个条码占一行
+		      </td>
+			  </tr>
+ <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+				  <td  class="txtleft" style="padding:10px 0 5px 0" >
+				  <textarea name="ship_remark" rows="3" cols="40"></textarea>
+		      </td>
+			  </tr>
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="批量出货" class="botton"   id="submit" >　　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

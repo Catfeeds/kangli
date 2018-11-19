@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+
+
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#">导出数据</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+
+<form action="<{:U('Mp/Dealer/dealerexport')}>"   method="post" name="fmmm" >
+<input type="hidden" value="save" name="action" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="20"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" ></td>
+				  <td class="txtleft" >按以下条件导出数据
+				  </td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >状态：</td>
+				  <td class="txtleft" >
+				 <select name="dl_status"   class="select"   >
+					<option value=""  >全部　　</option>
+					<option value="0"  >新申请</option>
+					<option value="1"  >正常</option>
+					<option value="9"  >已禁用</option>
+</select> </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商级别：</td>
+				  <td class="txtleft" >
+				  <select name="dl_type"   class="select" style="width:140px"  >
+					<option value="0" >全部</option>
+					<volist name='dltypelist' id='vo' key='key' >
+					<option value="<{$vo.dlt_id}>"  <if condition="$vo.dlt_id eq $dl_type" >selected</if> ><{$vo.dlt_name}></option>
+					</volist>
+</select> </td>
+			  </tr>
+<tr>     
+                  <td height="40"   class="txtright" >排序：</td>
+				  <td class="txtleft" >
+				 <select name="orderby"   class="select"   >
+					<option value="0"  >按申请时间降序　　</option>
+					<option value="1"  >按级别降序</option>
+					</select> </td>
+			  </tr>
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="确认导出" class="botton" >　　　<input name="" value="返 回" onclick="javascript:window.history.go(-1);" class="botton" type="reset">
+            </td>
+			  </tr>
+			</table>
+</form>
+
+<div class="height20"></div>
+<div class="height20"></div>
+<div class="height20"></div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

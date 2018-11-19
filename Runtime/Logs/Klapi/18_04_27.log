@@ -1,0 +1,45 @@
+[ 2018-04-27T10:32:04+08:00 ] 192.168.1.134 /kangli/klapi/v1/mpwx?param=0DC43E60B28ABE56ECD19CEC4EAF2F4868DCF896D0D55B58810D916CD8177EED8BEB2A64D1858F5F31ED0FFF7C64DBCB2A31537B4DB693F304CF7EF2F3254105867230B89EC63DE95DE55EF8447F0DE02087425C7DC75C48B18D49E1E1DA876B6A8B1E7D7E6150B426E705C4F6074F61E6F6CA97C9219DCA4EDB790ABEBBB67880545A0BA2024647C477B90FFCC7178D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.011000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0010s ]
+SQL: SELECT `qy_fwkey` FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.007000s ]
+INFO: [ action_begin ] --START--
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.008000s ]
+SQL: SHOW COLUMNS FROM `fw_protype` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0010s ]
+SQL: SELECT `pro_typeid` FROM `fw_product` WHERE `pro_unitcode` = '9999' AND `pro_active` = 1 GROUP BY pro_typeid  [ RunTime:0.0010s ]
+SQL: SELECT `protype_id`,`protype_name` FROM `fw_protype` WHERE `protype_unitcode` = '9999' AND `protype_iswho` = 0 AND `protype_id` = 3 ORDER BY protype_id ASC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pro_id`,`pro_typeid`,`pro_name`,`pro_number`,`pro_pic`,`pro_price` FROM `fw_product` WHERE `pro_unitcode` = '9999' AND `pro_active` = 1 ORDER BY pro_order ASC LIMIT 0,8   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: item D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `fw_proprice` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = null AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pro_addtime D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 171 行.
+NOTIC: [8] Undefined variable: item D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 157 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = null AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pro_addtime D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 171 行.
+NOTIC: [8] Undefined variable: item D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 157 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = null AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: pro_addtime D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 171 行.
+NOTIC: [8] Undefined variable: item D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 157 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = null AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pro_addtime D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 171 行.
+NOTIC: [8] Undefined variable: item D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 157 行.
+SQL: SELECT * FROM `fw_proprice` WHERE `pri_proid` = null AND `pri_unitcode` = '9999' AND `pri_dltype` = null LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pro_addtime D:\wamp64\www\Kangli\Apps\Klapi\Controller\ProductsController.class.php 第 171 行.
+SQL: SELECT `pro_id`,`pro_typeid`,`pro_name`,`pro_number`,`pro_pic`,`pro_price` FROM `fw_product` ORDER BY pro_order DESC LIMIT 8,8   [ RunTime:0.0010s ]
+

@@ -1,0 +1,241 @@
+[ 2018-08-21T17:39:59+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.040059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.041059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:02+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.087062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.087062s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:03+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.014058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.014058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:05+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.019059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.019059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:07+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.023058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.023058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:09+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.012058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.012058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:11+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.029059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.029059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:13+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.049060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.049060s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:15+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.030059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.030059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:17+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.020058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.020058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:19+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.019058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.019058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:21+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.016059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.016059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:23+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.016058s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.016058s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:25+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.036060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.036060s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:27+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.022059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.022059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T17:40:30+08:00 ] ::1 /Kangli/Mp/Echarts/echarts_data_get
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.076061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.077061s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] file_get_contents(/kangli//public/mp/js/mapseries.json): failed to open stream: No such file or directory D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Tp\Common\function.php 第 72 行.
+
+[ 2018-08-21T18:01:03+08:00 ] ::1 /Kangli/Mp/Dljf/index
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:01:09+08:00 ] ::1 /Kangli/Mp/Dljf/dljflist
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:01:12+08:00 ] ::1 /Kangli/Mp/Dljf/dljfexch
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:01:16+08:00 ] ::1 /Kangli/Mp/Dljf/dljfgift
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:07:41+08:00 ] ::1 /Kangli/Mp/Dljf/dljfgift
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:07:44+08:00 ] ::1 /Kangli/Mp/Dljf/dljfexch
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:07:46+08:00 ] ::1 /Kangli/Mp/Dljf/index
+ERR: 无法加载控制器:Dljf
+
+[ 2018-08-21T18:21:40+08:00 ] ::1 /Kangli/Mp/Returnable/dlreturn
+ERR: 无法加载控制器:Returnable
+
+[ 2018-08-21T18:41:28+08:00 ] ::1 /Kangli/Mp/Returnable/index
+ERR: 无法加载控制器:Returnable
+
+[ 2018-08-21T18:41:36+08:00 ] ::1 /Kangli/Mp/Returnable/dlreturn
+ERR: 无法加载控制器:Returnable
+
+[ 2018-08-21T18:41:41+08:00 ] ::1 /Kangli/Mp/Returnable/index
+ERR: 无法加载控制器:Returnable
+

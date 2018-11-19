@@ -1,0 +1,12 @@
+[ 2017-12-19T09:56:28+08:00 ] 192.168.1.134 /kangli/public/uploads/mobi/kangli/Query/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-19T09:57:02+08:00 ] 192.168.1.134 /kangli/Query/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Query
+

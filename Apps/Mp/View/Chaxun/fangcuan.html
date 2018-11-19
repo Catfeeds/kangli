@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>防窜货查询</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">防窜货查询</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Chaxun/fangcuan_cha')}>"   method="post" name="fmmm"  >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ><b style="font-size:16px">查询方式一</b></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >输入物流码：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="30"  name="wlcode"  class="input"  value=""  >  * </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="查 询" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+<div class="height20"></div>
+<div class="height20"></div>
+<eq name="qypurview.80003" value="80003">
+<form action="<{:U('Mp/Chaxun/fangcuan_setpwd')}>"   method="post" name="fmmm"  >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ><b style="font-size:16px">查询方式二</b></td>
+				  <td width="75%" class="txtleft" style=" font-size:20px;" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" ></td>
+				  <td class="txtleft" >1、设置防窜查询密码<br />2、用微信扫描二维码，输入密码进入查询<br /> 3、建议把该二维码图片保存在手机，在外巡查市场时可以用微信识别该二维码，输入密码进入查询</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >设置查询密码：</td>
+				  <td class="txtleft" ><input    type="password" size="25" maxlength="30"  name="fcpwd"  class="input"  value=""  >  * </td>
+			  </tr>
+
+			  <tr>  <td height="40" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="设　置" class="botton" >　　　　
+            </td>
+			  </tr>
+			   <tr>  <td height="40" ></td>
+                    <td  class="txtleft"  >
+					<notempty name="qyfangcuan_pic_str">
+					<{$qyfangcuan_pic_str}>
+					</notempty>
+            </td>
+			  </tr>
+			</table>
+</form>
+</eq>
+
+<div class="height20"></div>
+<div class="height20"></div>
+<eq name="qypurview.80004" value="80004">
+<form action="<{:U('Mp/Chaxun/fangcuan_fwcha')}>"   method="post" name="fmmm"  >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+              <tr>
+                  <td height="40"   width="25%" class="txtright" ><b style="font-size:16px">查询方式三</b></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >输入防伪码：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="30"  name="fwcode"  class="input"  value=""  >  * </td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="查 询" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</eq>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

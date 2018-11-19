@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出货统计</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Tongji/index')}>">出货统计</A> 　&gt;　<a href="#">总公司代发详细</a></div>
+<div class="nav_r"><a href="#" onClick="javascript:window.history.go(-1);">返回</a></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:80%;">
+统计日期：从 <b  style="font-size:14px"><{$begintime}></b> 到 <b  style="font-size:14px"><{$endtime}></b>　　　　统计经销商：<b  style="font-size:14px"><{$dealerinfo.dl_contact}> <{$dealerinfo.dl_name}></b>　　　　
+</div>
+<div style="float:right; width:15%; text-align:right">
+
+</div>
+</div>
+<volist name="list" id="vo">
+<div class="height20"></div>
+<div class="content">
+<div style="border-left:solid 1px #bbb; border-top:solid 1px #bbb; border-right:solid 1px #bbb; line-height:30px">
+&nbsp;收货方：<b  style="font-size:14px"><{$vo.dl_contact}> <{$vo.dl_name}></b>
+
+</div>
+<table class="table_results" >
+<thead><tr>
+<th  width="10%" ><span>序号</span></th>
+<th  width="70%"   style="text-align:left"><span>产品名称/编号</span></th>
+<th  width="20%"  ><span>数量</span></th>
+</tr></thead>
+<tbody>
+<volist name="vo['pro']" id='voo' key='keyy' > 
+<tr class="<{$keyy%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$keyy}></span> </td>
+<td class="data" style="text-align:left"><span><{$voo.pro_name}> (<{$voo.pro_number}>)</span></td>
+<td class="data" ><span><{$voo.sumqty}></span></td>
+
+</tr>
+</volist>
+</tbody>
+</table>
+<div class="height10"></div>
+</div>
+</volist>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

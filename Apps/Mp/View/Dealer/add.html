@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dealer/edit_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+<input type="hidden" value="0" name="dl_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <if condition="$qypurview.90001 eq '90001'" >
+				  <tr>     
+					  <td height="40"  class="txtright" > 登录账户：</td>
+					  <td  class="txtleft" >
+					    <input type="text" size="25" maxlength="25"  name="dl_username" class="input" value=""   > * 用户名由 A--Z,a--z,0--9,_ 组成,4-20位
+					  </td>
+				  </tr>
+				  <tr>     
+					  <td height="40"  class="txtright" > 登录密码：</td>
+					  <td  class="txtleft" ><input  type="password" size="25" maxlength="25"  name="dl_pwd" class="input" value=""   > *</td>
+				  </tr>
+			   </if>
+			  <tr>     
+                  <td height="40"   class="txtright" >经销商编号：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="dl_number"  class="input"  value=""   >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 经销商名称：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="50"  name="dl_name" class="input" value="" > *</td>
+			  </tr>
+			  
+              <eq name="qypurview.10005" value="10005">
+			  <tr>     
+                  <td height="40"  class="txtright" >经销商级别：</td>
+				  <td  class="txtleft" >
+				   <select name="dl_type"   class="select" >
+					<option value="0"   >选择经销商级别</option>
+					<volist name='typelist' id='vo' key='key' >
+					<option value="<{$vo.dlt_id}>"  <{$vo.selected}> ><{$vo.dlt_name}></option>
+					</volist>
+				  </select> *
+				  </td>
+			  </tr>
+			   </eq>
+			   
+			   <eq name="qypurview.90003" value="90003">
+			  <tr>     
+                  <td height="40"  class="txtright" >上家经销商：</td>
+				  <td  class="txtleft" >
+				    <select name="dl_belong"   class="select" >
+					<option value="0"   >直属公司</option>
+					<volist name='dllist' id='vo' key='key' >
+					<option value="<{$vo.dl_id}>"  <{$vo.selected}> ><{$vo.dl_number}> <{$vo.dl_name}> <{$vo.dl_username}></option>
+					</volist>
+				  </select> *
+				  </td>
+			  </tr>
+			   </eq>
+			   <tr>     
+                  <td height="40"  class="txtright" >联系人：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_contact" class="input" value="" > *</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_tel" class="input" value="" > *</td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >传真：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_fax" class="input" value="" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地址：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="100"  name="dl_address" class="input" value="" ></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><input type="text" size="50" maxlength="100"  name="dl_email" class="input" value="" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_qq" class="input" value="" > </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >微信号：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="50"  name="dl_weixin" class="input" value="" > 注:是微信号不是微信昵称 微信号由 A--Z,a--z,0--9,_-组成,6-20位</td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >身份证：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="dl_idcard" class="input" value="" > </td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >身份证图片：</td>
+				  <td  class="txtleft"  style="padding:10px 0 10px 0">
+				  <input name="pic_file" type="file" /> (建议图片大小不要超500k)  <input type="hidden"  value="" name="old_idcardpic" />
+				  </td>
+			  </tr>
+
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft"   ><textarea cols="60" rows="5" name="dl_remark"  ></textarea>(100字内)</td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

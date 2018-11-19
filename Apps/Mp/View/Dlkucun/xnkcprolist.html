@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>代理库存</title>
+<include file="Com/head" />
+
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dlkucun/xnkclist')}>">代理库存</A> &gt;　<A href="#">代理库存详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:40%">
+<form action="<{:U('Mp/Dlkucun/xnkcprolist')}>"   method="post" name="fmmm">
+<input type="text" size="20" maxlength="20"  name="pro_name"  class="input"   onfocus="if(this.value=='请填写代理账号')this.value=''" value="<{$pro_name}>" style="color:#999999">
+<input type="hidden" name="dlid" value="<{$dl_id}>">　
+<input type="submit" name="Submit" value="查 询">
+</form>
+</div>
+<div style="float:right; width:59%; text-align:right">
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="20%" style="text-align:left"><span>经销商名称</span></th>
+<th  width="20%"   ><span>经销商编号</span></th>
+<th  width="30%" ><span>产品名称</span></th>
+<th  width="10%"  ><span>库存</span></th>
+<th  width="20%"  ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='prolist' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" style="text-align:left"  ><span><{$dl_name}> (<{$dl_username}>)</span></td>
+<td class="data" ><span><{$dl_number}></span></td>
+<td class="data"><span><{$item.pro_name}></span></td>
+<td class="data"><span><{$item.surplusqty}></span></td>
+<td class="data"><span><a href="<{:U('Mp/Dlkucun/xnkcadd/dl_id')}>/<{$dl_id}>/pro_id/<{$item.pro_id}>">增加</a><!--　<a href="<{:U('Mp/Dlkucun/xnkccut?dl_id='.$item['dl_id'].'')}>">减少</a>--></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div style="float:right; line-height:4em">共 <{$pagecount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

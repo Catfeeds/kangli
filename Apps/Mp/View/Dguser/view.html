@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导购管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dguser/index')}>">导购员列表</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <if condition="$qypurview.12005 eq '12005' ">
+			  <notempty name="dguserinfo.dguser_openid">
+			   <tr>     
+                  <td height="40"  class="txtright" >已绑定微信　</td>
+				  <td  class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"  class="txtright" >Openid：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_openid}></td>
+			  </tr>
+			  </notempty>
+			  <notempty  name="dguserinfo.dguser_wxheadimg" >
+			  <tr>
+				  <td height="40"  class="txtright" > 头像：</td>
+				  <td  class="txtleft" > <img src="<{$dguserinfo.dguser_wxheadimg}>"    style="width:60px; height:60px" />
+				  </td>
+			  </tr>
+              </notempty>
+			  <notempty  name="dguserinfo.dguser_wxnickname" >
+			  <tr>     
+                  <td height="40"  class="txtright" >微信昵称：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_wxnickname}></td>
+			  </tr>
+			  </notempty>
+			  </if>
+			  <if condition="$qypurview.12002 eq '12002' ">
+			  <tr>     
+                  <td height="40"   class="txtright" >登录账号：</td>
+				  <td class="txtleft" ><{$dguserinfo.dguser_username}></td>
+			  </tr>
+			  </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >姓名：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_truename}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >电话：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_tel}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >所属店铺：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_dianpu}> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >Email：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_email}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >QQ：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_qq}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地区：</td>
+				  <td  class="txtleft" ><if condition="$dguserinfo.dguser_diqustr neq '' "><{$dguserinfo.dguser_diqustr}></if>
+				   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >地址：</td>
+				  <td  class="txtleft" ><{$dguserinfo.dguser_address}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft" ><{$dguserinfo.dguser_remark|nl2br}></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

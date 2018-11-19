@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/typelist')}>">经销商级别</A>　&gt;　<A href="<{:U('Mp/Dealer/sttypelist')}>">经销商级别2</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Dealer/sttype_save')}>"   method="post" name="fmmm" >
+<input type="hidden" value="<{$dlsttinfo.dlstt_id}>" name="dlstt_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+
+			  <tr>     
+                  <td height="40"   class="txtright" >级别名称：</td>
+				  <td class="txtleft" ><input    type="text" size="25" maxlength="25"  name="dlstt_name"  class="input"  value="<{$dlsttinfo.dlstt_name}>"   >  * </td>
+			  </tr>
+			    <tr>     
+                  <td height="40"   class="txtright" >级别：</td>
+				  <td class="txtleft" >
+				  <select name="dlstt_level"   class="select"  >
+				  <option  value="0" <eq name="dlsttinfo.dlstt_level" value="0" >selected</eq> >选择级别</option>
+				  <option  value="1" <eq name="dlsttinfo.dlstt_level" value="1" >selected</eq> >1　</option>
+				  <option  value="2" <eq name="dlsttinfo.dlstt_level" value="2" >selected</eq> >2　</option>
+				  <option  value="3" <eq name="dlsttinfo.dlstt_level" value="3" >selected</eq> >3　</option>
+				  <option  value="4" <eq name="dlsttinfo.dlstt_level" value="4" >selected</eq> >4　</option>
+				  <option  value="5" <eq name="dlsttinfo.dlstt_level" value="5" >selected</eq> >5　</option>
+				  <option  value="6" <eq name="dlsttinfo.dlstt_level" value="6" >selected</eq> >6　</option>
+				  <option  value="7" <eq name="dlsttinfo.dlstt_level" value="7" >selected</eq> >7　</option>
+				  <option  value="8" <eq name="dlsttinfo.dlstt_level" value="8" >selected</eq> >8　</option>
+				  <option  value="9" <eq name="dlsttinfo.dlstt_level" value="9" >selected</eq> >9　</option>
+				  </select>  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >推荐返利1级：</td>
+				  <td class="txtleft" ><input    type="text" size="5" maxlength="5"  name="dlstt_fanli1"  class="input"  value="<{$dlsttinfo.dlstt_fanli1}>"   >   </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >推荐返利2级：</td>
+				  <td class="txtleft" ><input    type="text" size="5" maxlength="5"  name="dlstt_fanli2"  class="input"  value="<{$dlsttinfo.dlstt_fanli2}>"   >   </td>
+			  </tr>
+
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

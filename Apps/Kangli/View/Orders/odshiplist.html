@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="__PUBLIC__/Kangli/static/chuanshu_min.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no">
+		<title>
+			<{$Think.config.QY_COMPANY}>-出货记录</title>
+		<include file="Com/head" />
+		<style type="text/css">
+			.icon_lists {
+				width: 100% !important;
+			}
+			
+			.icon_lists li {
+				float: left;
+				width: 20%;
+				height: 180px;
+				text-align: center;
+				list-style: none !important;
+			}
+			
+			.icon_lists li img {
+				width: 2rem;
+				margin: 0.3rem;
+			}
+			
+			.icon_lists li a {
+				text-decoration: none;
+			}
+			
+			.icon_lists .iconfont {
+				font-size: 25px;
+				line-height: 30px;
+				margin: 10px 0;
+				color: #7e7e7e;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.icon_lists .iconfont.active,
+			.icon_lists .iconfont:active {
+				font-size: 25px;
+				color: #f08519;
+			}
+			
+			.icon_lists .name {
+				font-size: 12px;
+			}
+			
+			.bar-tab .tab-item.active,
+			.bar-tab .tab-item:active {
+				color: #f08519;
+			}
+			
+			div.panel,
+			p.flip {
+				margin: 0px;
+				padding: 5px;
+				text-align: center;
+				background: #e5eecc;
+				border: solid 1px #c3c3c3;
+			}
+			
+			div.panel {
+				height: 220px;
+				display: none;
+			}
+
+      .modal-button {
+        font-size: .5rem;
+      }
+		</style>
+	</head>
+
+	<body ontouchstart="" style="background-color:#FAFAFA">
+		<div class="page">
+			<header class="bar bar-nav" style="background-color:#006db2;">
+				<!-- <a href="javascript:;" onClick="javascript :history.back(-1);" class="icon icon-left pull-left" style="color:#fff"></a> -->
+				<if condition="$isdetail eq 1">
+					<a href="<{:U('./Kangli/Orders/dlorderdetail/od_id')}>/<{$od_id}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				<else/>
+					<a href="<{:U('./Kangli/Orders/dlorders/')}>" class="icon icon-left pull-left" style="color:#fff"></a>
+				</if>
+				<h1 class="title" style="color:#fff">出货记录</h1>
+        </button>
+			</header>
+			<div class="content">
+				<div class="order-number" style="padding:.5rem;font-size: 1rem;color:#fff;background:#75787f">
+					<span>订单号：<{$ordersinfo.oddt_orderid}></span>
+					<span style="color: #f08519"><{$item.od_state_str}></span>
+				</div>
+				<div class="list-block media-list" style="margin-top:0rem;margin-bottom:0rem;">
+					<ul>
+						<li>
+							<div class="order-list all_odlist" style="border-bottom:.2rem solid #EFEFF4;">
+								<div class="order-content" style="padding-bottom: 0.5rem">
+									<div class="item-media"><img src="__PUBLIC__/uploads/mobi/<{$item2.oddt_propic}>" style="width:3.5rem;" onerror="this.src='__PUBLIC__/Kangli/static/logo_icon.png'"></div>
+									<div class="order-inner">
+										<div class="item-subtitle" style="font-size: 0.5rem">
+											<{$ordersinfo.oddt_proname}>
+										</div>
+										<div class="order-remark">
+											<div class="kl-layout-horizontally-between">
+												<div>
+													<div class="pro_name" style="color: red;">￥<span style="font-size:.75rem"><{$ordersinfo.oddt_dlprice|number_format=2,'.',''}></span>
+														<if condition="$ordersinfo.oddt_price gt 0"><span style="padding-right:.2rem; text-decoration:line-through;color:#c1c1c1">￥<{$ordersinfo.oddt_price|number_format=2,'.',''}></span></if>
+													</div>
+                          							<if condition="$ordersinfo.oddt_color neq ''"><div class="pro_name">颜色尺码：<{$ordersinfo.oddt_color}> <{$ordersinfo.oddt_size}>
+                          							</div></if>
+													<div class="pro_name">订购数量:
+														<{$ordersinfo.oddt_qty}>
+															<{$ordersinfo.oddt_prounits}>
+																<{$ordersinfo.oddt_totalqty}>
+													</div>
+													<div class="pro_name">已发数量：<{$ordersinfo.oddt_shipqty}>
+													</div>
+											</div>
+										</div>
+									</div>
+						</li>
+					</ul>
+					</div>
+					<div class="list-block" style="margin-top:0.5rem;">
+						<ul>
+							<li class="item-content" id="record_code_title">
+								<div class="item-inner">
+									<div class="item-title">出货记录</div>
+									<div class="item-after"><span class="icon icon-down" id="record_code_icon"></span></div>
+								</div>
+							</li>
+							<li class="item-content" id="record_code" style="display:none;">
+                				<foreach name='list' item='item'  key='key'>
+								   <div class="item-inner item-title">
+									<div >
+									   <div class="kl-layout-horizontally-between">扫描条码：<{$item.ship_barcode}></div>
+									   <div><span>数量：<{$item.ship_proqty}></span></div>
+									   <notempty name="item.ship_dealer_from_name"><div><{$item.ship_date_from|date='Y-m-d',###}>  由 <b><{$item.ship_dealer_from_name}></b>  发向  <b>我</b> </div></notempty>
+		 							   <notempty name="item.ship_dealer_name">
+		 								<div><{$item.ship_date|date='Y-m-d H:i',###}>  由 <b>我</b>  发向 <b><{$item.ship_dealer_name}></b></div>
+			 						    </notempty>
+			 						</div>
+			 					     <if condition='$od_state lt 3'>
+								   	 <span class="iconfont icon-shanchu recode_code_del" style="font-size: 1.2rem;color: c1c1c1;"></span>
+								   	</if>
+								   	</div>
+                				</foreach>
+							</li>
+						</ul>
+						<div class="kl-page" style="margin:.5rem">
+						 <if condition="$page neq ''">
+							<{$page}>
+						 </if>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+	<include file="Com/sj" />
+	<script type="text/javascript">
+		$.init();
+		$(function() {
+			var flag =0;
+			$("#record_code_title").click(function() {
+	          if (0==flag)
+	          {
+	              flag=1;
+	              $(this).css("background","#e9e9e9");
+	              if($("#record_code_icon").hasClass("icon-down"))
+	              {
+	                $("#record_code_icon").removeClass("icon-down");
+	                $("#record_code_icon").addClass("icon-up");
+	              }
+	          }else
+	          {
+	              flag=0;
+	              $(this).css("background","#fff");
+	              if($("#record_code_icon").hasClass("icon-up"))
+	              {
+	                $("#record_code_icon").removeClass("icon-up");
+	                $("#record_code_icon").addClass("icon-down");
+	              }
+	          }
+			  $("#record_code").toggle();
+			});
+
+			 var shipArrar=<{:json_encode($list)}>||{};
+      		$('.recode_code_del').each(function(index) {
+      			// console.log('li %d is:%o',index,this);
+	          	if ($.isArray(shipArrar)&&shipArrar.length>index)
+	          	{
+	              var shipObject=shipArrar[index];
+	              $(this).click(function() {
+			         	$.confirm('该操作将彻底删除该出货记录,请谨慎操作!',function () {
+			                window.location.href ="<{:U('./Kangli/Orders/odshdelete/shid')}>/" +shipObject['ship_id']+"/od_id/"+shipObject['ship_odid']+"/oddt_id/"+shipObject['ship_oddtid'];
+			            });
+			       });
+	          	}
+	     	});
+		});
+	</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品展示</title>
+<include file="Com/head" />
+<include file="Com/mobieditor" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfmobi/product')}>">产品展示</A>　&gt;　<A href="#"><{$atitle}></A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Mp/Jfmobi/proedit_save')}>"   method="post" name="fmmm"  enctype="multipart/form-data" >
+<input type="hidden" value="<{$proinfo.pro_id}>" name="pro_id" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >产品名称：</td>
+				  <td class="txtleft" ><input    type="text" size="50" maxlength="50"  name="pro_name"  class="input"  value="<{$proinfo.pro_name}>"   >  * </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 产品编号：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="pro_number" class="input" value="<{$proinfo.pro_number}>" > *</td>
+			  </tr>
+			  <eq name="qypurview.70008" value="70008">
+			   <tr>     
+                  <td height="40"  class="txtright" >产品类别：</td>
+				  <td  class="txtleft" >
+				  <select name="pro_typeid"   class="select" >
+					<option value="0"   >选择产品类别</option>
+					<volist name='typelist' id='vo' key='key' >
+					<option value="<{$vo.protype_id}>" style="font-weight:bold;" <{$vo.selected}> ><{$vo.protype_name}></option>
+					<volist name="vo['subarr']" id="sub">
+					<option value="<{$sub.protype_id}>"  <{$sub.selected}> >　├<{$sub.protype_name}></option>
+					</volist>
+					</volist>
+				  </select> *
+				  </td>
+			  </tr>
+			  </eq>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" > 产品价格：</td>
+				  <td  class="txtleft" ><input type="text" size="25" maxlength="25"  name="pro_price" class="input" value="<if condition="($proinfo.pro_price neq '') AND ($proinfo.pro_price neq '0') "><{$proinfo.pro_price|number_format=2,'.',''}></if>" ></td>
+			  </tr>
+			  
+			   <tr>     
+                  <td height="40"  class="txtright" >产品图片：</td>
+				  <td  class="txtleft" >
+				  <neq name="proinfo.pro_pic_str" value=""><a href="__PUBLIC__/uploads/mobi/<{$proinfo.pro_pic}>" target="_blank" ><{$proinfo.pro_pic_str}></a></neq> <input name="pic_file" type="file" /> (建议图片大小:600X600) <input type="hidden"  value="<{$proinfo.pro_pic}>" name="old_pro_pic" />
+				  </td>
+			  </tr>
+			   
+			   <tr>     
+                  <td height="40"  class="txtright" > 购买链接/更详细链接：</td>
+				  <td  class="txtleft" ><input type="text" size="106" maxlength="500"  name="pro_link" class="input" value="<{$proinfo.pro_link}>" > </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品描述：</td>
+				  <td  class="txtleft" ><textarea name="econtent" id="econtent" style="width:640px;height:500px;visibility:hidden;"><{$proinfo.pro_desc|htmlspecialchars}></textarea><br /><br /></td>
+			  </tr>
+			   
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="<{$atitle}>" class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</form>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+[ 2018-08-25T17:35:46+08:00 ] ::1 /Kangli/Mp/Orders/xnodfinishship
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.031059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.031059s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_id` = 84 AND `od_virtualstock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fw_orderdetail` WHERE `oddt_unitcode` = '9999' AND `oddt_odid` = 84 ORDER BY oddt_id DESC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_product` WHERE `pro_id` = 7 AND `pro_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ship_proqty) AS tp_sum FROM `fw_shipment` WHERE `ship_pro` = 7 AND `ship_unitcode` = '9999' AND `ship_odid` = 84 AND `ship_dealer` = 55 LIMIT 1   [ RunTime:0.0010s ]
+

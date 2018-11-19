@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Product/index')}>">产品管理</A>　&gt;　<A href="#">产品详细</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >产品名称：</td>
+				  <td class="txtleft" ><{$proinfo.pro_name}> </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" > 产品编号：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_number}></td>
+			  </tr>
+              <if condition="$qypurview.20006 eq '20006' ">
+			   <tr>     
+                  <td height="40"  class="txtright" > 零售价：</td>
+				  <td  class="txtleft" ><if condition="($proinfo.pro_price neq '') AND ($proinfo.pro_price neq '0') "><{$proinfo.pro_price}> 元</if></td>
+			  </tr>
+			   </if>
+			    <if condition="$qypurview.20012 eq '20012' ">
+			   <tr>     
+                  <td height="40"  class="txtright" > 库存：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_stock}></td>
+			  </tr>
+			   </if>
+			   <tr>     
+                  <td height="40"  class="txtright" > 单位：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_units}></td>
+			  </tr>
+               <if condition="$qypurview.20007 eq '20007' ">
+
+			  <tr>     
+                  <td height="40"  class="txtright" > 产品包装比例：</td>
+				  <td  class="txtleft" >大标：<{$proinfo.pro_dbiao}>　小标：<{$proinfo.pro_xbiao}>　　(一个包装单位里面大标与小标比例，如没有则不用填或为0)</td>
+			  </tr>
+			   </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品类别：</td>
+				  <td  class="txtleft" >
+				  <{$proinfo.pro_type_str}>
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品图片：</td>
+				  <td  class="txtleft"   style="padding:5px 5px 10px 0" >
+				  <a href="__PUBLIC__/uploads/product/<{$proinfo.pro_pic}>" target="_blank" ><{$proinfo.pro_pic_str}></a>
+				  </td>
+			  </tr>
+			   <if condition="$qypurview.20008 eq '20008' ">
+			   <eq name="proinfo.pro_jftype" value="2">
+			   <tr  >     
+                  <td height="40"  class="txtright" >固定积分：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_jifen}></td>
+			  </tr>
+			  </eq>
+			  <eq name="proinfo.pro_jftype" value="1">
+			   <tr  >     
+                  <td height="40"  class="txtright" >随机积分：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_jifen}>-<{$proinfo.pro_jfmax}></td>
+			  </tr>
+             </eq>
+			 </if>
+			 <if condition="$qypurview.15001 eq '15001' ">
+			  <tr >     
+                  <td height="40"  class="txtright" >代理积分：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_dljf}></td>
+			  </tr>
+			   </if>
+			   <tr>     
+                  <td height="40"  class="txtright" >产品描述：</td>
+				  <td  class="txtleft" ><{$proinfo.pro_desc|nl2br}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >备注：</td>
+			     <td  class="txtleft" ><{$proinfo.pro_remark|nl2br}></td>
+			  </tr>
+			   <tr>     
+                  <td height="40"  class="txtright" >添加时间：</td>
+			     <td  class="txtleft" ><{$proinfo.pro_addtime|date='Y-m-d H:i:s',###}></td>
+			  </tr>
+
+			  <tr>  <td height="60" ></td>
+                    <td  class="txtleft"  >
+             <input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+			</table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

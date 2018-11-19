@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<link href="__PUBLIC__/fwapi/css/style2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__PUBLIC__/fwapi/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/fwapi/js/jquery.form.min.js"></script>
+<title>防伪查询</title>
+<script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+			$("#referer").val(getParentUrl()); 
+			$("#btnquery").click(function() {
+				var options = {
+					url:"<{:U('Fwapi/Query/ajaxres')}>",
+					type:"post",
+					dataType:"json", 
+					beforeSubmit:function (){
+						if($("#fwcode").val() == "") { 
+							
+							if($("#lang").val()==1){
+							    $("#result").html("請輸入防偽碼！");
+							}else{
+							    $("#result").html("请输入防伪码！");
+							}
+							return false; 
+						} 
+						
+						var filter=/^\s*[0-9]{12,27}\s*$/; 
+						if  (!filter.test($("#fwcode").val())) { 
+							
+							if($("#lang").val()==1){
+							    $("#result").html("防偽碼只能填數字,不要有空格,長度不能少於12位！");
+							}else{
+							    $("#result").html("防伪码只能填数字,不要有空格,长度不能少于12位！"); 
+							}
+							return false; 
+						}
+						if($("#lang").val()==1){
+						    $("#result").text("正在查詢......");
+						}else{
+						    $("#result").text("正在查询......");
+						}
+						
+						$("#btnquery").attr("disabled", true);
+						return true;
+                    }, 
+					success:function (data){
+					    var msg="";
+						var stat=0;
+						stat=parseInt(data.stat);
+						if(stat==9){
+						    $("#checkcode").val(""); 
+						    $("#verify").show();
+							$("#verifyImg").attr("src","<{:U('Fwapi/Query/verify')}>?"+ Math.random());
+							msg=data.msg;
+						}else{
+						    $("#verify").hide();
+							if(data.fwc==""){
+								msg=data.msg
+							}else{
+								msg="<b>您输入的防伪码：</b>"+data.fwc+"<br><b>查询结果：</b>"+data.msg
+							}
+							$("#fwcode").val(""); 
+						}
+						if($("#lang").val()==1){
+						    msg=Traditionalized(msg);
+						}else{
+						    msg=Simplized(msg);
+						}
+						$("#result").html(msg);
+						setTimeout(btnEnabled, 1000);
+                    }
+				};
+				$("#fwfm").ajaxForm(options);
+	 
+			 }); 
+			 
+			function btnEnabled() {
+                $("#btnquery").attr("disabled", false);
+            }
+			
+            $("#verifyImg").click(function(){
+				$("#verifyImg").attr("src","<{:U('Fwapi/Query/verify')}>?"+ Math.random());
+			});
+			
+			//------
+			<if condition="$fwcode neq '' "> 
+			setTimeout(checkfw, 1000);
+			</if>
+
+	   }); 
+	   
+	//---------  
+	function getParentUrl(){ 
+		var url = null; 
+		if (parent !== window) { 
+			try {
+				url = parent.location.href; 
+			} catch (e) { 
+				url = document.referrer; 
+			}
+		}
+		return url; 
+	}
+	
+	function checkfw(){
+			var options = {
+			url:"<{:U('Fwapi/Query/ajaxres')}>",
+			type:"post",
+			dataType:"json", 
+			beforeSubmit:function (){
+				if($("#lang").val()==1){
+					$("#result").text("正在查詢......");
+				}else{
+					$("#result").text("正在查询......");
+				}
+				return true;
+			}, 
+			success:function (data){
+				var msg="";
+				var stat=0;
+				stat=parseInt(data.stat);
+				if(stat==9){
+					$("#checkcode").val(""); 
+					$("#verify").show();
+					$("#verifyImg").attr("src","<{:U('Fwapi/Query/verify')}>?"+ Math.random());
+					msg=data.msg;
+				}else{
+					$("#verify").hide();
+					if(data.fwc==""){
+						msg=data.msg
+					}else{
+						msg="<b>您输入的防伪码：</b>"+data.fwc+"<br><b>查询结果：</b>"+data.msg
+					}
+				}
+				if($("#lang").val()==1){
+					msg=Traditionalized(msg);
+				}else{
+					msg=Simplized(msg);
+				}
+				$("#result").html(msg);
+			}
+		};
+		$("#fwfm").ajaxSubmit(options);
+	}
+</script>
+</head>
+<body>
+<div id="wrap">
+<form action=""   method="post" name="fwfm" id="fwfm"  style="padding:0; margin:0">
+<input type="hidden" name="referer" id="referer" value="" />
+<input type="hidden" name="fwkey" id="fwkey" value="<{$fwkey|htmlspecialchars}>" />
+<input type="hidden" name="lastrequest" id="lastrequest" value="<{$lastrequest|htmlspecialchars}>" />
+<input type="hidden" name="lang" id="lang" value="<{$lang}>" />
+<div class="height10" ></div>
+<div class="fwfm">
+  <div class="search" >
+   <div style="width:25%; text-align:right; padding-top:17px; float:left; height:36px; line-height:36px">防伪码：</div>
+   <div style="width:75%; text-align:left; padding-top:17px; float:left"><input type="text" name="fwcode" id="fwcode" value="<{$fwcode}>" class="fwcode"  /></div>
+   <div class="height20"></div>
+   <div style="clear:both; height:24px; line-height:24px; text-align:center; font-size:12px; color:#666666;">从左到右，从上到下，正确输入防伪码</div>
+  </div>
+  <div class="height20"></div>
+  <div style="text-align:center">　　<input name="btnquery" id="btnquery" class="btnquery" value="查 询" type="submit">　<input name="reset" id="reset" class="btnquery" value="重 置" type="reset">　<a href="#" id="StranLink"  style="display:none" >繁</a></div>
+  <div class="height20"></div>
+	 <div id="verify"  style="display:none; text-align:center" >
+验证码：<input    type="text" size="4" maxlength="4"  name="checkcode"  class="checkcode"  value=""  id="checkcode"    > <img  alt="点击换另一个" title="点击换另一个"   style="vertical-align:middle; cursor:pointer"  id="verifyImg" src="<{:U('Fwapi/Query/verify')}>"  />
+  <div class="height20"></div>
+   </div>
+   <div id="result"  class="result"></div>
+</div>
+</form>
+</div>
+<script type="text/javascript" language="javascript">
+var Default_isFT = <{$lang}>		//默认是否繁体，0-简体，1-繁体
+</script>
+<script type="text/javascript" src="__PUBLIC__/fwapi/js/fantijianti.js"></script>
+</body>
+</html>

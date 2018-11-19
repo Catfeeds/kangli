@@ -1,0 +1,174 @@
+[ 2018-09-27T17:45:08+08:00 ] ::1 /kangli/Kangli/About
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.040059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.040059s ]
+SQL: SHOW COLUMNS FROM `fw_jfmobasic` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `fw_jfmobasic` WHERE `bas_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-09-27T17:45:27+08:00 ] ::1 /kangli/Kangli/Mine
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.048060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.048060s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0080s ]
+SQL: SELECT `dl_id`,`dl_username`,`dl_name`,`dl_belong`,`dl_type`,`dl_level`,`dl_wxheadimg` FROM `fw_dealer` WHERE `dl_id` = null AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: item D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\71a806bdd4c5c4d7ad2968fc5894cbd0.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-09-27T17:45:29+08:00 ] ::1 /kangli/Kangli/Dealer/login/ttamp/1538041527/sture/7074aeec8190c632dedf735202c2c5ab/tagpage/aHR0cDovL2xvY2FsaG9zdC9rYW5nbGkvS2FuZ2xpL01pbmU=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0030s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.051060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.051060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-09-27T17:45:34+08:00 ] ::1 /Kangli/Kangli/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.049060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.049060s ]
+SQL: SHOW COLUMNS FROM `fw_jfmonews` [ RunTime:0.0150s ]
+SQL: SELECT `news_id`,`news_title` FROM `fw_jfmonews` WHERE `news_isgg` = 1 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_adinfo` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `fw_adinfo` WHERE `ad_unitcode` = '9999' ORDER BY ad_addtime DESC LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_jfmonews` WHERE `news_type` = 2 AND `news_unitcode` = '9999' ORDER BY news_addtime DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0070s ]
+SQL: SELECT `dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' GROUP BY dlt_name,dlt_level ORDER BY dlt_level ASC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `fw_product` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `fw_orderdetail` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `fw_shipment` [ RunTime:0.0080s ]
+SQL: SELECT `od_id`,`od_state`,`od_orderid`,`od_total`,`od_addtime` FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_rcdlid` = null AND `od_virtualstock` = 1 AND `od_state` = 0 ORDER BY od_addtime DESC  [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: bas_content D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 300 行.
+NOTIC: [8] Undefined variable: bas_logopic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: bas_footpic D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Apps\Kangli\Controller\IndexController.class.php 第 303 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 242 行.
+NOTIC: [8] Undefined variable: oauthttamp D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 605 行.
+NOTIC: [8] Undefined variable: oauthtsture D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\Runtime\Cache\Kangli\707ff3e6b0334ba29319d61e11de267d.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-09-27T17:45:40+08:00 ] ::1 /Kangli/Kangli/Dealer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0030s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.042059s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.042059s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0110s ]
+SQL: SELECT `dlt_id`,`dlt_name`,`dlt_level` FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_type` = 7 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_type` = 8 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_type` = 9 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_type` = 10 AND `dl_status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `dl_id`,`dl_name`,`dl_weixin`,`dl_wxheadimg`,`dl_tel`,`dl_address`,`dl_addtime`,`dl_level` FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_belong` = null AND `dl_status` = 0 ORDER BY dl_id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+
+[ 2018-09-27T17:45:41+08:00 ] ::1 /kangli/Kangli/Dealer/login/ttamp/1538041540/sture/d1f6e83df964cd06eb45c40b20f660f3/tagpage/aHR0cDovL2xvY2FsaG9zdC9LYW5nbGkvS2FuZ2xpL0RlYWxlcg==
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0020s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:1.042060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.042060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\Aroot\myphp_www\PHPTutorial\WWW\Kangli\index.php 第 30 行.
+

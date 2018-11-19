@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('/Sysadmin')}>">首页</a>　&gt;　<A href="#" >同步信息</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div>
+<div style="float:left; width:60%">
+<form action="<{:U('Sysadmin/Company/synqyinfo')}>"   method="post" name="fmmm"  >
+企业码：<input    type="text" size="10" maxlength="5"  name="keyword"  class="input"    onfocus="this.value=''"   value=""   style="color:#999999"   >　<input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:39%; text-align:right">
+<a href="<{:U('Sysadmin/Company/synqyuser')}>" >同步企业信息</a>　　<a href="<{:U('Sysadmin/Syntellist/index')}>"  target="_blank" >同步查询记录</a>
+</div>
+<div class="height10"></div>
+<div><table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table><div style="float:right; line-height:4em">共 <{$pcount}> 条记录　</div></div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="10%" ><span>企业代号</span></th>
+<th  width="30%" ><span>企业名称</span></th>
+<th  width="10%" ><span>防伪码(本)</span></th>
+<th  width="10%" ><span>防伪码(云)</span></th>
+<th  width="10%" ><span>物流记录(本)</span></th>
+<th  width="10%"  ><span>物流记录(云)</span></th>
+<th  width="10%"  ><span>物流乱码(本)</span></th>
+<th  width="10%"  ><span>物流乱码(云)</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="txtcenter data"><span><{$item.qy_code}></span></td>
+<td class="txtcenter data"><span><{$item.qy_name}></span></td>
+<td class="txtcenter data"><span><{$item.b_codecount}></span></td>
+<td class="txtcenter data"><span <eq name="item.same_codecount" value="0" >style="color:#FF0000"</eq>  ><{$item.y_codecount}></span> <a href="<{:U('Sysadmin/Company/synfwcode?qy_code='.$item['qy_code'].'&p='.$currentpage.'')}>">同步</a></td>
+<td class="txtcenter data"><span ><{$item.b_sellrecordcount}></span></td>
+<td class="txtcenter data"><span <eq name="item.same_sellrecordcount" value="0" >style="color:#FF0000"</eq> ><{$item.y_sellrecordcount}></span> <a href="<{:U('Sysadmin/Company/synsellrecord?qy_code='.$item['qy_code'].'&p='.$currentpage.'')}>">同步</a></td>
+<td class="txtcenter data"><span><{$item.b_snmmcount}></span></td>
+<td class="txtcenter data"><span <eq name="item.same_snmmcount" value="0" >style="color:#FF0000"</eq> ><{$item.y_snmmcount}></span> <a href="<{:U('Sysadmin/Company/synfwsnmm?qy_code='.$item['qy_code'].'&p='.$currentpage.'')}>">同步</a></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table><div style="float:right; line-height:4em">共 <{$pcount}> 条记录　</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

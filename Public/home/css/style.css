@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px;}
+html {margin: 0px; padding: 0px;}
+body {
+	font-family:tahoma,arial,microsoft yahei,宋体;
+	font-size:12px; 
+	margin: 0px; padding: 0px;	
+	margin-right: auto; margin-left: auto; 
+	text-align:left; 
+	color:#333;
+	background-color:#f0f0ee;
+}
+ul, li{ 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0;
+	list-style:none;
+}
+div,td,p{
+	margin: 0; 
+	padding: 0; 
+}
+img{ border:none}
+a {
+color: #333333;
+text-decoration:none
+}	
+a:hover {
+color:#027cff;
+text-decoration:none
+}
+.clear{float:none; clear:both;font-size:0px;line-height:0px;height:0px; min-height:0px; padding:0px; margin:0px; overflow:hidden;}
+
+.height50{height:50px; line-height:50px; clear:both;text-align:center}
+.main{width:886px; margin:0 auto;  height:133px;background-image: url("../static/qbg2.png"); background-repeat:no-repeat}
+.input{
+    background: none repeat scroll 0 center rgba(255,255, 255,0.8);
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    height: 30px;
+    padding-left: 10px;
+    margin-right:10px;
+}
+.input:focus {border-color: #66afe9;outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);}
+.height22{height:22px; line-height:22px; clear:both; text-align:center}
+.bound{height:70px;text-align:center; vertical-align:middle}
+.result{color:#FF0000; font-size:14px; margin:0 auto; text-align:center; padding-top:20px; line-height:24px; width:570px; min-height:100px}
+.btnquery{
+    border: medium none;
+	background-color:#666666;
+    border-radius: 3px;
+	color:#FFFFFF;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+	padding:0 10px 0 10px;
+	cursor:pointer;
+}

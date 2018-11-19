@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发行记录</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Sysadmin/Index/index')}>">首页</a>　&gt;　<A href="#">发行记录</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:60%">
+<form action="<{:U('Sysadmin/Sellrecord/index')}>"   method="post" name="fmmm"  >
+企业码：<input    type="text" size="10" maxlength="5"  name="keyword"  class="input"  value="<{$keyword}>"   >　<input type="submit" name="Submit" value="查 询"  ></form>
+</div>
+<div style="float:right; width:39%; text-align:right">
+
+</div>
+</div>
+<div class="height10"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="8%" ><span>企业代号</span></th>
+<th  width="20%" ><span>企业名称</span></th>
+<th  width="8%" ><span>发行数量</span></th>
+<th  width="10%" ><span>开始序号</span></th>
+<th  width="10%" ><span>日期</span></th>
+<th  width="11%" ><span>包装类型</span></th>
+<th  width="11%"  ><span>物流码类型</span></th>
+<th  width="9%"  ><span>物流码起始</span></th>
+<th  width="9%"  ><span>物流码结束</span></th>
+<th  width="4%"  ><span>备</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data"><span><{$item.unitcode}></span></td>
+<td class="data"><span><{$item.qy_name}></span></td>
+<td class="data"><span title="<{$item.sellcount}>" ><{$item.mqty}></span></td>
+<td class="data"><span><{$item.mybegin}></span></td>
+<td class="data"><span><{$item.selldatetime}></span></td>
+<td class="data"><span><{$item.packtype}><br /><{$item.pdqty}>-<{$item.pzqty}>-<{$item.pxqty}></span></td>
+<td class="data"><span><{$item.sntype}></span></td>
+<td class="data"><span><{$item.snbegin}></span></td>
+<td class="data"><span><{$item.snend}></span></td>
+<td class="data">
+<if condition="$item.remark neq ''">
+<a  title="<{$item.remark}>" href="<{:U('Sysadmin/Sellrecord/remark?fid='.$item['fid'].'')}>" >...</a>
+<else />
+<a  title="点击备注" href="<{:U('Sysadmin/Sellrecord/remark?fid='.$item['fid'].'')}>" >　</a>
+</if>
+</td>
+
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

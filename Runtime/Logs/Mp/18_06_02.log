@@ -1,0 +1,2217 @@
+[ 2018-06-02T10:05:51+08:00 ] ::1 /Kangli/mp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+
+[ 2018-06-02T10:05:51+08:00 ] ::1 /Kangli/Mp/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.008000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: qyuser D:\wamp64\www\Kangli\Runtime\Cache\Mp\fe86c1cc2cc73e15aeea860bc99bd042.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:05:51+08:00 ] ::1 /Kangli/Mp/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.022000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022000s ]
+
+[ 2018-06-02T10:06:00+08:00 ] ::1 /Kangli/Mp/Login/logining
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.009000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-06-02T10:06:02+08:00 ] ::1 /Kangli/Mp/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+
+[ 2018-06-02T10:06:07+08:00 ] ::1 /Kangli/Mp/Login/logining
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.011000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_log` [ RunTime:0.0010s ]
+SQL: INSERT INTO `fw_log` (`log_qyid`,`log_user`,`log_qycode`,`log_action`,`log_type`,`log_addtime`,`log_ip`,`log_link`,`log_remark`) VALUES ('995','kangli','9999','企业登录','1','1527905167','0.0.0.0','/Kangli/Mp/Login/logining','') [ RunTime:0.0000s ]
+SQL: UPDATE `fw_qyinfo` SET `qy_logintime`='1527905167',`qy_errtimes`='0' WHERE `qy_id` = 995 [ RunTime:0.0000s ]
+
+[ 2018-06-02T10:06:08+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.008000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526609167 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:26:14+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.012000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610374 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:26:21+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610381 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:20+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.024000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610440 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:20+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.024000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610440 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:20+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.019000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610440 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:21+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610441 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:21+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.026000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610441 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:27:21+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.009000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610441 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:30:10+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.009000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610610 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:30:25+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610624 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:30:33+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.025000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610633 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:32:46+08:00 ] ::1 /Kangli/Mp/Login/quit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.023000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023000s ]
+
+[ 2018-06-02T10:32:46+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+
+[ 2018-06-02T10:32:46+08:00 ] ::1 /Kangli/Mp/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: qyuser D:\wamp64\www\Kangli\Runtime\Cache\Mp\fe86c1cc2cc73e15aeea860bc99bd042.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:32:46+08:00 ] ::1 /Kangli/Mp/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+
+[ 2018-06-02T10:32:55+08:00 ] ::1 /Kangli/Mp/Login/logining
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.011000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_log` [ RunTime:0.0000s ]
+SQL: INSERT INTO `fw_log` (`log_qyid`,`log_user`,`log_qycode`,`log_action`,`log_type`,`log_addtime`,`log_ip`,`log_link`,`log_remark`) VALUES ('995','kangli','9999','企业登录','1','1527906775','0.0.0.0','/Kangli/Mp/Login/logining','') [ RunTime:0.0000s ]
+SQL: UPDATE `fw_qyinfo` SET `qy_logintime`='1527906775',`qy_errtimes`='0' WHERE `qy_id` = 995 [ RunTime:0.0000s ]
+
+[ 2018-06-02T10:32:56+08:00 ] ::1 /Kangli/Mp/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SELECT * FROM fw_orders a,fw_orderbelong b WHERE a.od_unitcode = '9999' AND a.od_state = 3 AND `od_expressdate` < 1526610775 AND a.od_id =b.odbl_odid AND a.od_oddlid =b.odbl_oddlid ORDER BY a.od_expressdate ASC LIMIT 100   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orders` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_orderbelong` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' AND `dl_status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_orders` WHERE `od_unitcode` = '9999' AND `od_state` IN ('0','1','2') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_recash` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_recash` WHERE `rc_unitcode` = '9999' AND `rc_sdlid` = 0 AND `rc_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' AND `pi_state` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dljfexchange` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dljfexchange` WHERE `exch_unitcode` = '9999' AND `exch_state` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_jffeedback` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_jffeedback` WHERE `fb_unitcode` = '9999' AND `fb_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 46 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 47 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 48 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 49 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 55 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 61 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 62 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 63 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 64 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 70 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 71 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 72 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 79 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 80 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 81 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 82 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 83 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 84 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 85 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 92 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 93 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 94 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 95 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 96 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 97 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 98 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 107 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 108 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 109 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 110 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 111 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 119 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 120 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 121 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 122 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 126 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 135 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 147 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 148 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 149 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 150 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 151 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 152 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 153 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 154 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 155 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 156 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 157 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 158 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 159 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 160 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 166 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 167 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 173 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 179 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 180 行.
+NOTIC: [8] Undefined variable: curr D:\wamp64\www\Kangli\Runtime\Cache\Mp\7b8faf8817bf995ca0c5f7bbae2f4c63.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:35:00+08:00 ] ::1 /Kangli/Mp/Dealer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dlsttype` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_unitcode` = '9999' ORDER BY dl_id DESC LIMIT 0,50   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 10 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 35 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:35:12+08:00 ] ::1 /Kangli/Mp/Dljf/dljfgift
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dljf
+
+[ 2018-06-02T10:35:24+08:00 ] ::1 /Kangli/Mp/Dljf/dljflist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dljf
+
+[ 2018-06-02T10:35:27+08:00 ] ::1 /Kangli/Mp/Fanli/fanlilist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fw_fanlidetail` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_fanlidetail` WHERE `fl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_fanlidetail` WHERE `fl_unitcode` = '9999' ORDER BY fl_id DESC LIMIT 0,50   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 38 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 91 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 120 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 129 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 142 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 143 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 147 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 148 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 150 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 151 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\a8c2ed39fa93bf30291206be98e5e3b9.php 第 154 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:36:01+08:00 ] ::1 /Kangli/Mp/Capital/payinlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\wamp64\www\Kangli\Apps\Mp\Controller\CapitalController.class.php 第 1789 行.
+SQL: SELECT * FROM `fw_payin` WHERE `pi_unitcode` = '9999' ORDER BY pi_id DESC LIMIT 0,50   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: begintime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 14 行.
+NOTIC: [8] Undefined variable: endtime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 15 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 91 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 120 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 129 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 142 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 143 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 147 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 148 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 150 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 151 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 154 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:36:22+08:00 ] ::1 /Kangli/Mp/Capital/payinlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.013000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: parameter D:\wamp64\www\Kangli\Apps\Mp\Controller\CapitalController.class.php 第 1789 行.
+SQL: SELECT * FROM `fw_payin` WHERE `pi_unitcode` = '9999' ORDER BY pi_id DESC LIMIT 0,50   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: begintime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 14 行.
+NOTIC: [8] Undefined variable: endtime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 15 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 91 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 120 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 129 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 142 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 143 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 147 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 148 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 150 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 151 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 154 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:36:22+08:00 ] ::1 /Kangli/Mp/Capital/payinlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.011000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: parameter D:\wamp64\www\Kangli\Apps\Mp\Controller\CapitalController.class.php 第 1789 行.
+SQL: SELECT * FROM `fw_payin` WHERE `pi_unitcode` = '9999' ORDER BY pi_id DESC LIMIT 0,50   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: begintime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 14 行.
+NOTIC: [8] Undefined variable: endtime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 15 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 91 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 120 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 129 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 142 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 143 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 147 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 148 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 150 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 151 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 154 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:38:05+08:00 ] ::1 /Kangli/Mp/Capital/payinlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+SQL: SHOW COLUMNS FROM `fw_payin` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_payin` WHERE `pi_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: parameter D:\wamp64\www\Kangli\Apps\Mp\Controller\CapitalController.class.php 第 1789 行.
+SQL: SELECT * FROM `fw_payin` WHERE `pi_unitcode` = '9999' ORDER BY pi_id DESC LIMIT 0,50   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: begintime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 14 行.
+NOTIC: [8] Undefined variable: endtime D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 15 行.
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 91 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 120 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 129 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 142 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 143 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 147 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 148 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 150 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 151 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\0682a7c3fa6033010897856750a5026a.php 第 154 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:46:23+08:00 ] ::1 /Kangli/Mp/Dealer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.012000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dlsttype` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_unitcode` = '9999' ORDER BY dl_id DESC LIMIT 0,50   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 10 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 35 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:46:25+08:00 ] ::1 /Kangli/Mp/Dealer/addzs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.017000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\9bc00275cf8e80c6f6bac9b0bbb83a9d.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:54:28+08:00 ] ::1 /Kangli/Mp/Subuser/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0010s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.030000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031000s ]
+SQL: SHOW COLUMNS FROM `fw_qysubuser` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_qysubuser` WHERE `su_unitcode` = '9999' AND `su_belong` = 0 AND `su_username` <> '' ORDER BY su_id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\ca842d2628118102001aa8a51b8a0b66.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T10:54:52+08:00 ] ::1 /Kangli/Mp/Dealer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.021000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dlsttype` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_unitcode` = '9999' ORDER BY dl_id DESC LIMIT 0,50   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 10 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 35 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T11:06:06+08:00 ] ::1 /Kangli/Mp/Dealer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.011000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `fw_dealer` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fw_dltype` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fw_dlsttype` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fw_dealer` WHERE `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_unitcode` = '9999' ORDER BY dl_id DESC LIMIT 0,50   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 10 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 35 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 9 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 34 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 8 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_dealer` WHERE `dl_id` = 32 AND `dl_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_id` = 7 AND `dlt_unitcode` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_dltype` WHERE `dlt_unitcode` = '9999' ORDER BY dlt_level ASC,dlt_id ASC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\2a39d99bd652d611eda0dd51ddecdabd.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T11:06:11+08:00 ] ::1 /Kangli/Mp/Bindwx/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.019000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T12:10:53+08:00 ] ::1 /Kangli/Mp/Bindwx/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.027000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.027000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 81 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 110 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 119 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 132 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 133 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 137 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 138 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 140 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 141 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T14:27:36+08:00 ] ::1 /Kangli/Mp/Bindwx/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.027000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.028000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 83 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 112 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 121 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 134 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 135 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 139 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 140 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 142 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 143 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T14:27:37+08:00 ] ::1 /Kangli/Mp/Bindwx/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.024000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 83 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 112 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 121 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 134 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 135 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 139 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 140 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 142 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 143 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+
+[ 2018-06-02T16:14:30+08:00 ] ::1 /Kangli/Mp/Bindwx/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `fw_denyip` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_denyip`  [ RunTime:0.0000s ]
+INFO: Run Home\Behaviors\DenyipsBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+SQL: SHOW COLUMNS FROM `fw_qyinfo` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_id` = 995 AND `qy_username` = 'kangli' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `fw_qyinfo` WHERE `qy_code` = '9999' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 14006 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 83 行.
+NOTIC: [8] Undefined offset: 40000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 112 行.
+NOTIC: [8] Undefined offset: 12000 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 121 行.
+NOTIC: [8] Undefined offset: 70017 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 134 行.
+NOTIC: [8] Undefined offset: 70019 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 135 行.
+NOTIC: [8] Undefined offset: 70022 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 139 行.
+NOTIC: [8] Undefined offset: 70023 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 140 行.
+NOTIC: [8] Undefined offset: 70021 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 142 行.
+NOTIC: [8] Undefined offset: 70005 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 143 行.
+NOTIC: [8] Undefined offset: 70014 D:\wamp64\www\Kangli\Runtime\Cache\Mp\74558e9724446576c89e4b10e34aaace.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\wamp64\www\Kangli\index.php 第 31 行.
+

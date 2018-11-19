@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单管理</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/css/jquery-confirm.min.css" />
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery-confirm.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.form.min.js"></script>
+<script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+		
+			$("#odfinishship").click(function() {
+				var options = {
+					url:"<{:U('Mp/Orders/qbodfinishship')}>",
+					type:"post",
+					dataType:"json", 
+					beforeSubmit:function (){
+						
+						return true;
+                    }, 
+					success:function (data){
+					    var msg="";
+						var stat=0;
+						stat=parseInt(data.stat);
+						if(stat==9){
+							$.confirm({
+								title: '提示!',
+								content: '该订单还没完成出货，点击[确认]将强行完成发货',
+	
+								boxWidth: '25%',
+								useBootstrap: false,
+								buttons: {
+									 confirm: {
+										text: '确认完成发货',
+										btnClass: 'btn-blue',
+										action: function () {
+									         self.location.href='<{:U('Mp/Orders/qbodfinishship?od_id='.$od_id.'&odbl_id='.$odbl_id.'&isok=1')}>'; 
+										}
+									},
+									cancel: {
+										text: '取消发货',
+										action: function () {
+										
+										}
+									}
+								}
+							});	  
+						  
+						}else if(stat==1){
+						    self.location.href='<{:U('Mp/Orders/qbodfinishship?od_id='.$od_id.'&odbl_id='.$odbl_id.'&isok=1')}>'; 
+						}else{
+							
+							 $.alert({
+								title: '提示!',
+								boxWidth: '25%',
+								useBootstrap: false,
+								content: data.msg,
+                                buttons: {
+									cancel:{
+										text: '关闭',
+									}
+								}
+							});
+						}
+                    }
+				};
+				$("#fwfm").ajaxForm(options);
+	 
+			 }); 
+			 
+			 $("#odfinishship2").click(function() {
+			     self.location.href='<{:U('Mp/Orders/qbodfinishship?od_id='.$od_id.'&odbl_id='.$odbl_id.'&isok=1')}>'; 
+			 }); 
+			 
+
+	   }); 
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Orders/qborders')}>">订单管理</A>　&gt;　<A href="#">订单详细</A></div>
+<div class="nav_r"><if condition="$back eq '1' " ><a href="<{:U('Mp/Orders/qborders')}>" >&lt;&lt; 返 回</a><else /><a href="javascript:window.history.go(-1);" >&lt;&lt; 返 回</a></if></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<div class="detail" >
+<div class="detail_t">订单号：<{$ordersinfo.od_orderid}><span  style="float:right"><{$ordersinfo.od_state_str}></span></div>
+<table border="0" class="detail_c" width="100%" cellpadding="0" cellspacing="0"  >
+  <tr>
+    <td  style="width:10%" class="txtright txtbold" >&nbsp;收货人：</td>
+    <td style="width:40%" >&nbsp;<{$ordersinfo.od_contact}></td>
+    <td style="width:10%" class="txtright txtbold" >&nbsp;联系电话：</td>
+    <td style="width:40%" >&nbsp;<{$ordersinfo.od_tel}></td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;收货地址：</td>
+    <td>&nbsp;<{$ordersinfo.od_address}></td>
+    <td colspan="2" >&nbsp;</td>
+  </tr>
+<foreach name="ordersinfo['orderdetail']" item="item"  key="key">
+  <tr>
+    <td class="txtright"   style=" padding-right:6px">
+<if condition="$item.oddt_propic eq '' ">
+<img src="__PUBLIC__/mp/static/nophoto.jpg" style="vertical-align:middle; width:50%" />
+<else/>
+<img src="__PUBLIC__/uploads/product/<{$item.oddt_propic}>" style="vertical-align:middle; width:50%" />
+</if>
+	</td>
+    <td>&nbsp;<{$item.oddt_proname}> (<{$item.oddt_pronumber}>) <if condition="$item.oddt_dlprice neq '' ">单价:<{$item.oddt_dlprice|number_format=2,'.',''}> 元</if></td>
+    <td colspan="2">&nbsp; 订购：<{$item.oddt_qty}><{$item.oddt_prounits}><{$item.oddt_totalqty}>　已发：<{$item.oddt_shipqty}> <if condition="$item.oddt_shipqty neq '0' ">　<a href="<{:U('./Mp/Orders/odshiplist?od_id='.$item['oddt_odid'].'&odbl_id='.$item['oddt_odblid'].'&oddt_id='.$item['oddt_id'].'&back=1')}>" style="text-decoration:underline"  >已发记录</a></if>　　　　　　<{$item.oddt_shipment}></td>
+  
+  </tr>
+</foreach>
+  
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;订单留言：</td>
+    <td>&nbsp;<{$ordersinfo.odbl_remark}></td>
+    <td class="txtright txtbold"  >&nbsp;合计：</td>
+    <td>&nbsp;<{$ordersinfo.odbl_total}> 元</td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"   >&nbsp;支付凭证：</td>
+    <td>&nbsp;<{$ordersinfo.odbl_paypic_str}></td>
+    <td class="txtright"  >&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;下单时间：</td>
+    <td>&nbsp;<{$ordersinfo.od_addtime|date='Y-m-d H:i:s',###}></td>
+    <td class="txtright"  >&nbsp;</td>
+    <td>&nbsp;<{$custinfo.cust_email}></td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;下单代理：</td>
+    <td colspan="3" >&nbsp;<{$ordersinfo.od_dl_name}> (<{$ordersinfo.od_dl_username}>) (<{$ordersinfo.od_dl_tel}>)</td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;接单代理：</td>
+    <td colspan="3" >&nbsp;<{$ordersinfo.od_rcdl_name}> <if condition="$ordersinfo.od_rcdl_username neq '' "  >(<{$ordersinfo.od_rcdl_username}>)</if> <if condition="$ordersinfo.od_rcdl_tel neq '' "  >(<{$ordersinfo.od_rcdl_tel}>)</if></td>
+  </tr>
+  <tr>
+    <td class="txtright txtbold"  >&nbsp;物流信息：</td>
+    <td>
+	<if condition="$ordersinfo.od_expressname neq '' ">&nbsp;快递：<{$ordersinfo.od_expressname}><br></if>
+	<if condition="$ordersinfo.od_expressnum neq '' ">&nbsp;单号：<{$ordersinfo.od_expressnum}><br></if>
+	<if condition="($ordersinfo.od_expressdate neq '') AND  ($ordersinfo.od_expressdate neq 0 )" >&nbsp;时间：<{$ordersinfo.od_expressdate|date='Y-m-d H:i:s',###}><br></if>
+	<if condition="$ordersinfo.od_remark neq '' ">&nbsp;备注：<{$ordersinfo.od_remark}><br></if>
+	</td>
+    <td class="txtright"  >&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  
+</table>
+</div>
+<div style="text-align:center; padding:30px 0 30px 0" >
+<form action="#"   method="post" name="fwfm" id="fwfm"  style="padding:0; margin:0">
+<input type="hidden" name="od_id" id="od_id" value="<{$ordersinfo.od_id}>" />
+<input type="hidden" name="odbl_id" id="odbl_id" value="<{$ordersinfo.odbl_id}>" />
+<input type="hidden" name="od_state" id="od_state" value="<{$od_state}>" />
+<input type="hidden" name="isok" id="isok" value="0" />
+<{$ordersinfo.caozuostr}>　　　<if condition="$back eq '1' " ><input name="back" onclick="javascript:window.self.location='<{:U('Mp/Orders/qborders')}>';" id="back" class="botton" value="&lt;&lt; 返 回" type="button" ><else /><input name="back" onclick="javascript:window.history.go(-1);" id="back" class="botton" value="&lt;&lt; 返 回" type="button" ></if> </div>
+</form>
+<div class="detail" >
+<div class="detail_t">操作日志：</div>
+<table border="0" class="detail_c" width="100%" cellpadding="0" cellspacing="0"  >
+  <tr>
+    <td   class="" >
+	<foreach name="orderlogs" item="item"  key="key">
+	<p>&nbsp;&nbsp;<b><{$item.odlg_action}></b> 　<{$item.odlg_dlname}>　<{$item.odlg_addtime|date='Y-m-d H:i:s',###}></p>
+	</foreach>  
+	</td>
+  </tr>
+</table>  
+</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

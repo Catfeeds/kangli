@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出货统计</title>
+<include file="Com/head" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mp/js/themes/icon.css">
+<script type="text/javascript" src="__PUBLIC__/mp/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/mp/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+   $("#begintime").datebox("setValue", "<{$begintime}>"); 
+   $("#endtime").datebox("setValue", "<{$endtime}>"); 
+  });
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="#">出货统计</A></div>
+<div class="nav_r"> <a href="javascript:window.history.go(-1);" ><< 返 回</a></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:30%;">
+统计日期：从 <b  style="font-size:14px"><{$begintime}></b> 到 <b  style="font-size:14px"><{$endtime}></b>
+</div>
+<div style="float:right; width:65%; text-align:right">
+<form action="<{:U('Mp/Tongji/index')}>"   method="post" name="fmmm"  >
+日期：<input    type="text" size="15" maxlength="15"  name="begintime"  class="easyui-datebox"  value=""   id="begintime"    >　到　<input    type="text" size="15" maxlength="15"  name="endtime"  class="easyui-datebox"  value=""   id="endtime"    >　
+<select name="dlid"  ID="dlid" style="width:200px">
+<option value=0  >请选择出货方</option>	
+<eq name="qypurview.90003" value="90003">
+<{$option_str}>
+</eq>
+</select>　
+<input type="submit" name="Submit" value="查 询"  >
+</form>
+</div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="6%" ><span>序号</span></th>
+<th  width="28%"   style="text-align:left"><span>出货方</span></th>
+<th  width="28%"  style="text-align:left"><span>收货方</span></th>
+<eq name="qypurview.90003" value="90003">
+<th  width="12%"  ><span  >出货统计</span></th>
+<th  width="12%"  ><span  >出给下级统计</span></th>
+<th   ><span>操作</span></th>
+<else/>
+<th  width="12%"   ><span >统计</span></th>
+<th   ><span>操作</span></th>
+</eq>
+
+</tr></thead>
+<tbody>
+<empty name="list">
+<tr class="odd" >
+<td class="data"  colspan="7"  style="text-align:center">没有下级经销商记录</td>
+</tr>
+<else />
+<volist name='list' id='vo' key='key' > 
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$key}></span> </td>
+<td class="data" style="text-align:left"><span><{$dealer_chuhuo}></span></td>
+<td class="data" style="text-align:left"><span><{$vo.dl_name}>(<{$vo.dl_username}>)<{$vo.dl_type_str}></span></td>
+<eq name="qypurview.90003" value="90003">
+<td class="data" ><span><a href="<{:U('Mp/Tongji/detail?begintime='.$begintime.'&endtime='.$endtime.'&fdlid='.$dlid.'&sdlid='.$vo['dl_id'])}>" title="查看出货详细"  style="text-decoration:underline"  ><{$vo.count1}></a></span></td>
+<td class="data" ><span><{$vo.count2}></span></td>
+<td class="data" ><span><a href="<{:U('Mp/Tongji/index?begintime='.$begintime.'&endtime='.$endtime.'&dlid='.$vo['dl_id'])}>" title="查看收货方下级情况" >下级</a></span></td>
+<else/>
+<td class="data" ><span><a href="<{:U('Mp/Tongji/detail?begintime='.$begintime.'&endtime='.$endtime.'&fdlid='.$dlid.'&sdlid='.$vo['dl_id'])}>" title="查看出货详细" style="text-decoration:underline" ><{$vo.count1}></a></span></td>
+<td class="data" ><span><a href="<{:U('Mp/Tongji/detail?begintime='.$begintime.'&endtime='.$endtime.'&fdlid='.$dlid.'&sdlid='.$vo['dl_id'])}>" title="查看出货详细"  >详细</a></span></td>
+</eq>
+
+</tr>
+</volist>
+</empty> 
+
+</tbody>
+</table>
+
+<eq name="qypurview.90003" value="90003"><div class="height20"  style="line-height:30px">注："出货统计"为"出货方"直接出货给"收货方"统计数量<br />　　"出给下级统计"为"收货方"出货给"直属下级"的统计数量</div></eq>
+
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

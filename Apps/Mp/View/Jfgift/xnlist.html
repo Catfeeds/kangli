@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼品管理</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Jfgift/index')}>">礼品管理</A>　&gt;　<A href="#"><{$gifinfo.gif_name}>数据</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height10"></div>
+<div>
+<div style="float:left; width:40%">
+<form action="<{:U('Mp/Jfgift/xunilist')}>"   method="post" name="fmmm"  >
+<input type="hidden" name="gif_id" value="<{$gifinfo.gif_id}>" />
+<input    type="text" size="20" maxlength="25"  name="keyword"  class="input"  value="<{$keyword}>"   >   <input type="submit" name="Submit" value="搜 索"  ></form>
+</div>
+<div style="float:right; width:40%; text-align:right">
+
+<a href="<{:U('Mp/Jfgift/addxuni?gif_id='.$gifinfo['gif_id'].'')}>">导入数据</a>
+　<select name="pro_typeid"   class="select"  onChange="document.location.href ='<{:U('Mp/Jfgift/xunilist')}>?gif_id=<{$gifinfo.gif_id}>&order='+this.value;" >
+		<option value="0" <eq name="order" value="0">selected</eq>  >按...排序</option>
+		<option value="1" <eq name="order" value="1">selected</eq>  >已兑换在前</option>	
+		<option value="2" <eq name="order" value="2">selected</eq> >未兑换在前</option>
+</select>
+</div>
+</div>
+<div class="height10"></div>
+
+<div class="content">
+<table class="table_results" >
+<thead><tr>
+<th  width="7%" ><span>ID</span></th>
+<th  width="20%"  style="text-align:left"><span>卡号</span></th>
+<th  width="20%" style="text-align:left" ><span>卡密</span></th>
+<th  width="15%" ><span>添加时间</span></th>
+<th  width="15%" ><span>兑换时间</span></th>
+<th  width="15%"  ><span>兑换用户</span></th>
+<th  width="8%" ><span>操作</span></th>
+</tr></thead>
+<tbody>
+<foreach name='list' item='item'  key='key'>
+<tr class="<{$key%2 == 0?'odd':'even'}>" >
+<td class="data" ><span><{$item.xn_id}></span></td>
+<td class="data" style="text-align:left"><span><{$item.xn_cardid}></span></td>
+<td class="data" style="text-align:left"><span><{$item.xn_cardpwdstr}></span></td>
+<td class="data"><span><{$item.xn_addtime|date='Y-m-d H:i:s',###}></span></td>
+<td class="data"><span><{$item.xn_exchtime}></span></td>
+<td class="data"><span><{$item.xn_username}></span></td>
+<td class="data"><span> <a  href="#" onClick="javascript:var truthBeTold = window.confirm('该操作将彻底删除,谨慎操作!'); if (truthBeTold) window.location.href='<{:U('Mp/Jfgift/xunidel?xn_id='.$item['xn_id'].'')}>';" >删除</a></span></td>
+</tr>
+</foreach>
+</tbody>
+</table>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

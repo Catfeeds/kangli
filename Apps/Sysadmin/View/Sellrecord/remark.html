@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发行记录备注</title>
+<include file="Com/head" />
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Sysadmin/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Sysadmin/Sellrecord/index')}>">发行记录</A>　&gt;　<A href="#">发行记录备注</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<form action="<{:U('Sysadmin/Sellrecord/remark')}>" id="fm" name="login" method="post" >
+<input  name="action"  value="save" type="hidden" />
+<input  name="fid"  value="<{$srinfo.fid}>" type="hidden" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+             <tr>     
+                  <td height="40"   width="25%" class="txtright" ></td>
+				  <td width="75%" class="txtleft" ></td>
+			  </tr>
+			  <tr>     
+                  <td height="40"   class="txtright" >企业码：</td>
+				  <td class="txtleft" >
+				  <{$srinfo.unitcode}>
+				  </td>
+			  </tr>
+			   <tr>     
+                  <td height="40"   class="txtright" >备注：</td>
+				  <td class="txtleft" ><input    type="text" size="40" maxlength="200"  name="remark"  class="input"  value="<{$srinfo.remark}>"    ></td>
+			  </tr>
+
+			    <tr>  <td height="60"  ></td>
+                    <td  class="txtleft"  >
+             <input type="submit" name="Submit" value="提 交"  class="botton" >　　　　<input name="" type="reset" value="返 回"  onClick="javascript:window.history.go(-1);" class="botton" >
+            </td>
+			  </tr>
+
+			</table>
+</form>
+
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>

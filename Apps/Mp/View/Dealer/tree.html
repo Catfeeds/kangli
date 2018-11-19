@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商管理</title>
+<include file="Com/head" />
+<script language="JavaScript">
+<!--
+function toggleCollapse(z,obj){
+  $(z).toggle();
+  if($(z).css("display")=="none"){
+      $(obj).attr("src","__PUBLIC__/cp/static/menu_plus.gif"); 
+  }else{
+      $(obj).attr("src","__PUBLIC__/cp/static/menu_minus.gif"); 
+  }
+}
+//-->
+</script>
+</head>
+<body>
+<include file="Com/header" />
+<div class="main" >
+<div class="bound" >
+<div class="leftmenu">
+<include file="Com/leftmenu" />
+</div>
+<div class="rightcontent">
+<div class="content_nav" >
+<div class="nav_l"><a href="<{:U('Mp/Index/index')}>">首页</a>　&gt;　<A href="<{:U('Mp/Dealer/index')}>">经销商管理</A>　&gt;　<A href="#">经销商架构树</A></div>
+<div class="nav_r"></div>
+</div>
+<div class="height20"></div>
+<div class="content">
+<div class="tree_l" >
+<div class="tree_t">结构树</div>
+<div style="padding:10px 10px 10px 0">
+<ul class="treelist" >
+<{$list_html}>
+</ul>
+<div class="height10"></div>
+<table class="page" cellpadding="0" cellspacing="0"><tbody>
+<tr>
+<td><{$page}></td>
+</tr></tbody></table>
+<div class="height10"></div>
+</div>
+</div>
+<div class="tree_r"  >
+<div class="tree_t"  >详细资料</div>
+<div style="padding:5px" >
+<iframe src="<{:U('Mp/Dealer/treedetail')}>" allowtransparency="true" style="background-color=transparent" title="test" frameborder="0" width="373" height="900"   scrolling="auto" name="dealerframe"></iframe>
+</div>
+</div>
+</div>
+<div class="height20"></div>
+</div>
+</div>
+</div>
+<include file="Com/foot" />
+</body>
+</html>
